@@ -1,0 +1,2294 @@
+{
+  "0": {
+    "basicblocks": 4,
+    "calls": "36 108",
+    "file": "top.cpp",
+    "fileloc": 152,
+    "instructions": 45,
+    "name": "BlackBoxJam",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 15765
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "streamtools.h",
+    "fileloc": 753,
+    "instructions": 7,
+    "loads": {
+      "L": 2
+    },
+    "name": "~WidthAdjustedOutputStream",
+    "total_instructions": 376
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "6",
+    "file": "mac.hpp",
+    "fileloc": 113,
+    "instructions": 4,
+    "name": "mul<Binary, ap_fixed<8, 1, AP_TRN, AP_SAT, 0> >",
+    "total_instructions": 178
+  },
+  "100": {
+    "basicblocks": 1,
+    "calls": "193",
+    "file": "interpret.hpp",
+    "fileloc": 149,
+    "instructions": 7,
+    "name": "operator()",
+    "total_instructions": 50
+  },
+  "101": {
+    "basicblocks": 8,
+    "calls": "180 188",
+    "file": "dma.h",
+    "fileloc": 182,
+    "instructions": 24,
+    "name": "Stream2Mem_Batch<64, 128>",
+    "total_instructions": 76
+  },
+  "102": {
+    "basicblocks": 1,
+    "calls": "121",
+    "file": "interpret.hpp",
+    "fileloc": 235,
+    "instructions": 2,
+    "name": "operator()<ap_uint<16> >",
+    "total_instructions": 4
+  },
+  "103": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 136,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "Container",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "104": {
+    "basicblocks": 43,
+    "calls": "",
+    "file": "slidingwindow.h",
+    "fileloc": 80,
+    "instructions": 211,
+    "loads": {
+      "L": 10
+    },
+    "name": "ConvolutionInputGenerator<3, 64, 1, 14, 12, 32, 1>",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 227
+  },
+  "105": {
+    "basicblocks": 7,
+    "calls": "162",
+    "file": "activations.hpp",
+    "fileloc": 137,
+    "instructions": 22,
+    "name": "activate",
+    "total_instructions": 82
+  },
+  "106": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 769,
+    "instructions": 1,
+    "name": "~WidthAdjustedOutputStream",
+    "total_instructions": 1
+  },
+  "107": {
+    "basicblocks": 1,
+    "calls": "43",
+    "file": "streamtools.h",
+    "fileloc": 753,
+    "instructions": 7,
+    "loads": {
+      "L": 2
+    },
+    "name": "~WidthAdjustedOutputStream",
+    "total_instructions": 376
+  },
+  "108": {
+    "basicblocks": 1,
+    "calls": "185 128 39 132 141 110 84 135 88 111 174 138 85 182 72 146 101 106",
+    "file": "top.cpp",
+    "fileloc": 95,
+    "instructions": 231,
+    "name": "DoCompute",
+    "total_instructions": 14883
+  },
+  "109": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 209,
+    "instructions": 8,
+    "name": "operator()",
+    "total_instructions": 19
+  },
+  "11": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 131,
+    "loads": {
+      "L": 7
+    },
+    "name": "StreamingDataWidthConverter_Batch<128, 32, 25>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 364
+  },
+  "110": {
+    "basicblocks": 7,
+    "calls": "89",
+    "file": "maxpool.h",
+    "fileloc": 107,
+    "instructions": 11,
+    "name": "StreamingMaxPool_Batch<28, 2, 64>",
+    "total_instructions": 238
+  },
+  "111": {
+    "basicblocks": 1,
+    "calls": "70 57 68 17 61 45 21 59",
+    "file": "convlayer.h",
+    "fileloc": 103,
+    "instructions": 27,
+    "name": "ConvLayer_Batch<3, 128, 5, 256, 3, 32, 4, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, 128, 256, BinaryWeights<32, 4, 2304>, ThresholdsActivation<64, 4, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "total_instructions": 1599
+  },
+  "112": {
+    "basicblocks": 7,
+    "calls": "162",
+    "file": "activations.hpp",
+    "fileloc": 137,
+    "instructions": 22,
+    "name": "activate",
+    "total_instructions": 82
+  },
+  "113": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 752,
+    "instructions": 7,
+    "name": "WidthAdjustedOutputStream",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 8
+  },
+  "114": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "activations.hpp",
+    "fileloc": 131,
+    "instructions": 2,
+    "name": "init",
+    "total_instructions": 19
+  },
+  "115": {
+    "basicblocks": 52,
+    "calls": "91 58 181 154 37 14 170 156 171 38",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 206,
+    "loads": {
+      "L": 6
+    },
+    "name": "Matrix_Vector_Activate_Batch<512, 64, 1, 4, 1, Recast<XnorMul>, Slice<ap_uint<16>, 16>, Identity, ap_uint<1>, ap_uint<64>, BinaryWeights<1, 4, 8192>, PassThroughActivation<ap_uint<16> >, ap_resource_lut>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 509
+  },
+  "116": {
+    "basicblocks": 1,
+    "calls": "183",
+    "file": "weights.hpp",
+    "fileloc": 94,
+    "instructions": 2,
+    "name": "weights",
+    "total_instructions": 7
+  },
+  "117": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 87,
+    "instructions": 12,
+    "loads": {
+      "L": 3
+    },
+    "name": "operator[]",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "118": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 81,
+    "instructions": 5,
+    "name": "TileIndex",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 5
+  },
+  "119": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 114,
+    "instructions": 1,
+    "name": "operator()<ap_uint<32> >",
+    "total_instructions": 1
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 752,
+    "instructions": 7,
+    "name": "WidthAdjustedOutputStream",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 8
+  },
+  "120": {
+    "basicblocks": 1,
+    "calls": "87",
+    "file": "streamtools.h",
+    "fileloc": 753,
+    "instructions": 7,
+    "loads": {
+      "L": 2
+    },
+    "name": "~WidthAdjustedOutputStream",
+    "total_instructions": 376
+  },
+  "121": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 202,
+    "instructions": 2,
+    "name": "Container",
+    "total_instructions": 2
+  },
+  "122": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 209,
+    "instructions": 8,
+    "name": "operator()",
+    "total_instructions": 19
+  },
+  "123": {
+    "basicblocks": 1,
+    "calls": "202",
+    "file": "interpret.hpp",
+    "fileloc": 166,
+    "instructions": 2,
+    "name": "operator()<ap_uint<32> >",
+    "total_instructions": 6
+  },
+  "124": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 114,
+    "instructions": 1,
+    "name": "operator()<ap_uint<4> >",
+    "total_instructions": 1
+  },
+  "125": {
+    "basicblocks": 7,
+    "calls": "66 55 10",
+    "file": "mac.hpp",
+    "fileloc": 164,
+    "instructions": 33,
+    "loads": {
+      "L": 1
+    },
+    "name": "mac<3, ap_fixed<24, 16, AP_TRN, AP_WRAP, 0>, Recast<Binary>::Container<ap_uint<3> >, Slice<ap_fixed<8, 1, AP_TRN, AP_SAT, 0>, 8>::Container<ap_uint<24> >, ap_resource_lut>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 588
+  },
+  "126": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 758,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<16>, 0> &",
+    "total_instructions": 2
+  },
+  "127": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 131,
+    "loads": {
+      "L": 7
+    },
+    "name": "StreamingDataWidthConverter_Batch<64, 8, 8>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 368
+  },
+  "128": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 132,
+    "loads": {
+      "L": 8
+    },
+    "name": "StreamingDataWidthConverter_Batch<64, 192, 384>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 368
+  },
+  "129": {
+    "basicblocks": 1,
+    "calls": "148",
+    "file": "interpret.hpp",
+    "fileloc": 70,
+    "instructions": 2,
+    "name": "operator*",
+    "total_instructions": 19
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 186,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "cast<8>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "130": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 752,
+    "instructions": 7,
+    "name": "WidthAdjustedOutputStream",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 8
+  },
+  "131": {
+    "basicblocks": 1,
+    "calls": "193",
+    "file": "interpret.hpp",
+    "fileloc": 149,
+    "instructions": 7,
+    "name": "operator()",
+    "total_instructions": 51
+  },
+  "132": {
+    "basicblocks": 1,
+    "calls": "27 200 24 152 157 163 56 15",
+    "file": "convlayer.h",
+    "fileloc": 103,
+    "instructions": 27,
+    "name": "ConvLayer_Batch<3, 3, 32, 64, 30, 3, 16, Slice<ap_fixed<8, 1, AP_TRN, AP_SAT, 0>, 8>, Slice<ap_uint<1>, 1>, Recast<Binary>, 24, 64, BinaryWeights<3, 16, 36>, ThresholdsActivation<4, 16, 1, ap_fixed<24, 16, AP_TRN, AP_WRAP, 0>, ap_uint<1>, 0, std::less<ap_fixed<24, 16, AP_TRN, AP_WRAP, 0> > >, ap_resource_lut>",
+    "total_instructions": 1681
+  },
+  "133": {
+    "basicblocks": 1,
+    "calls": "74",
+    "file": "weights.hpp",
+    "fileloc": 94,
+    "instructions": 2,
+    "name": "weights",
+    "total_instructions": 7
+  },
+  "134": {
+    "basicblocks": 1,
+    "calls": "63",
+    "file": "weights.hpp",
+    "fileloc": 94,
+    "instructions": 2,
+    "name": "weights",
+    "total_instructions": 7
+  },
+  "135": {
+    "basicblocks": 1,
+    "calls": "82 26 179 164 69 5 1 198",
+    "file": "convlayer.h",
+    "fileloc": 103,
+    "instructions": 27,
+    "name": "ConvLayer_Batch<3, 128, 12, 128, 10, 32, 16, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, 128, 128, BinaryWeights<32, 16, 288>, ThresholdsActivation<8, 16, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "total_instructions": 1599
+  },
+  "136": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 87,
+    "instructions": 12,
+    "loads": {
+      "L": 3
+    },
+    "name": "operator[]",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "137": {
+    "basicblocks": 1,
+    "calls": "103",
+    "file": "interpret.hpp",
+    "fileloc": 166,
+    "instructions": 2,
+    "name": "operator()<ap_uint<8> >",
+    "total_instructions": 6
+  },
+  "138": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 767,
+    "instructions": 3,
+    "name": "WidthAdjustedOutputStream",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 3
+  },
+  "139": {
+    "basicblocks": 1,
+    "calls": "196",
+    "file": "weights.hpp",
+    "fileloc": 94,
+    "instructions": 2,
+    "name": "weights",
+    "total_instructions": 7
+  },
+  "14": {
+    "basicblocks": 7,
+    "calls": "28 18",
+    "file": "mac.hpp",
+    "fileloc": 164,
+    "instructions": 29,
+    "loads": {
+      "L": 1
+    },
+    "name": "mac<1, ap_uint<16>, ap_uint<1>, Recast<XnorMul>::Container<ap_uint<1> >, ap_resource_lut>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 178
+  },
+  "140": {
+    "basicblocks": 43,
+    "calls": "",
+    "file": "slidingwindow.h",
+    "fileloc": 80,
+    "instructions": 211,
+    "loads": {
+      "L": 10
+    },
+    "name": "ConvolutionInputGenerator<3, 256, 1, 3, 1, 32, 1>",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 227
+  },
+  "141": {
+    "basicblocks": 1,
+    "calls": "161 177 184 31 165 32 169 195",
+    "file": "convlayer.h",
+    "fileloc": 103,
+    "instructions": 27,
+    "name": "ConvLayer_Batch<3, 64, 30, 64, 28, 32, 32, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, 64, 64, BinaryWeights<32, 32, 36>, ThresholdsActivation<2, 32, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "total_instructions": 1595
+  },
+  "142": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 722,
+    "instructions": 1,
+    "name": "~WidthAdjustedInputStream",
+    "total_instructions": 1
+  },
+  "143": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 725,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<32>, 0> &",
+    "total_instructions": 2
+  },
+  "144": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 87,
+    "instructions": 12,
+    "loads": {
+      "L": 3
+    },
+    "name": "operator[]",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "145": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 136,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "Container",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "146": {
+    "basicblocks": 1,
+    "calls": "46 138 65 72 115 106 142",
+    "file": "fclayer.h",
+    "fileloc": 94,
+    "instructions": 18,
+    "name": "StreamingFCLayer_Batch<512, 64, 1, 4, Recast<XnorMul>, Slice<ap_uint<16>, 16>, Identity, 64, 64, BinaryWeights<1, 4, 8192>, PassThroughActivation<ap_uint<16> >, ap_resource_lut>",
+    "total_instructions": 911
+  },
+  "147": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 78,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "Binary",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "148": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 65,
+    "instructions": 7,
+    "name": "operator*",
+    "total_instructions": 17
+  },
+  "149": {
+    "basicblocks": 7,
+    "calls": "162",
+    "file": "activations.hpp",
+    "fileloc": 137,
+    "instructions": 22,
+    "name": "activate",
+    "total_instructions": 82
+  },
+  "15": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 736,
+    "instructions": 1,
+    "name": "~WidthAdjustedInputStream",
+    "total_instructions": 1
+  },
+  "150": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 202,
+    "instructions": 2,
+    "name": "Container",
+    "total_instructions": 2
+  },
+  "151": {
+    "basicblocks": 52,
+    "calls": "50 134 117 119 123 192 90 95 109 201",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 205,
+    "loads": {
+      "L": 6
+    },
+    "name": "Matrix_Vector_Activate_Batch<2304, 256, 32, 1, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<32>, ap_uint<1>, BinaryWeights<32, 1, 18432>, ThresholdsActivation<256, 1, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 569
+  },
+  "152": {
+    "basicblocks": 43,
+    "calls": "",
+    "file": "slidingwindow.h",
+    "fileloc": 80,
+    "instructions": 211,
+    "loads": {
+      "L": 10
+    },
+    "name": "ConvolutionInputGenerator<3, 3, 8, 32, 30, 3, 1>",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 227
+  },
+  "153": {
+    "basicblocks": 1,
+    "calls": "20",
+    "file": "interpret.hpp",
+    "fileloc": 235,
+    "instructions": 2,
+    "name": "operator()<ap_uint<4> >",
+    "total_instructions": 4
+  },
+  "154": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 114,
+    "instructions": 1,
+    "name": "operator()<ap_uint<1> >",
+    "total_instructions": 1
+  },
+  "155": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 222,
+    "instructions": 2,
+    "name": "operator const ap_uint<4> &",
+    "total_instructions": 2
+  },
+  "156": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "activations.hpp",
+    "fileloc": 86,
+    "instructions": 3,
+    "loads": {
+      "L": 1
+    },
+    "name": "activate",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 3
+  },
+  "157": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 758,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<16>, 0> &",
+    "total_instructions": 2
+  },
+  "158": {
+    "basicblocks": 1,
+    "calls": "186",
+    "file": "streamtools.h",
+    "fileloc": 719,
+    "instructions": 5,
+    "name": "WidthAdjustedInputStream",
+    "total_instructions": 374
+  },
+  "159": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 722,
+    "instructions": 1,
+    "name": "~WidthAdjustedInputStream",
+    "total_instructions": 1
+  },
+  "16": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "stl_function.h",
+    "fileloc": 385,
+    "instructions": 4,
+    "name": "operator()",
+    "total_instructions": 14
+  },
+  "160": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 81,
+    "instructions": 5,
+    "name": "TileIndex",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 5
+  },
+  "161": {
+    "basicblocks": 1,
+    "calls": "190",
+    "file": "streamtools.h",
+    "fileloc": 719,
+    "instructions": 5,
+    "name": "WidthAdjustedInputStream",
+    "total_instructions": 370
+  },
+  "162": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "stl_function.h",
+    "fileloc": 385,
+    "instructions": 4,
+    "name": "operator()",
+    "total_instructions": 14
+  },
+  "163": {
+    "basicblocks": 52,
+    "calls": "3 139 136 78 53 125 102 2 122 52",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 203,
+    "loads": {
+      "L": 5
+    },
+    "name": "Matrix_Vector_Activate_Batch<27, 64, 3, 16, 1, Slice<ap_fixed<8, 1, AP_TRN, AP_SAT, 0>, 8>, Slice<ap_uint<1>, 1>, Recast<Binary>, ap_uint<24>, ap_uint<16>, BinaryWeights<3, 16, 36>, ThresholdsActivation<4, 16, 1, ap_fixed<24, 16, AP_TRN, AP_WRAP, 0>, ap_uint<1>, 0, std::less<ap_fixed<24, 16, AP_TRN, AP_WRAP, 0> > >, ap_resource_lut>",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 1033
+  },
+  "164": {
+    "basicblocks": 43,
+    "calls": "",
+    "file": "slidingwindow.h",
+    "fileloc": 80,
+    "instructions": 211,
+    "loads": {
+      "L": 10
+    },
+    "name": "ConvolutionInputGenerator<3, 128, 1, 12, 10, 32, 1>",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 227
+  },
+  "165": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 758,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<32>, 0> &",
+    "total_instructions": 2
+  },
+  "166": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 725,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<4>, 0> &",
+    "total_instructions": 2
+  },
+  "167": {
+    "basicblocks": 52,
+    "calls": "194 116 92 124 79 83 90 112 109 201",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 205,
+    "loads": {
+      "L": 6
+    },
+    "name": "Matrix_Vector_Activate_Batch<256, 512, 4, 1, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<4>, ap_uint<1>, BinaryWeights<4, 1, 32768>, ThresholdsActivation<512, 1, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 571
+  },
+  "168": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 81,
+    "instructions": 5,
+    "name": "TileIndex",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 5
+  },
+  "169": {
+    "basicblocks": 1,
+    "calls": "197",
+    "file": "streamtools.h",
+    "fileloc": 753,
+    "instructions": 7,
+    "loads": {
+      "L": 2
+    },
+    "name": "~WidthAdjustedOutputStream",
+    "total_instructions": 372
+  },
+  "17": {
+    "basicblocks": 43,
+    "calls": "",
+    "file": "slidingwindow.h",
+    "fileloc": 80,
+    "instructions": 211,
+    "loads": {
+      "L": 10
+    },
+    "name": "ConvolutionInputGenerator<3, 128, 1, 5, 3, 32, 1>",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 227
+  },
+  "170": {
+    "basicblocks": 1,
+    "calls": "9",
+    "file": "interpret.hpp",
+    "fileloc": 235,
+    "instructions": 2,
+    "name": "operator()<ap_uint<64> >",
+    "total_instructions": 4
+  },
+  "171": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 209,
+    "instructions": 8,
+    "name": "operator()",
+    "total_instructions": 19
+  },
+  "172": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "activations.hpp",
+    "fileloc": 131,
+    "instructions": 2,
+    "name": "init",
+    "total_instructions": 19
+  },
+  "173": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 131,
+    "loads": {
+      "L": 7
+    },
+    "name": "StreamingDataWidthConverter_Batch<64, 1, 8>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 368
+  },
+  "174": {
+    "basicblocks": 1,
+    "calls": "96 130 97 140 93 151 120 159",
+    "file": "convlayer.h",
+    "fileloc": 103,
+    "instructions": 27,
+    "name": "ConvLayer_Batch<3, 256, 3, 256, 1, 32, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, 256, 256, BinaryWeights<32, 1, 18432>, ThresholdsActivation<256, 1, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "total_instructions": 1583
+  },
+  "175": {
+    "basicblocks": 1,
+    "calls": "150",
+    "file": "interpret.hpp",
+    "fileloc": 235,
+    "instructions": 2,
+    "name": "operator()<ap_uint<32> >",
+    "total_instructions": 4
+  },
+  "176": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 136,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "Container",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "177": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 752,
+    "instructions": 7,
+    "name": "WidthAdjustedOutputStream",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 8
+  },
+  "178": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 205,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "Container",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "179": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 725,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<32>, 0> &",
+    "total_instructions": 2
+  },
+  "18": {
+    "basicblocks": 1,
+    "calls": "129",
+    "file": "mac.hpp",
+    "fileloc": 113,
+    "instructions": 11,
+    "loads": {
+      "L": 1
+    },
+    "name": "mul<bool, XnorMul>",
+    "total_instructions": 45
+  },
+  "180": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "dma.h",
+    "fileloc": 149,
+    "instructions": 20,
+    "loads": {
+      "L": 1
+    },
+    "name": "Stream2Mem<64, 2048>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 26
+  },
+  "181": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 87,
+    "instructions": 12,
+    "loads": {
+      "L": 3
+    },
+    "name": "operator[]",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "182": {
+    "basicblocks": 1,
+    "calls": "62 12 33 60 47 25 29",
+    "file": "fclayer.h",
+    "fileloc": 94,
+    "instructions": 18,
+    "name": "StreamingFCLayer_Batch<512, 512, 8, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, 64, 64, BinaryWeights<8, 1, 32768>, ThresholdsActivation<512, 1, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "total_instructions": 1352
+  },
+  "183": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 81,
+    "instructions": 5,
+    "name": "TileIndex",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 5
+  },
+  "184": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 725,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<32>, 0> &",
+    "total_instructions": 2
+  },
+  "185": {
+    "basicblocks": 8,
+    "calls": "94 98",
+    "file": "dma.h",
+    "fileloc": 161,
+    "instructions": 24,
+    "name": "Mem2Stream_Batch<64, 3072>",
+    "total_instructions": 72
+  },
+  "186": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 131,
+    "loads": {
+      "L": 7
+    },
+    "name": "StreamingDataWidthConverter_Batch<256, 4, 1>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 368
+  },
+  "187": {
+    "basicblocks": 1,
+    "calls": "71",
+    "file": "weights.hpp",
+    "fileloc": 94,
+    "instructions": 2,
+    "name": "weights",
+    "total_instructions": 7
+  },
+  "188": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "dma.h",
+    "fileloc": 149,
+    "instructions": 20,
+    "loads": {
+      "L": 1
+    },
+    "name": "Stream2Mem<64, 128>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 26
+  },
+  "189": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 114,
+    "instructions": 1,
+    "name": "operator()<ap_uint<8> >",
+    "total_instructions": 1
+  },
+  "19": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 87,
+    "instructions": 12,
+    "loads": {
+      "L": 3
+    },
+    "name": "operator[]",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "190": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 131,
+    "loads": {
+      "L": 7
+    },
+    "name": "StreamingDataWidthConverter_Batch<64, 32, 900>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 364
+  },
+  "191": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 209,
+    "instructions": 8,
+    "name": "operator()",
+    "total_instructions": 19
+  },
+  "192": {
+    "basicblocks": 7,
+    "calls": "100 18",
+    "file": "mac.hpp",
+    "fileloc": 164,
+    "instructions": 29,
+    "loads": {
+      "L": 1
+    },
+    "name": "mac<32, ap_int<16>, ap_uint<32>, Recast<XnorMul>::Container<ap_uint<32> >, ap_resource_lut>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 176
+  },
+  "193": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 60,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "XnorMul",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "194": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "activations.hpp",
+    "fileloc": 131,
+    "instructions": 2,
+    "name": "init",
+    "total_instructions": 19
+  },
+  "195": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 722,
+    "instructions": 1,
+    "name": "~WidthAdjustedInputStream",
+    "total_instructions": 1
+  },
+  "196": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 81,
+    "instructions": 5,
+    "name": "TileIndex",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 5
+  },
+  "197": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 132,
+    "loads": {
+      "L": 8
+    },
+    "name": "StreamingDataWidthConverter_Batch<32, 64, 1568>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 365
+  },
+  "198": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 722,
+    "instructions": 1,
+    "name": "~WidthAdjustedInputStream",
+    "total_instructions": 1
+  },
+  "199": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 136,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "Container",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "2": {
+    "basicblocks": 7,
+    "calls": "16",
+    "file": "activations.hpp",
+    "fileloc": 137,
+    "instructions": 22,
+    "name": "activate",
+    "total_instructions": 82
+  },
+  "20": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 202,
+    "instructions": 2,
+    "name": "Container",
+    "total_instructions": 2
+  },
+  "200": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 752,
+    "instructions": 7,
+    "name": "WidthAdjustedOutputStream",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 8
+  },
+  "201": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 222,
+    "instructions": 2,
+    "name": "operator const ap_uint<1> &",
+    "total_instructions": 2
+  },
+  "202": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 136,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "Container",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "21": {
+    "basicblocks": 1,
+    "calls": "4",
+    "file": "streamtools.h",
+    "fileloc": 753,
+    "instructions": 7,
+    "loads": {
+      "L": 2
+    },
+    "name": "~WidthAdjustedOutputStream",
+    "total_instructions": 376
+  },
+  "22": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 87,
+    "instructions": 12,
+    "loads": {
+      "L": 3
+    },
+    "name": "operator[]",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "23": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 132,
+    "loads": {
+      "L": 8
+    },
+    "name": "StreamingDataWidthConverter_Batch<1, 64, 512>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 369
+  },
+  "24": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 739,
+    "instructions": 3,
+    "loads": {
+      "L": 1
+    },
+    "name": "operator hls::stream<ap_uint<24>, 0> &",
+    "total_instructions": 3
+  },
+  "25": {
+    "basicblocks": 1,
+    "calls": "23",
+    "file": "streamtools.h",
+    "fileloc": 753,
+    "instructions": 7,
+    "loads": {
+      "L": 2
+    },
+    "name": "~WidthAdjustedOutputStream",
+    "total_instructions": 376
+  },
+  "26": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 752,
+    "instructions": 7,
+    "name": "WidthAdjustedOutputStream",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 8
+  },
+  "27": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 735,
+    "instructions": 3,
+    "name": "WidthAdjustedInputStream",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 3
+  },
+  "28": {
+    "basicblocks": 1,
+    "calls": "193",
+    "file": "interpret.hpp",
+    "fileloc": 149,
+    "instructions": 7,
+    "name": "operator()",
+    "total_instructions": 51
+  },
+  "29": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 722,
+    "instructions": 1,
+    "name": "~WidthAdjustedInputStream",
+    "total_instructions": 1
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "activations.hpp",
+    "fileloc": 131,
+    "instructions": 2,
+    "name": "init",
+    "total_instructions": 52
+  },
+  "30": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 81,
+    "instructions": 5,
+    "name": "TileIndex",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 5
+  },
+  "31": {
+    "basicblocks": 43,
+    "calls": "",
+    "file": "slidingwindow.h",
+    "fileloc": 80,
+    "instructions": 211,
+    "loads": {
+      "L": 10
+    },
+    "name": "ConvolutionInputGenerator<3, 64, 1, 30, 28, 32, 1>",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 227
+  },
+  "32": {
+    "basicblocks": 52,
+    "calls": "172 35 22 119 123 192 175 149 191 34",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 205,
+    "loads": {
+      "L": 6
+    },
+    "name": "Matrix_Vector_Activate_Batch<576, 64, 32, 32, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<32>, ap_uint<32>, BinaryWeights<32, 32, 36>, ThresholdsActivation<2, 32, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 585
+  },
+  "33": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 725,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<8>, 0> &",
+    "total_instructions": 2
+  },
+  "34": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 222,
+    "instructions": 2,
+    "name": "operator const ap_uint<32> &",
+    "total_instructions": 2
+  },
+  "35": {
+    "basicblocks": 1,
+    "calls": "30",
+    "file": "weights.hpp",
+    "fileloc": 94,
+    "instructions": 2,
+    "name": "weights",
+    "total_instructions": 7
+  },
+  "36": {
+    "basicblocks": 20,
+    "calls": "",
+    "file": "top.cpp",
+    "fileloc": 36,
+    "instructions": 242,
+    "loads": {
+      "L": 17
+    },
+    "name": "DoMemInit",
+    "stores": {
+      "G": 17
+    },
+    "total_instructions": 837
+  },
+  "37": {
+    "basicblocks": 1,
+    "calls": "199",
+    "file": "interpret.hpp",
+    "fileloc": 166,
+    "instructions": 2,
+    "name": "operator()<ap_uint<1> >",
+    "total_instructions": 6
+  },
+  "38": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 222,
+    "instructions": 2,
+    "name": "operator const ap_uint<64> &",
+    "total_instructions": 2
+  },
+  "39": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 131,
+    "loads": {
+      "L": 7
+    },
+    "name": "StreamingDataWidthConverter_Batch<192, 24, 128>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 368
+  },
+  "4": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 132,
+    "loads": {
+      "L": 8
+    },
+    "name": "StreamingDataWidthConverter_Batch<4, 256, 576>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 369
+  },
+  "40": {
+    "basicblocks": 1,
+    "calls": "80",
+    "file": "streamtools.h",
+    "fileloc": 719,
+    "instructions": 5,
+    "name": "WidthAdjustedInputStream",
+    "total_instructions": 370
+  },
+  "41": {
+    "basicblocks": 52,
+    "calls": "114 133 51 119 123 192 102 105 122 52",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 205,
+    "loads": {
+      "L": 6
+    },
+    "name": "Matrix_Vector_Activate_Batch<576, 128, 32, 16, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<32>, ap_uint<16>, BinaryWeights<32, 16, 144>, ThresholdsActivation<8, 16, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 585
+  },
+  "42": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 132,
+    "loads": {
+      "L": 8
+    },
+    "name": "StreamingDataWidthConverter_Batch<16, 64, 3600>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 369
+  },
+  "43": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 132,
+    "loads": {
+      "L": 8
+    },
+    "name": "StreamingDataWidthConverter_Batch<16, 128, 1152>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 369
+  },
+  "44": {
+    "basicblocks": 1,
+    "calls": "118",
+    "file": "weights.hpp",
+    "fileloc": 94,
+    "instructions": 2,
+    "name": "weights",
+    "total_instructions": 7
+  },
+  "45": {
+    "basicblocks": 52,
+    "calls": "75 8 19 119 123 192 153 86 73 155",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 205,
+    "loads": {
+      "L": 6
+    },
+    "name": "Matrix_Vector_Activate_Batch<1152, 256, 32, 4, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<32>, ap_uint<4>, BinaryWeights<32, 4, 2304>, ThresholdsActivation<64, 4, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 585
+  },
+  "46": {
+    "basicblocks": 1,
+    "calls": "173",
+    "file": "streamtools.h",
+    "fileloc": 719,
+    "instructions": 5,
+    "name": "WidthAdjustedInputStream",
+    "total_instructions": 374
+  },
+  "47": {
+    "basicblocks": 52,
+    "calls": "194 187 144 189 137 77 90 112 109 201",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 205,
+    "loads": {
+      "L": 6
+    },
+    "name": "Matrix_Vector_Activate_Batch<512, 512, 8, 1, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<8>, ap_uint<1>, BinaryWeights<8, 1, 32768>, ThresholdsActivation<512, 1, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 571
+  },
+  "48": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 131,
+    "loads": {
+      "L": 7
+    },
+    "name": "StreamingDataWidthConverter_Batch<256, 32, 9>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 364
+  },
+  "49": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 87,
+    "instructions": 12,
+    "loads": {
+      "L": 3
+    },
+    "name": "operator[]",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "5": {
+    "basicblocks": 52,
+    "calls": "114 44 49 119 123 192 102 105 122 52",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 205,
+    "loads": {
+      "L": 6
+    },
+    "name": "Matrix_Vector_Activate_Batch<1152, 128, 32, 16, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<32>, ap_uint<16>, BinaryWeights<32, 16, 288>, ThresholdsActivation<8, 16, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 585
+  },
+  "50": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "activations.hpp",
+    "fileloc": 131,
+    "instructions": 2,
+    "name": "init",
+    "total_instructions": 19
+  },
+  "51": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 87,
+    "instructions": 12,
+    "loads": {
+      "L": 3
+    },
+    "name": "operator[]",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "52": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 222,
+    "instructions": 2,
+    "name": "operator const ap_uint<16> &",
+    "total_instructions": 2
+  },
+  "53": {
+    "basicblocks": 1,
+    "calls": "178",
+    "file": "interpret.hpp",
+    "fileloc": 240,
+    "instructions": 2,
+    "name": "operator()<ap_uint<24> >",
+    "total_instructions": 6
+  },
+  "54": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 131,
+    "loads": {
+      "L": 7
+    },
+    "name": "StreamingDataWidthConverter_Batch<128, 32, 144>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 364
+  },
+  "55": {
+    "basicblocks": 1,
+    "calls": "13",
+    "file": "interpret.hpp",
+    "fileloc": 213,
+    "instructions": 26,
+    "name": "operator()",
+    "total_instructions": 109
+  },
+  "56": {
+    "basicblocks": 1,
+    "calls": "42",
+    "file": "streamtools.h",
+    "fileloc": 753,
+    "instructions": 7,
+    "loads": {
+      "L": 2
+    },
+    "name": "~WidthAdjustedOutputStream",
+    "total_instructions": 376
+  },
+  "57": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 752,
+    "instructions": 7,
+    "name": "WidthAdjustedOutputStream",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 8
+  },
+  "58": {
+    "basicblocks": 1,
+    "calls": "168",
+    "file": "weights.hpp",
+    "fileloc": 94,
+    "instructions": 2,
+    "name": "weights",
+    "total_instructions": 7
+  },
+  "59": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 722,
+    "instructions": 1,
+    "name": "~WidthAdjustedInputStream",
+    "total_instructions": 1
+  },
+  "6": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 87,
+    "instructions": 19,
+    "name": "operator*<ap_fixed<8, 1, AP_TRN, AP_SAT, 0> >",
+    "total_instructions": 174
+  },
+  "60": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 758,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<1>, 0> &",
+    "total_instructions": 2
+  },
+  "61": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 758,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<4>, 0> &",
+    "total_instructions": 2
+  },
+  "62": {
+    "basicblocks": 1,
+    "calls": "127",
+    "file": "streamtools.h",
+    "fileloc": 719,
+    "instructions": 5,
+    "name": "WidthAdjustedInputStream",
+    "total_instructions": 374
+  },
+  "63": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 81,
+    "instructions": 5,
+    "name": "TileIndex",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 5
+  },
+  "64": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 202,
+    "instructions": 2,
+    "name": "Container",
+    "total_instructions": 2
+  },
+  "65": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 725,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<1>, 0> &",
+    "total_instructions": 2
+  },
+  "66": {
+    "basicblocks": 1,
+    "calls": "147",
+    "file": "interpret.hpp",
+    "fileloc": 141,
+    "instructions": 7,
+    "name": "operator[]",
+    "total_instructions": 51
+  },
+  "67": {
+    "basicblocks": 1,
+    "calls": "193",
+    "file": "interpret.hpp",
+    "fileloc": 149,
+    "instructions": 7,
+    "name": "operator()",
+    "total_instructions": 51
+  },
+  "68": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 725,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<32>, 0> &",
+    "total_instructions": 2
+  },
+  "69": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 758,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<16>, 0> &",
+    "total_instructions": 2
+  },
+  "7": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 132,
+    "loads": {
+      "L": 8
+    },
+    "name": "StreamingDataWidthConverter_Batch<16, 128, 800>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 369
+  },
+  "70": {
+    "basicblocks": 1,
+    "calls": "11",
+    "file": "streamtools.h",
+    "fileloc": 719,
+    "instructions": 5,
+    "name": "WidthAdjustedInputStream",
+    "total_instructions": 370
+  },
+  "71": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 81,
+    "instructions": 5,
+    "name": "TileIndex",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 5
+  },
+  "72": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 772,
+    "instructions": 3,
+    "loads": {
+      "L": 1
+    },
+    "name": "operator hls::stream<ap_uint<64>, 0> &",
+    "total_instructions": 3
+  },
+  "73": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 209,
+    "instructions": 8,
+    "name": "operator()",
+    "total_instructions": 19
+  },
+  "74": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 81,
+    "instructions": 5,
+    "name": "TileIndex",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 5
+  },
+  "75": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "activations.hpp",
+    "fileloc": 131,
+    "instructions": 2,
+    "name": "init",
+    "total_instructions": 19
+  },
+  "76": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 722,
+    "instructions": 1,
+    "name": "~WidthAdjustedInputStream",
+    "total_instructions": 1
+  },
+  "77": {
+    "basicblocks": 7,
+    "calls": "67 18",
+    "file": "mac.hpp",
+    "fileloc": 164,
+    "instructions": 29,
+    "loads": {
+      "L": 1
+    },
+    "name": "mac<8, ap_int<16>, ap_uint<8>, Recast<XnorMul>::Container<ap_uint<8> >, ap_resource_lut>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 178
+  },
+  "78": {
+    "basicblocks": 1,
+    "calls": "145",
+    "file": "interpret.hpp",
+    "fileloc": 161,
+    "instructions": 2,
+    "name": "operator()<ap_uint<3> >",
+    "total_instructions": 6
+  },
+  "79": {
+    "basicblocks": 1,
+    "calls": "176",
+    "file": "interpret.hpp",
+    "fileloc": 166,
+    "instructions": 2,
+    "name": "operator()<ap_uint<4> >",
+    "total_instructions": 6
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "160",
+    "file": "weights.hpp",
+    "fileloc": 94,
+    "instructions": 2,
+    "name": "weights",
+    "total_instructions": 7
+  },
+  "80": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 131,
+    "loads": {
+      "L": 7
+    },
+    "name": "StreamingDataWidthConverter_Batch<64, 32, 196>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 364
+  },
+  "81": {
+    "basicblocks": 37,
+    "calls": "",
+    "file": "maxpool.h",
+    "fileloc": 63,
+    "instructions": 110,
+    "loads": {
+      "L": 3
+    },
+    "name": "StreamingMaxPool<10, 2, 128>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 227
+  },
+  "82": {
+    "basicblocks": 1,
+    "calls": "54",
+    "file": "streamtools.h",
+    "fileloc": 719,
+    "instructions": 5,
+    "name": "WidthAdjustedInputStream",
+    "total_instructions": 370
+  },
+  "83": {
+    "basicblocks": 7,
+    "calls": "131 18",
+    "file": "mac.hpp",
+    "fileloc": 164,
+    "instructions": 29,
+    "loads": {
+      "L": 1
+    },
+    "name": "mac<4, ap_int<16>, ap_uint<4>, Recast<XnorMul>::Container<ap_uint<4> >, ap_resource_lut>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 178
+  },
+  "84": {
+    "basicblocks": 1,
+    "calls": "40 113 143 104 126 41 107 99",
+    "file": "convlayer.h",
+    "fileloc": 103,
+    "instructions": 27,
+    "name": "ConvLayer_Batch<3, 64, 14, 128, 12, 32, 16, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, 64, 128, BinaryWeights<32, 16, 144>, ThresholdsActivation<8, 16, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "total_instructions": 1599
+  },
+  "85": {
+    "basicblocks": 1,
+    "calls": "158 12 166 60 167 25 76",
+    "file": "fclayer.h",
+    "fileloc": 94,
+    "instructions": 18,
+    "name": "StreamingFCLayer_Batch<256, 512, 4, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, 256, 64, BinaryWeights<4, 1, 32768>, ThresholdsActivation<512, 1, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "total_instructions": 1352
+  },
+  "86": {
+    "basicblocks": 7,
+    "calls": "162",
+    "file": "activations.hpp",
+    "fileloc": 137,
+    "instructions": 22,
+    "name": "activate",
+    "total_instructions": 82
+  },
+  "87": {
+    "basicblocks": 31,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 132,
+    "loads": {
+      "L": 8
+    },
+    "name": "StreamingDataWidthConverter_Batch<1, 256, 256>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 369
+  },
+  "88": {
+    "basicblocks": 7,
+    "calls": "81",
+    "file": "maxpool.h",
+    "fileloc": 107,
+    "instructions": 11,
+    "name": "StreamingMaxPool_Batch<10, 2, 128>",
+    "total_instructions": 238
+  },
+  "89": {
+    "basicblocks": 37,
+    "calls": "",
+    "file": "maxpool.h",
+    "fileloc": 63,
+    "instructions": 110,
+    "loads": {
+      "L": 3
+    },
+    "name": "StreamingMaxPool<28, 2, 64>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 227
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 202,
+    "instructions": 2,
+    "name": "Container",
+    "total_instructions": 2
+  },
+  "90": {
+    "basicblocks": 1,
+    "calls": "64",
+    "file": "interpret.hpp",
+    "fileloc": 235,
+    "instructions": 2,
+    "name": "operator()<ap_uint<1> >",
+    "total_instructions": 4
+  },
+  "91": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "activations.hpp",
+    "fileloc": 68,
+    "instructions": 2,
+    "name": "init",
+    "total_instructions": 19
+  },
+  "92": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "weights.hpp",
+    "fileloc": 87,
+    "instructions": 12,
+    "loads": {
+      "L": 3
+    },
+    "name": "operator[]",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "93": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 758,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<1>, 0> &",
+    "total_instructions": 2
+  },
+  "94": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "dma.h",
+    "fileloc": 136,
+    "instructions": 20,
+    "loads": {
+      "L": 1
+    },
+    "name": "Mem2Stream<64, 49152>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 24
+  },
+  "95": {
+    "basicblocks": 7,
+    "calls": "162",
+    "file": "activations.hpp",
+    "fileloc": 137,
+    "instructions": 22,
+    "name": "activate",
+    "total_instructions": 82
+  },
+  "96": {
+    "basicblocks": 1,
+    "calls": "48",
+    "file": "streamtools.h",
+    "fileloc": 719,
+    "instructions": 5,
+    "name": "WidthAdjustedInputStream",
+    "total_instructions": 370
+  },
+  "97": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 725,
+    "instructions": 2,
+    "name": "operator hls::stream<ap_uint<32>, 0> &",
+    "total_instructions": 2
+  },
+  "98": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "dma.h",
+    "fileloc": 136,
+    "instructions": 20,
+    "loads": {
+      "L": 1
+    },
+    "name": "Mem2Stream<64, 3072>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 24
+  },
+  "99": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 722,
+    "instructions": 1,
+    "name": "~WidthAdjustedInputStream",
+    "total_instructions": 1
+  }
+}

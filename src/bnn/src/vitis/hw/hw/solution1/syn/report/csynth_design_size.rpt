@@ -1,0 +1,349 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 15,765       | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  | 31,436       | user unroll pragmas are applied                                                        |
+|               | (2) simplification          | 23,503       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  | 23,220       | user inline pragmas are applied                                                        |
+|               | (4) simplification          | 22,733       | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         | 30,231       | user array partition pragmas are applied                                               |
+|               | (2) simplification          | 26,327       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  | 26,327       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           | 26,301       | apply array reshape pragmas                                                            |
+|               | (5) access patterns         | 26,391       | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     | 26,049       | loop and instruction simplification                                                    |
+|               | (2) parallelization         | 25,543       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         | 25,543       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          | 25,543       | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                | 25,535       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           | 25,664       | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++-----------------------------------------+---------------------+--------------+------------------+------------------+------------------+------------------+
+| Function                                | Location            | Compile/Link | Unroll/Inline    | Array/Struct     | Performance      | HW Transforms    |
++-----------------------------------------+---------------------+--------------+------------------+------------------+------------------+------------------+
+| + BlackBoxJam                           | top.cpp:152         | 15,765       | 22,733           | 26,391           | 25,543           | 25,664           |
+|    DoMemInit                            | top.cpp:36          |   837        |                  |                  |                  |                  |
+|  + DoCompute                            | top.cpp:95          | 14,883       | 22,579           | 25,599           | 24,751           | 24,858           |
+|   + Mem2Stream_Batch<64, 3072>          | dma.h:161           |    72        |    35            |    37            |    36            |    50            |
+|      Mem2Stream<64, 49152>              | dma.h:136           |    24        |                  |                  |                  |                  |
+|      Mem2Stream<64, 3072>               | dma.h:136           |    24        |                  |                  |                  |                  |
+|     StreamingDataWidthConverter_...     | streamtools.h:259   |   368        |    21            |    21            |    20            |    25            |
+|     StreamingDataWidthConverter_...     | streamtools.h:259   |   368        |    25            |    25            |    24            |    27            |
+|   + ConvLayer_Batch<3, 3, 32, 64...     | convlayer.h:103     | 1,681        |                  |                  |                  |                  |
+|      WidthAdjustedInputStream           | streamtools.h:735   |     3        |                  |                  |                  |                  |
+|      WidthAdjustedOutputStream          | streamtools.h:752   |     8        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:739   |     3        |                  |                  |                  |                  |
+|      ConvolutionInputGenerator<3,...    | slidingwindow.h:80  |   227        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:758   |     2        |                  |                  |                  |                  |
+|    + Matrix_Vector_Activate_Batch...    | mvau.hpp:92         | 1,033        |                  |                  |                  |                  |
+|       init                              | activations.hpp:131 |    52        |                  |                  |                  |                  |
+|     + weights                           | weights.hpp:94      |     7        |                  |                  |                  |                  |
+|        TileIndex                        | weights.hpp:81      |     5        |                  |                  |                  |                  |
+|       operator[]                        | weights.hpp:87      |    12        |                  |                  |                  |                  |
+|     + operator()<ap_uint<3> >           | interpret.hpp:161   |     6        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:136   |     4        |                  |                  |                  |                  |
+|     + operator()<ap_uint<24> >          | interpret.hpp:240   |     6        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:205   |     4        |                  |                  |                  |                  |
+|     + mac<3, ap_fixed<24, 16, AP_T...   | mac.hpp:164         |   588        |                  |                  |                  |                  |
+|      + operator[]                       | interpret.hpp:141   |    51        |                  |                  |                  |                  |
+|         Binary                          | interpret.hpp:78    |     4        |                  |                  |                  |                  |
+|      + operator()                       | interpret.hpp:213   |   109        |                  |                  |                  |                  |
+|         cast<8>                         | interpret.hpp:186   |     4        |                  |                  |                  |                  |
+|      + mul<Binary, ap_fixed<8, 1, A...  | mac.hpp:113         |   178        |                  |                  |                  |                  |
+|         operator*<ap_fixed<8, 1, AP_... | interpret.hpp:87    |   174        |                  |                  |                  |                  |
+|     + operator()<ap_uint<16> >          | interpret.hpp:235   |     4        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:202   |     2        |                  |                  |                  |                  |
+|     + activate                          | activations.hpp:137 |    82        |                  |                  |                  |                  |
+|        operator()                       | stl_function.h:385  |    14        |                  |                  |                  |                  |
+|       operator()                        | interpret.hpp:209   |    19        |                  |                  |                  |                  |
+|       operator const ap_uint<16> &...   | interpret.hpp:222   |     2        |                  |                  |                  |                  |
+|    + ~WidthAdjustedOutputStream         | streamtools.h:753   |   376        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   369        |                  |                  |                  |                  |
+|      ~WidthAdjustedInputStream          | streamtools.h:736   |     1        |                  |                  |                  |                  |
+|   + ConvLayer_Batch<3, 64, 30, 6...     | convlayer.h:103     | 1,595        |                  |                  |                  |                  |
+|    + WidthAdjustedInputStream           | streamtools.h:719   |   370        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   364        |                  |                  |                  |                  |
+|      WidthAdjustedOutputStream          | streamtools.h:752   |     8        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:725   |     2        |                  |                  |                  |                  |
+|      ConvolutionInputGenerator<3,...    | slidingwindow.h:80  |   227        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:758   |     2        |                  |                  |                  |                  |
+|    + Matrix_Vector_Activate_Batch...    | mvau.hpp:92         |   585        |                  |                  |                  |                  |
+|       init                              | activations.hpp:131 |    19        |                  |                  |                  |                  |
+|     + weights                           | weights.hpp:94      |     7        |                  |                  |                  |                  |
+|        TileIndex                        | weights.hpp:81      |     5        |                  |                  |                  |                  |
+|       operator[]                        | weights.hpp:87      |    12        |                  |                  |                  |                  |
+|       operator()<ap_uint<32> >          | interpret.hpp:114   |     1        |                  |                  |                  |                  |
+|     + operator()<ap_uint<32> >          | interpret.hpp:166   |     6        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:136   |     4        |                  |                  |                  |                  |
+|     + mac<32, ap_int<16>, ap_uint<...   | mac.hpp:164         |   176        |                  |                  |                  |                  |
+|      + operator()                       | interpret.hpp:149   |    50        |                  |                  |                  |                  |
+|         XnorMul                         | interpret.hpp:60    |     4        |                  |                  |                  |                  |
+|      + mul<bool, XnorMul>               | mac.hpp:113         |    45        |                  |                  |                  |                  |
+|       + operator*                       | interpret.hpp:70    |    19        |                  |                  |                  |                  |
+|          operator*                      | interpret.hpp:65    |    17        |                  |                  |                  |                  |
+|     + operator()<ap_uint<32> >          | interpret.hpp:235   |     4        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:202   |     2        |                  |                  |                  |                  |
+|     + activate                          | activations.hpp:137 |    82        |                  |                  |                  |                  |
+|        operator()                       | stl_function.h:385  |    14        |                  |                  |                  |                  |
+|       operator()                        | interpret.hpp:209   |    19        |                  |                  |                  |                  |
+|       operator const ap_uint<32> &...   | interpret.hpp:222   |     2        |                  |                  |                  |                  |
+|    + ~WidthAdjustedOutputStream         | streamtools.h:753   |   372        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   365        |                  |                  |                  |                  |
+|      ~WidthAdjustedInputStream          | streamtools.h:722   |     1        |                  |                  |                  |                  |
+|   + StreamingMaxPool_Batch<28, 2...     | maxpool.h:107       |   238        |    72            |    73            |    72            |    89            |
+|      StreamingMaxPool<28, 2, 64>        | maxpool.h:63        |   227        |                  |                  |                  |                  |
+|   + ConvLayer_Batch<3, 64, 14, 1...     | convlayer.h:103     | 1,599        |                  |                  |                  |                  |
+|    + WidthAdjustedInputStream           | streamtools.h:719   |   370        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   364        |                  |                  |                  |                  |
+|      WidthAdjustedOutputStream          | streamtools.h:752   |     8        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:725   |     2        |                  |                  |                  |                  |
+|      ConvolutionInputGenerator<3,...    | slidingwindow.h:80  |   227        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:758   |     2        |                  |                  |                  |                  |
+|    + Matrix_Vector_Activate_Batch...    | mvau.hpp:92         |   585        |                  |                  |                  |                  |
+|       init                              | activations.hpp:131 |    19        |                  |                  |                  |                  |
+|     + weights                           | weights.hpp:94      |     7        |                  |                  |                  |                  |
+|        TileIndex                        | weights.hpp:81      |     5        |                  |                  |                  |                  |
+|       operator[]                        | weights.hpp:87      |    12        |                  |                  |                  |                  |
+|       operator()<ap_uint<32> >          | interpret.hpp:114   |     1        |                  |                  |                  |                  |
+|     + operator()<ap_uint<32> >          | interpret.hpp:166   |     6        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:136   |     4        |                  |                  |                  |                  |
+|     + mac<32, ap_int<16>, ap_uint<...   | mac.hpp:164         |   176        |                  |                  |                  |                  |
+|      + operator()                       | interpret.hpp:149   |    50        |                  |                  |                  |                  |
+|         XnorMul                         | interpret.hpp:60    |     4        |                  |                  |                  |                  |
+|      + mul<bool, XnorMul>               | mac.hpp:113         |    45        |                  |                  |                  |                  |
+|       + operator*                       | interpret.hpp:70    |    19        |                  |                  |                  |                  |
+|          operator*                      | interpret.hpp:65    |    17        |                  |                  |                  |                  |
+|     + operator()<ap_uint<16> >          | interpret.hpp:235   |     4        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:202   |     2        |                  |                  |                  |                  |
+|     + activate                          | activations.hpp:137 |    82        |                  |                  |                  |                  |
+|        operator()                       | stl_function.h:385  |    14        |                  |                  |                  |                  |
+|       operator()                        | interpret.hpp:209   |    19        |                  |                  |                  |                  |
+|       operator const ap_uint<16> &...   | interpret.hpp:222   |     2        |                  |                  |                  |                  |
+|    + ~WidthAdjustedOutputStream         | streamtools.h:753   |   376        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   369        |                  |                  |                  |                  |
+|      ~WidthAdjustedInputStream          | streamtools.h:722   |     1        |                  |                  |                  |                  |
+|   + ConvLayer_Batch<3, 128, 12, ...     | convlayer.h:103     | 1,599        |                  |                  |                  |                  |
+|    + WidthAdjustedInputStream           | streamtools.h:719   |   370        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   364        |                  |                  |                  |                  |
+|      WidthAdjustedOutputStream          | streamtools.h:752   |     8        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:725   |     2        |                  |                  |                  |                  |
+|      ConvolutionInputGenerator<3,...    | slidingwindow.h:80  |   227        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:758   |     2        |                  |                  |                  |                  |
+|    + Matrix_Vector_Activate_Batch...    | mvau.hpp:92         |   585        |                  |                  |                  |                  |
+|       init                              | activations.hpp:131 |    19        |                  |                  |                  |                  |
+|     + weights                           | weights.hpp:94      |     7        |                  |                  |                  |                  |
+|        TileIndex                        | weights.hpp:81      |     5        |                  |                  |                  |                  |
+|       operator[]                        | weights.hpp:87      |    12        |                  |                  |                  |                  |
+|       operator()<ap_uint<32> >          | interpret.hpp:114   |     1        |                  |                  |                  |                  |
+|     + operator()<ap_uint<32> >          | interpret.hpp:166   |     6        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:136   |     4        |                  |                  |                  |                  |
+|     + mac<32, ap_int<16>, ap_uint<...   | mac.hpp:164         |   176        |                  |                  |                  |                  |
+|      + operator()                       | interpret.hpp:149   |    50        |                  |                  |                  |                  |
+|         XnorMul                         | interpret.hpp:60    |     4        |                  |                  |                  |                  |
+|      + mul<bool, XnorMul>               | mac.hpp:113         |    45        |                  |                  |                  |                  |
+|       + operator*                       | interpret.hpp:70    |    19        |                  |                  |                  |                  |
+|          operator*                      | interpret.hpp:65    |    17        |                  |                  |                  |                  |
+|     + operator()<ap_uint<16> >          | interpret.hpp:235   |     4        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:202   |     2        |                  |                  |                  |                  |
+|     + activate                          | activations.hpp:137 |    82        |                  |                  |                  |                  |
+|        operator()                       | stl_function.h:385  |    14        |                  |                  |                  |                  |
+|       operator()                        | interpret.hpp:209   |    19        |                  |                  |                  |                  |
+|       operator const ap_uint<16> &...   | interpret.hpp:222   |     2        |                  |                  |                  |                  |
+|    + ~WidthAdjustedOutputStream         | streamtools.h:753   |   376        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   369        |                  |                  |                  |                  |
+|      ~WidthAdjustedInputStream          | streamtools.h:722   |     1        |                  |                  |                  |                  |
+|   + StreamingMaxPool_Batch<10, 2...     | maxpool.h:107       |   238        |    54            |    55            |    54            |    71            |
+|      StreamingMaxPool<10, 2, 128>...    | maxpool.h:63        |   227        |                  |                  |                  |                  |
+|   + ConvLayer_Batch<3, 128, 5, 2...     | convlayer.h:103     | 1,599        |                  |                  |                  |                  |
+|    + WidthAdjustedInputStream           | streamtools.h:719   |   370        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   364        |                  |                  |                  |                  |
+|      WidthAdjustedOutputStream          | streamtools.h:752   |     8        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:725   |     2        |                  |                  |                  |                  |
+|      ConvolutionInputGenerator<3,...    | slidingwindow.h:80  |   227        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:758   |     2        |                  |                  |                  |                  |
+|    + Matrix_Vector_Activate_Batch...    | mvau.hpp:92         |   585        |                  |                  |                  |                  |
+|       init                              | activations.hpp:131 |    19        |                  |                  |                  |                  |
+|     + weights                           | weights.hpp:94      |     7        |                  |                  |                  |                  |
+|        TileIndex                        | weights.hpp:81      |     5        |                  |                  |                  |                  |
+|       operator[]                        | weights.hpp:87      |    12        |                  |                  |                  |                  |
+|       operator()<ap_uint<32> >          | interpret.hpp:114   |     1        |                  |                  |                  |                  |
+|     + operator()<ap_uint<32> >          | interpret.hpp:166   |     6        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:136   |     4        |                  |                  |                  |                  |
+|     + mac<32, ap_int<16>, ap_uint<...   | mac.hpp:164         |   176        |                  |                  |                  |                  |
+|      + operator()                       | interpret.hpp:149   |    50        |                  |                  |                  |                  |
+|         XnorMul                         | interpret.hpp:60    |     4        |                  |                  |                  |                  |
+|      + mul<bool, XnorMul>               | mac.hpp:113         |    45        |                  |                  |                  |                  |
+|       + operator*                       | interpret.hpp:70    |    19        |                  |                  |                  |                  |
+|          operator*                      | interpret.hpp:65    |    17        |                  |                  |                  |                  |
+|     + operator()<ap_uint<4> >           | interpret.hpp:235   |     4        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:202   |     2        |                  |                  |                  |                  |
+|     + activate                          | activations.hpp:137 |    82        |                  |                  |                  |                  |
+|        operator()                       | stl_function.h:385  |    14        |                  |                  |                  |                  |
+|       operator()                        | interpret.hpp:209   |    19        |                  |                  |                  |                  |
+|       operator const ap_uint<4> &       | interpret.hpp:222   |     2        |                  |                  |                  |                  |
+|    + ~WidthAdjustedOutputStream         | streamtools.h:753   |   376        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   369        |                  |                  |                  |                  |
+|      ~WidthAdjustedInputStream          | streamtools.h:722   |     1        |                  |                  |                  |                  |
+|   + ConvLayer_Batch<3, 256, 3, 2...     | convlayer.h:103     | 1,583        |                  |                  |                  |                  |
+|    + WidthAdjustedInputStream           | streamtools.h:719   |   370        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   364        |                  |                  |                  |                  |
+|      WidthAdjustedOutputStream          | streamtools.h:752   |     8        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:725   |     2        |                  |                  |                  |                  |
+|      ConvolutionInputGenerator<3,...    | slidingwindow.h:80  |   227        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:758   |     2        |                  |                  |                  |                  |
+|    + Matrix_Vector_Activate_Batch...    | mvau.hpp:92         |   569        |                  |                  |                  |                  |
+|       init                              | activations.hpp:131 |    19        |                  |                  |                  |                  |
+|     + weights                           | weights.hpp:94      |     7        |                  |                  |                  |                  |
+|        TileIndex                        | weights.hpp:81      |     5        |                  |                  |                  |                  |
+|       operator[]                        | weights.hpp:87      |    12        |                  |                  |                  |                  |
+|       operator()<ap_uint<32> >          | interpret.hpp:114   |     1        |                  |                  |                  |                  |
+|     + operator()<ap_uint<32> >          | interpret.hpp:166   |     6        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:136   |     4        |                  |                  |                  |                  |
+|     + mac<32, ap_int<16>, ap_uint<...   | mac.hpp:164         |   176        |                  |                  |                  |                  |
+|      + operator()                       | interpret.hpp:149   |    50        |                  |                  |                  |                  |
+|         XnorMul                         | interpret.hpp:60    |     4        |                  |                  |                  |                  |
+|      + mul<bool, XnorMul>               | mac.hpp:113         |    45        |                  |                  |                  |                  |
+|       + operator*                       | interpret.hpp:70    |    19        |                  |                  |                  |                  |
+|          operator*                      | interpret.hpp:65    |    17        |                  |                  |                  |                  |
+|     + operator()<ap_uint<1> >           | interpret.hpp:235   |     4        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:202   |     2        |                  |                  |                  |                  |
+|     + activate                          | activations.hpp:137 |    82        |                  |                  |                  |                  |
+|        operator()                       | stl_function.h:385  |    14        |                  |                  |                  |                  |
+|       operator()                        | interpret.hpp:209   |    19        |                  |                  |                  |                  |
+|       operator const ap_uint<1> &       | interpret.hpp:222   |     2        |                  |                  |                  |                  |
+|    + ~WidthAdjustedOutputStream         | streamtools.h:753   |   376        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   369        |                  |                  |                  |                  |
+|      ~WidthAdjustedInputStream          | streamtools.h:722   |     1        |                  |                  |                  |                  |
+|     WidthAdjustedOutputStream           | streamtools.h:767   |     3        |                  |                  |                  |                  |
+|   + StreamingFCLayer_Batch<256, ...     | fclayer.h:94        | 1,352        |                  |                  |                  |                  |
+|    + WidthAdjustedInputStream           | streamtools.h:719   |   374        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   368        |                  |                  |                  |                  |
+|      WidthAdjustedOutputStream          | streamtools.h:752   |     8        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:725   |     2        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:758   |     2        |                  |                  |                  |                  |
+|    + Matrix_Vector_Activate_Batch...    | mvau.hpp:92         |   571        |                  |                  |                  |                  |
+|       init                              | activations.hpp:131 |    19        |                  |                  |                  |                  |
+|     + weights                           | weights.hpp:94      |     7        |                  |                  |                  |                  |
+|        TileIndex                        | weights.hpp:81      |     5        |                  |                  |                  |                  |
+|       operator[]                        | weights.hpp:87      |    12        |                  |                  |                  |                  |
+|       operator()<ap_uint<4> >           | interpret.hpp:114   |     1        |                  |                  |                  |                  |
+|     + operator()<ap_uint<4> >           | interpret.hpp:166   |     6        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:136   |     4        |                  |                  |                  |                  |
+|     + mac<4, ap_int<16>, ap_uint<4...   | mac.hpp:164         |   178        |                  |                  |                  |                  |
+|      + operator()                       | interpret.hpp:149   |    51        |                  |                  |                  |                  |
+|         XnorMul                         | interpret.hpp:60    |     4        |                  |                  |                  |                  |
+|      + mul<bool, XnorMul>               | mac.hpp:113         |    45        |                  |                  |                  |                  |
+|       + operator*                       | interpret.hpp:70    |    19        |                  |                  |                  |                  |
+|          operator*                      | interpret.hpp:65    |    17        |                  |                  |                  |                  |
+|     + operator()<ap_uint<1> >           | interpret.hpp:235   |     4        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:202   |     2        |                  |                  |                  |                  |
+|     + activate                          | activations.hpp:137 |    82        |                  |                  |                  |                  |
+|        operator()                       | stl_function.h:385  |    14        |                  |                  |                  |                  |
+|       operator()                        | interpret.hpp:209   |    19        |                  |                  |                  |                  |
+|       operator const ap_uint<1> &       | interpret.hpp:222   |     2        |                  |                  |                  |                  |
+|    + ~WidthAdjustedOutputStream         | streamtools.h:753   |   376        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   369        |                  |                  |                  |                  |
+|      ~WidthAdjustedInputStream          | streamtools.h:722   |     1        |                  |                  |                  |                  |
+|   + StreamingFCLayer_Batch<512, ...     | fclayer.h:94        | 1,352        |                  |                  |                  |                  |
+|    + WidthAdjustedInputStream           | streamtools.h:719   |   374        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   368        |                  |                  |                  |                  |
+|      WidthAdjustedOutputStream          | streamtools.h:752   |     8        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:725   |     2        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:758   |     2        |                  |                  |                  |                  |
+|    + Matrix_Vector_Activate_Batch...    | mvau.hpp:92         |   571        |                  |                  |                  |                  |
+|       init                              | activations.hpp:131 |    19        |                  |                  |                  |                  |
+|     + weights                           | weights.hpp:94      |     7        |                  |                  |                  |                  |
+|        TileIndex                        | weights.hpp:81      |     5        |                  |                  |                  |                  |
+|       operator[]                        | weights.hpp:87      |    12        |                  |                  |                  |                  |
+|       operator()<ap_uint<8> >           | interpret.hpp:114   |     1        |                  |                  |                  |                  |
+|     + operator()<ap_uint<8> >           | interpret.hpp:166   |     6        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:136   |     4        |                  |                  |                  |                  |
+|     + mac<8, ap_int<16>, ap_uint<8...   | mac.hpp:164         |   178        |                  |                  |                  |                  |
+|      + operator()                       | interpret.hpp:149   |    51        |                  |                  |                  |                  |
+|         XnorMul                         | interpret.hpp:60    |     4        |                  |                  |                  |                  |
+|      + mul<bool, XnorMul>               | mac.hpp:113         |    45        |                  |                  |                  |                  |
+|       + operator*                       | interpret.hpp:70    |    19        |                  |                  |                  |                  |
+|          operator*                      | interpret.hpp:65    |    17        |                  |                  |                  |                  |
+|     + operator()<ap_uint<1> >           | interpret.hpp:235   |     4        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:202   |     2        |                  |                  |                  |                  |
+|     + activate                          | activations.hpp:137 |    82        |                  |                  |                  |                  |
+|        operator()                       | stl_function.h:385  |    14        |                  |                  |                  |                  |
+|       operator()                        | interpret.hpp:209   |    19        |                  |                  |                  |                  |
+|       operator const ap_uint<1> &       | interpret.hpp:222   |     2        |                  |                  |                  |                  |
+|    + ~WidthAdjustedOutputStream         | streamtools.h:753   |   376        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   369        |                  |                  |                  |                  |
+|      ~WidthAdjustedInputStream          | streamtools.h:722   |     1        |                  |                  |                  |                  |
+|     operator hls::stream<ap_uint...     | streamtools.h:772   |     3        |                  |                  |                  |                  |
+|   + StreamingFCLayer_Batch<512, ...     | fclayer.h:94        |   911        |                  |                  |                  |                  |
+|    + WidthAdjustedInputStream           | streamtools.h:719   |   374        |                  |                  |                  |                  |
+|       StreamingDataWidthConverter_...   | streamtools.h:259   |   368        |                  |                  |                  |                  |
+|      WidthAdjustedOutputStream          | streamtools.h:767   |     3        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:725   |     2        |                  |                  |                  |                  |
+|      operator hls::stream<ap_uint...    | streamtools.h:772   |     3        |                  |                  |                  |                  |
+|    + Matrix_Vector_Activate_Batch...    | mvau.hpp:92         |   509        |                  |                  |                  |                  |
+|       init                              | activations.hpp:68  |    19        |                  |                  |                  |                  |
+|     + weights                           | weights.hpp:94      |     7        |                  |                  |                  |                  |
+|        TileIndex                        | weights.hpp:81      |     5        |                  |                  |                  |                  |
+|       operator[]                        | weights.hpp:87      |    12        |                  |                  |                  |                  |
+|       operator()<ap_uint<1> >           | interpret.hpp:114   |     1        |                  |                  |                  |                  |
+|     + operator()<ap_uint<1> >           | interpret.hpp:166   |     6        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:136   |     4        |                  |                  |                  |                  |
+|     + mac<1, ap_uint<16>, ap_uint<...   | mac.hpp:164         |   178        |                  |                  |                  |                  |
+|      + operator()                       | interpret.hpp:149   |    51        |                  |                  |                  |                  |
+|         XnorMul                         | interpret.hpp:60    |     4        |                  |                  |                  |                  |
+|      + mul<bool, XnorMul>               | mac.hpp:113         |    45        |                  |                  |                  |                  |
+|       + operator*                       | interpret.hpp:70    |    19        |                  |                  |                  |                  |
+|          operator*                      | interpret.hpp:65    |    17        |                  |                  |                  |                  |
+|     + operator()<ap_uint<64> >          | interpret.hpp:235   |     4        |                  |                  |                  |                  |
+|        Container                        | interpret.hpp:202   |     2        |                  |                  |                  |                  |
+|       activate                          | activations.hpp:86  |     3        |                  |                  |                  |                  |
+|       operator()                        | interpret.hpp:209   |    19        |                  |                  |                  |                  |
+|       operator const ap_uint<64> &...   | interpret.hpp:222   |     2        |                  |                  |                  |                  |
+|      ~WidthAdjustedOutputStream         | streamtools.h:769   |     1        |                  |                  |                  |                  |
+|      ~WidthAdjustedInputStream          | streamtools.h:722   |     1        |                  |                  |                  |                  |
+|   + Stream2Mem_Batch<64, 128>           | dma.h:182           |    76        |    38            |    40            |    39            |    52            |
+|      Stream2Mem<64, 2048>               | dma.h:149           |    26        |                  |                  |                  |                  |
+|      Stream2Mem<64, 128>                | dma.h:149           |    26        |                  |                  |                  |                  |
+|     ~WidthAdjustedOutputStream          | streamtools.h:769   |     1        |                  |                  |                  |                  |
+|     ConvolutionInputGenerator<3,...     | slidingwindow.h:80  |              |   119            |   167            |   158            |   165            |
+|   + Matrix_Vector_Activate_Batch...     | mvau.hpp:92         |              | 1,642            | 1,628            |   965            |   965            |
+|      cast<8>                            | interpret.hpp:186   |              |   144 (48 calls) |   144 (48 calls) |                  |                  |
+|     ConvolutionInputGenerator<3,...     | slidingwindow.h:80  |              |   128            |   177            |   167            |   174            |
+|   + Matrix_Vector_Activate_Batch...     | mvau.hpp:92         |              | 8,693            | 8,740            | 8,641            | 8,641            |
+|      operator()                         | stl_function.h:385  |              |   128 (32 calls) |   128 (32 calls) |    64 (32 calls) |    64 (32 calls) |
+|     ConvolutionInputGenerator<3,...     | slidingwindow.h:80  |              |   128            |   177            |   167            |   174            |
+|     Matrix_Vector_Activate_Batch...     | mvau.hpp:92         |              | 4,357            | 4,370            | 4,369            | 4,369            |
+|     ConvolutionInputGenerator<3,...     | slidingwindow.h:80  |              |   128            |   177            |   167            |   174            |
+|     Matrix_Vector_Activate_Batch...     | mvau.hpp:92         |              | 4,357            | 4,424            | 4,423            | 4,423            |
+|     ConvolutionInputGenerator<3,...     | slidingwindow.h:80  |              |   128            |   177            |   167            |   174            |
+|     Matrix_Vector_Activate_Batch...     | mvau.hpp:92         |              | 1,177            | 1,268            | 1,267            | 1,267            |
+|     ConvolutionInputGenerator<3,...     | slidingwindow.h:80  |              |   113            |   160            |   152            |   159            |
+|     Matrix_Vector_Activate_Batch...     | mvau.hpp:92         |              |   381            |   586            |   585            |   585            |
+|     Matrix_Vector_Activate_Batch...     | mvau.hpp:92         |              |   102            |   281            |   280            |   279            |
+|     Matrix_Vector_Activate_Batch...     | mvau.hpp:92         |              |   142            |   321            |   320            |   319            |
+|     Matrix_Vector_Activate_Batch...     | mvau.hpp:92         |              |    99            | 2,131            | 2,130            | 2,129            |
++-----------------------------------------+---------------------+--------------+------------------+------------------+------------------+------------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

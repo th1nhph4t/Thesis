@@ -1,0 +1,30 @@
+In file included from ../top.cpp:3:
+In file included from ../bnn-library.h:60:
+../slidingwindow.h:91:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable inputBuf core=RAM_2P
+        ^
+../slidingwindow.h:91:31: warning: unexpected pragma argument 'inputBuf', expects '=' [-Winvalid-hls-pragmas]
+#pragma HLS RESOURCE variable inputBuf core=RAM_2P
+                              ^
+../slidingwindow.h:222:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable inputBuf core=RAM_2P
+        ^
+../slidingwindow.h:222:31: warning: unexpected pragma argument 'inputBuf', expects '=' [-Winvalid-hls-pragmas]
+#pragma HLS RESOURCE variable inputBuf core=RAM_2P
+                              ^
+In file included from ../top.cpp:3:
+In file included from ../bnn-library.h:61:
+../maxpool.h:287:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=accumulators core=RAM_2P_LUTRAM
+        ^
+In file included from ../top.cpp:3:
+In file included from ../bnn-library.h:62:
+In file included from ../fclayer.h:55:
+In file included from ../mvau.hpp:56:
+../mac.hpp:116:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=res core=Mul_LUT
+        ^
+../mac.hpp:142:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=res core=DSP48
+        ^
+7 warnings generated.

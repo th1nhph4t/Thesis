@@ -1,0 +1,102 @@
+<stg><name>DoCompute_Block__ZN24WidthAdjustedInputStreamILj64ELj32ELj900EEC2ERN3hls6streamI</name>
+
+
+<trans_list>
+
+<trans id="8" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="9" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>FIFO_SRL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="30" op_0_bw="30" op_1_bw="30">
+<![CDATA[
+entry:0 %p_read_13 = read i30 @_ssdm_op_Read.ap_auto.i30, i30 %p_read
+
+]]></Node>
+<StgValue><ssdm name="p_read_13"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="5" st_id="2" stage="2" lat="2">
+<core>Multiplier</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="30" op_0_bw="30" op_1_bw="30">
+<![CDATA[
+entry:1 %mul_ln118 = mul i30 %p_read_13, i30 784
+
+]]></Node>
+<StgValue><ssdm name="mul_ln118"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="6" st_id="3" stage="1" lat="2">
+<core>Multiplier</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="30" op_0_bw="30" op_1_bw="30">
+<![CDATA[
+entry:1 %mul_ln118 = mul i30 %p_read_13, i30 784
+
+]]></Node>
+<StgValue><ssdm name="mul_ln118"/></StgValue>
+</operation>
+
+<operation id="7" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="0" op_0_bw="30">
+<![CDATA[
+entry:2 %ret_ln118 = ret i30 %mul_ln118
+
+]]></Node>
+<StgValue><ssdm name="ret_ln118"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

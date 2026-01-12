@@ -1,0 +1,165 @@
+<stg><name>DoCompute_Block__ZN24WidthAdjustedInputStreamILj128ELj32ELj144EEC2ERN3hls6stream</name>
+
+
+<trans_list>
+
+<trans id="10" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+newFuncRoot:0 %numReps_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %numReps
+
+]]></Node>
+<StgValue><ssdm name="numReps_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="2" lat="2">
+<core>Multiplier</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+newFuncRoot:1 %mul_ln121 = mul i32 %numReps_read, i32 100
+
+]]></Node>
+<StgValue><ssdm name="mul_ln121"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="5" st_id="2" stage="1" lat="2">
+<core>Multiplier</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+newFuncRoot:1 %mul_ln121 = mul i32 %numReps_read, i32 100
+
+]]></Node>
+<StgValue><ssdm name="mul_ln121"/></StgValue>
+</operation>
+
+<operation id="6" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="27" op_0_bw="32">
+<![CDATA[
+newFuncRoot:2 %trunc_ln118 = trunc i32 %mul_ln121
+
+]]></Node>
+<StgValue><ssdm name="trunc_ln118"/></StgValue>
+</operation>
+
+<operation id="7" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="59" op_0_bw="59" op_1_bw="32">
+<![CDATA[
+newFuncRoot:3 %mrv = insertvalue i59 <undef>, i32 %mul_ln121
+
+]]></Node>
+<StgValue><ssdm name="mrv"/></StgValue>
+</operation>
+
+<operation id="8" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="59" op_0_bw="59" op_1_bw="27">
+<![CDATA[
+newFuncRoot:4 %mrv_1 = insertvalue i59 %mrv, i27 %trunc_ln118
+
+]]></Node>
+<StgValue><ssdm name="mrv_1"/></StgValue>
+</operation>
+
+<operation id="9" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="0" op_0_bw="59">
+<![CDATA[
+newFuncRoot:5 %ret_ln121 = ret i59 %mrv_1
+
+]]></Node>
+<StgValue><ssdm name="ret_ln121"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="11" name="numReps" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="numReps"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="13" from="_ssdm_op_Read.ap_auto.i32" to="numReps_read" fromId="12" toId="3">
+</dataflow>
+<dataflow id="14" from="numReps" to="numReps_read" fromId="11" toId="3">
+</dataflow>
+<dataflow id="15" from="numReps_read" to="mul_ln121" fromId="3" toId="4">
+</dataflow>
+<dataflow id="17" from="StgValue_16" to="mul_ln121" fromId="16" toId="4">
+</dataflow>
+<dataflow id="18" from="numReps_read" to="mul_ln121" fromId="3" toId="5">
+</dataflow>
+<dataflow id="19" from="StgValue_16" to="mul_ln121" fromId="16" toId="5">
+</dataflow>
+<dataflow id="20" from="mul_ln121" to="trunc_ln118" fromId="5" toId="6">
+</dataflow>
+<dataflow id="22" from="StgValue_21" to="mrv" fromId="21" toId="7">
+</dataflow>
+<dataflow id="23" from="mul_ln121" to="mrv" fromId="5" toId="7">
+</dataflow>
+<dataflow id="24" from="mrv" to="mrv_1" fromId="7" toId="8">
+</dataflow>
+<dataflow id="25" from="trunc_ln118" to="mrv_1" fromId="6" toId="8">
+</dataflow>
+<dataflow id="26" from="mrv_1" to="ret_ln121" fromId="8" toId="9">
+</dataflow>
+</dataflows>
+
+
+</stg>

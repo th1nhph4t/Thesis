@@ -1,0 +1,829 @@
+---
+MainSourceFile:  'E:/Tai_lieu/DATN/vitis/hw/hw/solution1/.autopilot/db/top.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1207_1:  '
+    FileOffset:      1207
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          59179
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1207_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          286503
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          286967
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          287432
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          570714
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_1:  '
+    FileOffset:      75
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1682698
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_107_1:  '
+    FileOffset:      107
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1683120
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_107_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_158_1:  '
+    FileOffset:      158
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1684140
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_158_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_159_2:  '
+    FileOffset:      159
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1684185
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_159_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_209_1:  '
+    FileOffset:      209
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1684856
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_209_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_232_1:  '
+    FileOffset:      232
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1685152
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_232_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_268_1:  '
+    FileOffset:      268
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1685837
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_268_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_288_2:  '
+    FileOffset:      288
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1686166
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_288_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_300_3:  '
+    FileOffset:      300
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1686605
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_300_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_354_1:  '
+    FileOffset:      354
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1687817
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_354_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_372_2:  '
+    FileOffset:      372
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1688352
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_372_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_409_1:  '
+    FileOffset:      409
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1688998
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_409_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_437_1:  '
+    FileOffset:      437
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1689396
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_437_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_467_1:  '
+    FileOffset:      467
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1689900
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_467_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_472_2:  '
+    FileOffset:      472
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1690132
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_472_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_510_1:  '
+    FileOffset:      510
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1690878
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_510_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_588_1:  '
+    FileOffset:      588
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1692953
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_588_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_595_2:  '
+    FileOffset:      595
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1693105
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_595_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_611_3:  '
+    FileOffset:      611
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1693370
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_611_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_617_4:  '
+    FileOffset:      617
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1693547
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_617_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_630_5:  '
+    FileOffset:      630
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1693956
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_630_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_634_6:  '
+    FileOffset:      634
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1694083
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_634_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_670_1:  '
+    FileOffset:      670
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1694578
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_670_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_674_2:  '
+    FileOffset:      674
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1694744
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_674_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_701_1:  '
+    FileOffset:      701
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1695128
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_701_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_705_2:  '
+    FileOffset:      705
+    FilePath:        'E:\Tai_lieu\DATN\vitis\streamtools.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1695290
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_705_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_113_1:  '
+    FileOffset:      113
+    FilePath:        'E:\Tai_lieu\DATN\vitis\dma.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1697913
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_113_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_140_1:  '
+    FileOffset:      140
+    FilePath:        'E:\Tai_lieu\DATN\vitis\dma.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1698618
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_140_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_153_1:  '
+    FileOffset:      153
+    FilePath:        'E:\Tai_lieu\DATN\vitis\dma.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1699157
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_153_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_166_1:  '
+    FileOffset:      166
+    FilePath:        'E:\Tai_lieu\DATN\vitis\dma.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1699547
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_166_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_187_1:  '
+    FileOffset:      187
+    FilePath:        'E:\Tai_lieu\DATN\vitis\dma.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1700112
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_187_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_104_1:  '
+    FileOffset:      104
+    FilePath:        'E:\Tai_lieu\DATN\vitis\slidingwindow.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1702217
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_104_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_105_2:  '
+    FileOffset:      105
+    FilePath:        'E:\Tai_lieu\DATN\vitis\slidingwindow.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1702296
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_105_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_235_1:  '
+    FileOffset:      235
+    FilePath:        'E:\Tai_lieu\DATN\vitis\slidingwindow.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1707038
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_235_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_236_2:  '
+    FileOffset:      236
+    FilePath:        'E:\Tai_lieu\DATN\vitis\slidingwindow.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1707115
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_236_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_242_3:  '
+    FileOffset:      242
+    FilePath:        'E:\Tai_lieu\DATN\vitis\slidingwindow.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1707317
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_242_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_269_4:  '
+    FileOffset:      269
+    FilePath:        'E:\Tai_lieu\DATN\vitis\slidingwindow.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1708164
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_269_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_302_5:  '
+    FileOffset:      302
+    FilePath:        'E:\Tai_lieu\DATN\vitis\slidingwindow.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1709016
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_302_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_68_1:  '
+    FileOffset:      68
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1756726
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_68_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_73_2:  '
+    FileOffset:      73
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1756818
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_73_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_74_3:  '
+    FileOffset:      74
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1756879
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_74_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_4:  '
+    FileOffset:      75
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1756933
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_78_5:  '
+    FileOffset:      78
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1757055
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_78_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_85_6:  '
+    FileOffset:      85
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1757186
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_85_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_109_1:  '
+    FileOffset:      109
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1757570
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_109_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_138_1:  '
+    FileOffset:      138
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1758153
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_138_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_139_2:  '
+    FileOffset:      139
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1758210
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_139_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_145_3:  '
+    FileOffset:      145
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1758355
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_145_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_146_4:  '
+    FileOffset:      146
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1758416
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_146_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_147_5:  '
+    FileOffset:      147
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1758470
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_147_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_149_6:  '
+    FileOffset:      149
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1758536
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_149_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_152_7:  '
+    FileOffset:      152
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1758644
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_152_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_165_8:  '
+    FileOffset:      165
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1759055
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_165_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_166_9:  '
+    FileOffset:      166
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1759130
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_166_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_203_1:  '
+    FileOffset:      203
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1760126
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_203_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_239_1:  '
+    FileOffset:      239
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1760803
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_239_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_240_2:  '
+    FileOffset:      240
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1760853
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_240_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_241_3:  '
+    FileOffset:      241
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1760916
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_241_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_244_4:  '
+    FileOffset:      244
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1761029
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_244_4: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: RAM_2P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      287
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_290_1:  '
+    FileOffset:      290
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1761953
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_290_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_291_2:  '
+    FileOffset:      291
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1762003
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_291_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_292_3:  '
+    FileOffset:      292
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1762066
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_292_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_296_4:  '
+    FileOffset:      296
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1762251
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_296_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_313_5:  '
+    FileOffset:      313
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1762855
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_313_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_350_1:  '
+    FileOffset:      350
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1763458
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_350_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_352_2:  '
+    FileOffset:      352
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1763532
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_352_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_356_3:  '
+    FileOffset:      356
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1763629
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_356_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_359_4:  '
+    FileOffset:      359
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1763743
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_359_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_363_5:  '
+    FileOffset:      363
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1763942
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_363_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_381_6:  '
+    FileOffset:      381
+    FilePath:        'E:\Tai_lieu\DATN\vitis\maxpool.h'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1764410
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_381_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_90_1:  '
+    FileOffset:      90
+    FilePath:        'E:\Tai_lieu\DATN\vitis\utils.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1826521
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_90_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_96_2:  '
+    FileOffset:      96
+    FilePath:        'E:\Tai_lieu\DATN\vitis\utils.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1826677
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_96_2: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: Mul_LUT pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      116
+    FilePath:        'E:\Tai_lieu\DATN\vitis\mac.hpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: DSP48 pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      142
+    FilePath:        'E:\Tai_lieu\DATN\vitis\mac.hpp'
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_167_1:  '
+    FileOffset:      167
+    FilePath:        'E:\Tai_lieu\DATN\vitis\mac.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1827697
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_167_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_194_1:  '
+    FileOffset:      194
+    FilePath:        'E:\Tai_lieu\DATN\vitis\mac.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1827983
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_194_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_122_1:  '
+    FileOffset:      122
+    FilePath:        'E:\Tai_lieu\DATN\vitis\mvau.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1834677
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_122_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_138_2:  '
+    FileOffset:      138
+    FilePath:        'E:\Tai_lieu\DATN\vitis\mvau.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1834919
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_138_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_139_3:  '
+    FileOffset:      139
+    FilePath:        'E:\Tai_lieu\DATN\vitis\mvau.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1834965
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_139_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_148_4:  '
+    FileOffset:      148
+    FilePath:        'E:\Tai_lieu\DATN\vitis\mvau.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1835141
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_148_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_151_5:  '
+    FileOffset:      151
+    FilePath:        'E:\Tai_lieu\DATN\vitis\mvau.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1835241
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_151_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_162_6:  '
+    FileOffset:      162
+    FilePath:        'E:\Tai_lieu\DATN\vitis\mvau.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1835510
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_162_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_164_7:  '
+    FileOffset:      164
+    FilePath:        'E:\Tai_lieu\DATN\vitis\mvau.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1835569
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_164_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_134_1:  '
+    FileOffset:      134
+    FilePath:        'E:\Tai_lieu\DATN\vitis\weights.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1859320
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_134_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_140_1:  '
+    FileOffset:      140
+    FilePath:        'E:\Tai_lieu\DATN\vitis\activations.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1861107
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_140_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_187_1:  '
+    FileOffset:      187
+    FilePath:        'E:\Tai_lieu\DATN\vitis\activations.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1861710
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_187_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_192_2:  '
+    FileOffset:      192
+    FilePath:        'E:\Tai_lieu\DATN\vitis\activations.hpp'
+    Replacements:    
+      - FilePath:        'E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp'
+        Offset:          1861870
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_192_2: '
+...

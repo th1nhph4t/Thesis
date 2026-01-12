@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vitis HLS Report for 'StreamingDataWidthConverter_Batch_192u_24u_128u_s'
+================================================================
+* Date:           Thu May 29 09:36:28 2025
+
+* Version:        2023.2.2 (Build 4101106 on Feb  9 2024)
+* Project:        hw
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.390 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                                                     |                                                                           |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                                       Instance                                      |                                   Module                                  |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_StreamingDataWidthConverter_Batch_192u_24u_128u_Pipeline_VITIS_LOOP_268_1_fu_52  |StreamingDataWidthConverter_Batch_192u_24u_128u_Pipeline_VITIS_LOOP_268_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|     818|    325|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     74|    -|
+|Register         |        -|    -|      60|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     878|    401|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+----+-----+-----+-----+
+    |                                       Instance                                      |                                   Module                                  | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+----+-----+-----+-----+
+    |grp_StreamingDataWidthConverter_Batch_192u_24u_128u_Pipeline_VITIS_LOOP_268_1_fu_52  |StreamingDataWidthConverter_Batch_192u_24u_128u_Pipeline_VITIS_LOOP_268_1  |        0|   0|  818|  325|    0|
+    +-------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                                                |                                                                           |        0|   0|  818|  325|    0|
+    +-------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm           |  20|          4|    1|          4|
+    |ap_done             |   9|          2|    1|          2|
+    |inter0_1_read       |   9|          2|    1|          2|
+    |inter0_2_write      |   9|          2|    1|          2|
+    |numReps_blk_n       |   9|          2|    1|          2|
+    |numReps_c158_blk_n  |   9|          2|    1|          2|
+    |real_start          |   9|          2|    1|          2|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               |  74|         16|    7|         16|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                               Name                                               | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                                         |   3|   0|    3|          0|
+    |ap_done_reg                                                                                       |   1|   0|    1|          0|
+    |grp_StreamingDataWidthConverter_Batch_192u_24u_128u_Pipeline_VITIS_LOOP_268_1_fu_52_ap_start_reg  |   1|   0|    1|          0|
+    |numReps_read_reg_67                                                                               |  32|   0|   32|          0|
+    |start_once_reg                                                                                    |   1|   0|    1|          0|
+    |totalIters_reg_72                                                                                 |  22|   0|   32|         10|
+    +--------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                             |  60|   0|   70|         10|
+    +--------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+------------+----------------------------------------------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  |                    Source Object                   |    C Type    |
++-----------------------------+-----+-----+------------+----------------------------------------------------+--------------+
+|ap_clk                       |   in|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<192u, 24u, 128u>|  return value|
+|ap_rst                       |   in|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<192u, 24u, 128u>|  return value|
+|ap_start                     |   in|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<192u, 24u, 128u>|  return value|
+|start_full_n                 |   in|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<192u, 24u, 128u>|  return value|
+|ap_done                      |  out|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<192u, 24u, 128u>|  return value|
+|ap_continue                  |   in|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<192u, 24u, 128u>|  return value|
+|ap_idle                      |  out|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<192u, 24u, 128u>|  return value|
+|ap_ready                     |  out|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<192u, 24u, 128u>|  return value|
+|start_out                    |  out|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<192u, 24u, 128u>|  return value|
+|start_write                  |  out|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<192u, 24u, 128u>|  return value|
+|inter0_1_dout                |   in|  192|     ap_fifo|                                            inter0_1|       pointer|
+|inter0_1_num_data_valid      |   in|    3|     ap_fifo|                                            inter0_1|       pointer|
+|inter0_1_fifo_cap            |   in|    3|     ap_fifo|                                            inter0_1|       pointer|
+|inter0_1_empty_n             |   in|    1|     ap_fifo|                                            inter0_1|       pointer|
+|inter0_1_read                |  out|    1|     ap_fifo|                                            inter0_1|       pointer|
+|inter0_2_din                 |  out|   24|     ap_fifo|                                            inter0_2|       pointer|
+|inter0_2_num_data_valid      |   in|    8|     ap_fifo|                                            inter0_2|       pointer|
+|inter0_2_fifo_cap            |   in|    8|     ap_fifo|                                            inter0_2|       pointer|
+|inter0_2_full_n              |   in|    1|     ap_fifo|                                            inter0_2|       pointer|
+|inter0_2_write               |  out|    1|     ap_fifo|                                            inter0_2|       pointer|
+|numReps_dout                 |   in|   32|     ap_fifo|                                             numReps|       pointer|
+|numReps_num_data_valid       |   in|    3|     ap_fifo|                                             numReps|       pointer|
+|numReps_fifo_cap             |   in|    3|     ap_fifo|                                             numReps|       pointer|
+|numReps_empty_n              |   in|    1|     ap_fifo|                                             numReps|       pointer|
+|numReps_read                 |  out|    1|     ap_fifo|                                             numReps|       pointer|
+|numReps_c158_din             |  out|   32|     ap_fifo|                                        numReps_c158|       pointer|
+|numReps_c158_num_data_valid  |   in|    3|     ap_fifo|                                        numReps_c158|       pointer|
+|numReps_c158_fifo_cap        |   in|    3|     ap_fifo|                                        numReps_c158|       pointer|
+|numReps_c158_full_n          |   in|    1|     ap_fifo|                                        numReps_c158|       pointer|
+|numReps_c158_write           |  out|    1|     ap_fifo|                                        numReps_c158|       pointer|
++-----------------------------+-----+-----+------------+----------------------------------------------------+--------------+
+

@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "BlackBoxJam",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "BlackBoxJam"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "E:/Tai_lieu/DATN/vitis/hw/hw/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "BlackBoxJam",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "BlackBoxJam"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "E:/Tai_lieu/DATN/vitis/hw/hw/solution1/csynth.tcl",
+    "sourceLine": 14,
+    "success": true
+  }
+]

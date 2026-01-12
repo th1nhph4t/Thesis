@@ -1,0 +1,356 @@
+{
+  "0": {
+    "basicblocks": 205,
+    "calls": "1",
+    "file": "top.cpp",
+    "fileloc": 152,
+    "instructions": 847,
+    "name": "BlackBoxJam",
+    "stores": {
+      "G": 178
+    },
+    "total_instructions": 30231
+  },
+  "1": {
+    "basicblocks": 81,
+    "calls": "21 19 6 22 9 2 3 16 7 10 15 4 5 18 23 24 13 8 12 20 11",
+    "file": "top.cpp",
+    "fileloc": 95,
+    "instructions": 548,
+    "name": "DoCompute",
+    "total_instructions": 29384
+  },
+  "10": {
+    "basicblocks": 28,
+    "calls": "",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 4872,
+    "loads": {
+      "G": 32,
+      "L": 18
+    },
+    "name": "Matrix_Vector_Activate_Batch<576, 128, 32, 16, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<32>, ap_uint<16>, BinaryWeights<32, 16, 144>, ThresholdsActivation<8, 16, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 18
+    },
+    "total_instructions": 4872
+  },
+  "11": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "dma.h",
+    "fileloc": 182,
+    "instructions": 38,
+    "name": "Stream2Mem_Batch<64, 128>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 38
+  },
+  "12": {
+    "basicblocks": 74,
+    "calls": "",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 391,
+    "loads": {
+      "G": 2,
+      "L": 64
+    },
+    "name": "Matrix_Vector_Activate_Batch<512, 512, 8, 1, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<8>, ap_uint<1>, BinaryWeights<8, 1, 32768>, ThresholdsActivation<512, 1, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 64
+    },
+    "total_instructions": 391
+  },
+  "13": {
+    "basicblocks": 82,
+    "calls": "",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 662,
+    "loads": {
+      "G": 2,
+      "L": 72
+    },
+    "name": "Matrix_Vector_Activate_Batch<2304, 256, 32, 1, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<32>, ap_uint<1>, BinaryWeights<32, 1, 18432>, ThresholdsActivation<256, 1, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 72
+    },
+    "total_instructions": 662
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 186,
+    "instructions": 3,
+    "loads": {
+      "L": 1
+    },
+    "name": "cast<8>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 3
+  },
+  "15": {
+    "basicblocks": 29,
+    "calls": "",
+    "file": "slidingwindow.h",
+    "fileloc": 80,
+    "instructions": 175,
+    "loads": {
+      "L": 4
+    },
+    "name": "ConvolutionInputGenerator<3, 128, 1, 12, 10, 32, 1>",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 175
+  },
+  "16": {
+    "basicblocks": 12,
+    "calls": "",
+    "file": "maxpool.h",
+    "fileloc": 107,
+    "instructions": 72,
+    "loads": {
+      "L": 2
+    },
+    "name": "StreamingMaxPool_Batch<28, 2, 64>",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 72
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "stl_function.h",
+    "fileloc": 385,
+    "instructions": 4,
+    "loads": {
+      "L": 2
+    },
+    "name": "operator()",
+    "total_instructions": 4
+  },
+  "18": {
+    "basicblocks": 29,
+    "calls": "",
+    "file": "slidingwindow.h",
+    "fileloc": 80,
+    "instructions": 175,
+    "loads": {
+      "L": 4
+    },
+    "name": "ConvolutionInputGenerator<3, 128, 1, 5, 3, 32, 1>",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 175
+  },
+  "19": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 20,
+    "name": "StreamingDataWidthConverter_Batch<64, 192, 384>",
+    "total_instructions": 20
+  },
+  "2": {
+    "basicblocks": 29,
+    "calls": "",
+    "file": "slidingwindow.h",
+    "fileloc": 80,
+    "instructions": 175,
+    "loads": {
+      "L": 4
+    },
+    "name": "ConvolutionInputGenerator<3, 64, 1, 30, 28, 32, 1>",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 175
+  },
+  "20": {
+    "basicblocks": 522,
+    "calls": "",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 2148,
+    "loads": {
+      "G": 4,
+      "L": 512
+    },
+    "name": "Matrix_Vector_Activate_Batch<512, 64, 1, 4, 1, Recast<XnorMul>, Slice<ap_uint<16>, 16>, Identity, ap_uint<1>, ap_uint<64>, BinaryWeights<1, 4, 8192>, PassThroughActivation<ap_uint<16> >, ap_resource_lut>",
+    "stores": {
+      "L": 512
+    },
+    "total_instructions": 2148
+  },
+  "21": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "dma.h",
+    "fileloc": 161,
+    "instructions": 35,
+    "loads": {
+      "L": 2
+    },
+    "name": "Mem2Stream_Batch<64, 3072>",
+    "total_instructions": 35
+  },
+  "22": {
+    "basicblocks": 28,
+    "calls": "",
+    "file": "slidingwindow.h",
+    "fileloc": 80,
+    "instructions": 166,
+    "loads": {
+      "L": 4
+    },
+    "name": "ConvolutionInputGenerator<3, 3, 8, 32, 30, 3, 1>",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 166
+  },
+  "23": {
+    "basicblocks": 46,
+    "calls": "",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 1332,
+    "loads": {
+      "G": 8,
+      "L": 36
+    },
+    "name": "Matrix_Vector_Activate_Batch<1152, 256, 32, 4, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<32>, ap_uint<4>, BinaryWeights<32, 4, 2304>, ThresholdsActivation<64, 4, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 36
+    },
+    "total_instructions": 1332
+  },
+  "24": {
+    "basicblocks": 27,
+    "calls": "",
+    "file": "slidingwindow.h",
+    "fileloc": 80,
+    "instructions": 160,
+    "loads": {
+      "L": 4
+    },
+    "name": "ConvolutionInputGenerator<3, 256, 1, 3, 1, 32, 1>",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 160
+  },
+  "3": {
+    "basicblocks": 30,
+    "calls": "17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 10618,
+    "loads": {
+      "G": 32,
+      "L": 50
+    },
+    "name": "Matrix_Vector_Activate_Batch<576, 64, 32, 32, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<32>, ap_uint<32>, BinaryWeights<32, 32, 36>, ThresholdsActivation<2, 32, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 82
+    },
+    "total_instructions": 10746
+  },
+  "4": {
+    "basicblocks": 46,
+    "calls": "",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 4944,
+    "loads": {
+      "G": 32,
+      "L": 36
+    },
+    "name": "Matrix_Vector_Activate_Batch<1152, 128, 32, 16, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<32>, ap_uint<16>, BinaryWeights<32, 16, 288>, ThresholdsActivation<8, 16, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 36
+    },
+    "total_instructions": 4944
+  },
+  "5": {
+    "basicblocks": 12,
+    "calls": "",
+    "file": "maxpool.h",
+    "fileloc": 107,
+    "instructions": 54,
+    "loads": {
+      "L": 2
+    },
+    "name": "StreamingMaxPool_Batch<10, 2, 128>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 54
+  },
+  "6": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 259,
+    "instructions": 24,
+    "name": "StreamingDataWidthConverter_Batch<192, 24, 128>",
+    "total_instructions": 24
+  },
+  "7": {
+    "basicblocks": 29,
+    "calls": "",
+    "file": "slidingwindow.h",
+    "fileloc": 80,
+    "instructions": 175,
+    "loads": {
+      "L": 4
+    },
+    "name": "ConvolutionInputGenerator<3, 64, 1, 14, 12, 32, 1>",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 175
+  },
+  "8": {
+    "basicblocks": 74,
+    "calls": "",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 351,
+    "loads": {
+      "G": 2,
+      "L": 64
+    },
+    "name": "Matrix_Vector_Activate_Batch<256, 512, 4, 1, 1, Recast<XnorMul>, Slice<ap_uint<1>, 1>, Identity, ap_uint<4>, ap_uint<1>, BinaryWeights<4, 1, 32768>, ThresholdsActivation<512, 1, 1, ap_int<16>, ap_uint<1>, 0, std::less<ap_int<16> > >, ap_resource_lut>",
+    "stores": {
+      "L": 64
+    },
+    "total_instructions": 351
+  },
+  "9": {
+    "basicblocks": 19,
+    "calls": "14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14",
+    "file": "mvau.hpp",
+    "fileloc": 92,
+    "instructions": 1977,
+    "loads": {
+      "G": 32,
+      "L": 57
+    },
+    "name": "Matrix_Vector_Activate_Batch<27, 64, 3, 16, 1, Slice<ap_fixed<8, 1, AP_TRN, AP_SAT, 0>, 8>, Slice<ap_uint<1>, 1>, Recast<Binary>, ap_uint<24>, ap_uint<16>, BinaryWeights<3, 16, 36>, ThresholdsActivation<4, 16, 1, ap_fixed<24, 16, AP_TRN, AP_WRAP, 0>, ap_uint<1>, 0, std::less<ap_fixed<24, 16, AP_TRN, AP_WRAP, 0> > >, ap_resource_lut>",
+    "stores": {
+      "L": 57
+    },
+    "total_instructions": 2121
+  }
+}

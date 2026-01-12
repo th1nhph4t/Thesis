@@ -1,0 +1,1195 @@
+{
+    "1": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc329",
+        "file": "..\/top.cpp",
+        "fileloc": "133",
+        "instructions": "10",
+        "total_instructions": "45",
+        "calls": "29",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "ConvolutionInputGenerator<3u, 128u, 1u, 5u, 3u, 32u, 1u>",
+        "file": "..\/slidingwindow.h",
+        "fileloc": "81",
+        "instructions": "13",
+        "total_instructions": "207",
+        "calls": "26",
+        "basicblocks": "1"
+    },
+    "3": {
+        "name": "Matrix_Vector_Activate_Batch",
+        "file": "..\/top.cpp",
+        "fileloc": "130",
+        "instructions": "10",
+        "total_instructions": "6406",
+        "calls": "80",
+        "basicblocks": "1"
+    },
+    "4": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc26_Pipeline_VITIS_LOOP_300_3",
+        "file": "..\/top.cpp",
+        "fileloc": "129",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc6_Pipeline_VITIS_LOOP_268_1",
+        "file": "..\/top.cpp",
+        "fileloc": "134",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "DoCompute_Block__ZN24WidthAdjustedInputStreamILj64ELj32ELj900EEC2ERN3hls6streamI",
+        "file": "..\/top.cpp",
+        "fileloc": "130",
+        "instructions": "3",
+        "total_instructions": "3",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "7": {
+        "name": "ConvolutionInputGenerator_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2.3",
+        "file": "..\/slidingwindow.h",
+        "fileloc": "88",
+        "instructions": "168",
+        "total_instructions": "168",
+        "calls": "",
+        "basicblocks": "30",
+        "loads": {
+            "L": "18"
+        },
+        "stores": {
+            "L": "40"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "StreamingDataWidthConverter_Batch<64u, 192u, 384u>_Pipeline_VITIS_LOOP_300_3",
+        "file": "..\/top.cpp",
+        "fileloc": "126",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc228",
+        "file": "..\/top.cpp",
+        "fileloc": "130",
+        "instructions": "10",
+        "total_instructions": "42",
+        "calls": "54",
+        "basicblocks": "1"
+    },
+    "10": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc18",
+        "file": "..\/top.cpp",
+        "fileloc": "142",
+        "instructions": "8",
+        "total_instructions": "43",
+        "calls": "34",
+        "basicblocks": "1"
+    },
+    "11": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc24_Pipeline_VITIS_LOOP_268_1",
+        "file": "..\/top.cpp",
+        "fileloc": "146",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "12": {
+        "name": "DoCompute_Block__ZN24WidthAdjustedInputStreamILj64ELj32ELj196EEC2ERN3hls6streamI",
+        "file": "..\/top.cpp",
+        "fileloc": "133",
+        "instructions": "10",
+        "total_instructions": "10",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "13": {
+        "name": "ConvolutionInputGenerator<3u, 64u, 1u, 14u, 12u, 32u, 1u>",
+        "file": "..\/slidingwindow.h",
+        "fileloc": "81",
+        "instructions": "11",
+        "total_instructions": "205",
+        "calls": "71",
+        "basicblocks": "1"
+    },
+    "14": {
+        "name": "Stream2Mem_Batch<64u, 128u>_Pipeline_VITIS_LOOP_153_1",
+        "file": "..\/dma.h",
+        "fileloc": "191",
+        "instructions": "20",
+        "total_instructions": "20",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "15": {
+        "name": "StreamingMaxPool_Batch<10u, 2u, 128u>",
+        "file": "..\/maxpool.h",
+        "fileloc": "107",
+        "instructions": "41",
+        "total_instructions": "89",
+        "calls": "75 57",
+        "basicblocks": "7",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "16": {
+        "name": "DoCompute",
+        "file": "top.cpp",
+        "fileloc": "95",
+        "instructions": "257",
+        "total_instructions": "20671",
+        "calls": "61 45 73 31 36 35 60 69 77 33 6 3 9 85 1 13 12 22 55 58 56 67 25 46 42 15 65 2 30 19 20 53 72 27 23 24 48 10 84 50 66 81 74 52",
+        "basicblocks": "1"
+    },
+    "17": {
+        "name": "Matrix_Vector_Activate_Batch.3_Pipeline_VITIS_LOOP_122_1",
+        "file": "..\/top.cpp",
+        "fileloc": "144",
+        "instructions": "368",
+        "total_instructions": "368",
+        "calls": "",
+        "basicblocks": "74",
+        "loads": {
+            "G": "2",
+            "L": "69"
+        },
+        "stores": {
+            "L": "75"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "18": {
+        "name": "Matrix_Vector_Activate_Batch.5_Pipeline_VITIS_LOOP_122_1",
+        "file": "..\/top.cpp",
+        "fileloc": "142",
+        "instructions": "341",
+        "total_instructions": "341",
+        "calls": "",
+        "basicblocks": "74",
+        "loads": {
+            "G": "2",
+            "L": "69"
+        },
+        "stores": {
+            "L": "75"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "19": {
+        "name": "Matrix_Vector_Activate_Batch.7",
+        "file": "..\/top.cpp",
+        "fileloc": "138",
+        "instructions": "10",
+        "total_instructions": "1018",
+        "calls": "38",
+        "basicblocks": "1"
+    },
+    "20": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc11",
+        "file": "..\/top.cpp",
+        "fileloc": "138",
+        "instructions": "7",
+        "total_instructions": "42",
+        "calls": "21",
+        "basicblocks": "1"
+    },
+    "21": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc11_Pipeline_VITIS_LOOP_300_3",
+        "file": "..\/top.cpp",
+        "fileloc": "138",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "22": {
+        "name": "Matrix_Vector_Activate_Batch.1",
+        "file": "..\/top.cpp",
+        "fileloc": "133",
+        "instructions": "10",
+        "total_instructions": "3286",
+        "calls": "51",
+        "basicblocks": "1"
+    },
+    "23": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc1531",
+        "file": "..\/top.cpp",
+        "fileloc": "139",
+        "instructions": "10",
+        "total_instructions": "45",
+        "calls": "40",
+        "basicblocks": "1"
+    },
+    "24": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc16",
+        "file": "top.cpp",
+        "fileloc": "0",
+        "instructions": "9",
+        "total_instructions": "44",
+        "calls": "70",
+        "basicblocks": "1"
+    },
+    "25": {
+        "name": "DoCompute_Block__ZN24WidthAdjustedInputStreamILj128ELj32ELj144EEC2ERN3hls6stream",
+        "file": "..\/top.cpp",
+        "fileloc": "134",
+        "instructions": "6",
+        "total_instructions": "6",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "26": {
+        "name": "ConvolutionInputGenerator_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2.4",
+        "file": "..\/slidingwindow.h",
+        "fileloc": "88",
+        "instructions": "194",
+        "total_instructions": "194",
+        "calls": "",
+        "basicblocks": "34",
+        "loads": {
+            "L": "21"
+        },
+        "stores": {
+            "L": "51"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "27": {
+        "name": "Matrix_Vector_Activate_Batch.6",
+        "file": "..\/top.cpp",
+        "fileloc": "139",
+        "instructions": "12",
+        "total_instructions": "578",
+        "calls": "44",
+        "basicblocks": "1"
+    },
+    "28": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc27_Pipeline_VITIS_LOOP_268_1",
+        "file": "..\/top.cpp",
+        "fileloc": "130",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "29": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc329_Pipeline_VITIS_LOOP_268_1",
+        "file": "..\/top.cpp",
+        "fileloc": "133",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "30": {
+        "name": "DoCompute_Block__ZN24WidthAdjustedInputStreamILj128ELj32ELj25EEC2ERN3hls6streamI",
+        "file": "..\/top.cpp",
+        "fileloc": "138",
+        "instructions": "9",
+        "total_instructions": "9",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "31": {
+        "name": "StreamingDataWidthConverter_Batch<192u, 24u, 128u>",
+        "file": "..\/top.cpp",
+        "fileloc": "127",
+        "instructions": "10",
+        "total_instructions": "45",
+        "calls": "76",
+        "basicblocks": "1"
+    },
+    "32": {
+        "name": "Matrix_Vector_Activate_Batch.4_Pipeline_VITIS_LOOP_122_1",
+        "file": "..\/top.cpp",
+        "fileloc": "129",
+        "instructions": "496",
+        "total_instructions": "496",
+        "calls": "",
+        "basicblocks": "19",
+        "loads": {
+            "G": "32",
+            "L": "29"
+        },
+        "stores": {
+            "L": "35"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "33": {
+        "name": "ConvolutionInputGenerator<3u, 64u, 1u, 30u, 28u, 32u, 1u>",
+        "file": "..\/slidingwindow.h",
+        "fileloc": "81",
+        "instructions": "11",
+        "total_instructions": "205",
+        "calls": "78",
+        "basicblocks": "1"
+    },
+    "0": {
+        "name": "BlackBoxJam",
+        "file": "top.cpp",
+        "fileloc": "152",
+        "instructions": "636",
+        "total_instructions": "21307",
+        "calls": "16",
+        "basicblocks": "205",
+        "stores": {
+            "G": "178"
+        }
+    },
+    "34": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc18_Pipeline_VITIS_LOOP_300_3",
+        "file": "..\/top.cpp",
+        "fileloc": "142",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "35": {
+        "name": "DoCompute_Block_entry5993_proc",
+        "file": "..\/top.cpp",
+        "fileloc": "129",
+        "instructions": "5",
+        "total_instructions": "5",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "36": {
+        "name": "ConvolutionInputGenerator<3u, 3u, 8u, 32u, 30u, 3u, 1u>",
+        "file": "..\/slidingwindow.h",
+        "fileloc": "81",
+        "instructions": "14",
+        "total_instructions": "194",
+        "calls": "49",
+        "basicblocks": "1"
+    },
+    "37": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc4_Pipeline_VITIS_LOOP_300_3",
+        "file": "..\/top.cpp",
+        "fileloc": "133",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "38": {
+        "name": "Matrix_Vector_Activate_Batch.7_Pipeline_VITIS_LOOP_122_1",
+        "file": "..\/top.cpp",
+        "fileloc": "138",
+        "instructions": "1008",
+        "total_instructions": "1008",
+        "calls": "",
+        "basicblocks": "46",
+        "loads": {
+            "G": "8",
+            "L": "44"
+        },
+        "stores": {
+            "L": "50"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "39": {
+        "name": "StreamingMaxPool_Batch<28u, 2u, 64u>_Pipeline_VITIS_LOOP_74_3_VITIS_LOOP_75_4",
+        "file": "..\/maxpool.h",
+        "fileloc": "110",
+        "instructions": "29",
+        "total_instructions": "29",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "40": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc1531_Pipeline_VITIS_LOOP_300_3",
+        "file": "..\/top.cpp",
+        "fileloc": "139",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "41": {
+        "name": "Mem2Stream_Batch<64u, 3072u>_Pipeline_VITIS_LOOP_140_1",
+        "file": "..\/dma.h",
+        "fileloc": "170",
+        "instructions": "20",
+        "total_instructions": "20",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "42": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc830",
+        "file": "..\/top.cpp",
+        "fileloc": "134",
+        "instructions": "10",
+        "total_instructions": "45",
+        "calls": "63",
+        "basicblocks": "1"
+    },
+    "43": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc13_Pipeline_VITIS_LOOP_268_1",
+        "file": "..\/top.cpp",
+        "fileloc": "139",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "44": {
+        "name": "Matrix_Vector_Activate_Batch.6_Pipeline_VITIS_LOOP_122_1",
+        "file": "..\/top.cpp",
+        "fileloc": "139",
+        "instructions": "566",
+        "total_instructions": "566",
+        "calls": "",
+        "basicblocks": "82",
+        "loads": {
+            "G": "2",
+            "L": "77"
+        },
+        "stores": {
+            "L": "83"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "45": {
+        "name": "Mem2Stream_Batch<64u, 3072u>",
+        "file": "..\/dma.h",
+        "fileloc": "161",
+        "instructions": "40",
+        "total_instructions": "80",
+        "calls": "41 79",
+        "basicblocks": "7",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "46": {
+        "name": "Matrix_Vector_Activate_Batch.8",
+        "file": "..\/top.cpp",
+        "fileloc": "134",
+        "instructions": "10",
+        "total_instructions": "3358",
+        "calls": "47",
+        "basicblocks": "1"
+    },
+    "47": {
+        "name": "Matrix_Vector_Activate_Batch.8_Pipeline_VITIS_LOOP_122_1",
+        "file": "..\/top.cpp",
+        "fileloc": "134",
+        "instructions": "3348",
+        "total_instructions": "3348",
+        "calls": "",
+        "basicblocks": "46",
+        "loads": {
+            "G": "32",
+            "L": "56"
+        },
+        "stores": {
+            "L": "62"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "48": {
+        "name": "Matrix_Vector_Activate_Batch.5",
+        "file": "..\/top.cpp",
+        "fileloc": "142",
+        "instructions": "10",
+        "total_instructions": "351",
+        "calls": "18",
+        "basicblocks": "1"
+    },
+    "49": {
+        "name": "ConvolutionInputGenerator_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2.2",
+        "file": "..\/slidingwindow.h",
+        "fileloc": "88",
+        "instructions": "180",
+        "total_instructions": "180",
+        "calls": "",
+        "basicblocks": "32",
+        "loads": {
+            "L": "20"
+        },
+        "stores": {
+            "L": "45"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "50": {
+        "name": "Matrix_Vector_Activate_Batch.3",
+        "file": "..\/top.cpp",
+        "fileloc": "144",
+        "instructions": "10",
+        "total_instructions": "378",
+        "calls": "17",
+        "basicblocks": "1"
+    },
+    "51": {
+        "name": "Matrix_Vector_Activate_Batch.1_Pipeline_VITIS_LOOP_122_1",
+        "file": "..\/top.cpp",
+        "fileloc": "133",
+        "instructions": "3276",
+        "total_instructions": "3276",
+        "calls": "",
+        "basicblocks": "28",
+        "loads": {
+            "G": "32",
+            "L": "38"
+        },
+        "stores": {
+            "L": "44"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "52": {
+        "name": "Stream2Mem_Batch<64u, 128u>",
+        "file": "..\/dma.h",
+        "fileloc": "182",
+        "instructions": "40",
+        "total_instructions": "80",
+        "calls": "14 59",
+        "basicblocks": "7",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "53": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc13",
+        "file": "..\/top.cpp",
+        "fileloc": "139",
+        "instructions": "10",
+        "total_instructions": "45",
+        "calls": "43",
+        "basicblocks": "1"
+    },
+    "54": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc228_Pipeline_VITIS_LOOP_300_3",
+        "file": "..\/top.cpp",
+        "fileloc": "130",
+        "instructions": "32",
+        "total_instructions": "32",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "55": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc4",
+        "file": "..\/top.cpp",
+        "fileloc": "133",
+        "instructions": "12",
+        "total_instructions": "47",
+        "calls": "37",
+        "basicblocks": "1"
+    },
+    "56": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc6",
+        "file": "top.cpp",
+        "fileloc": "0",
+        "instructions": "8",
+        "total_instructions": "43",
+        "calls": "5",
+        "basicblocks": "1"
+    },
+    "57": {
+        "name": "StreamingMaxPool_Batch<10u, 2u, 128u>_Pipeline_VITIS_LOOP_85_6",
+        "file": "..\/maxpool.h",
+        "fileloc": "110",
+        "instructions": "19",
+        "total_instructions": "19",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "58": {
+        "name": "DoCompute_Block__ZN25WidthAdjustedOutputStreamILj16ELj128ELj1152EED2Ev.exit.loop",
+        "file": "..\/top.cpp",
+        "fileloc": "134",
+        "instructions": "9",
+        "total_instructions": "9",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "59": {
+        "name": "Stream2Mem_Batch<64u, 128u>_Pipeline_VITIS_LOOP_153_15",
+        "file": "..\/dma.h",
+        "fileloc": "195",
+        "instructions": "20",
+        "total_instructions": "20",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "60": {
+        "name": "Matrix_Vector_Activate_Batch.4",
+        "file": "..\/top.cpp",
+        "fileloc": "129",
+        "instructions": "10",
+        "total_instructions": "506",
+        "calls": "32",
+        "basicblocks": "1"
+    },
+    "61": {
+        "name": "entry_proc",
+        "file": "top.cpp",
+        "fileloc": "0",
+        "instructions": "4",
+        "total_instructions": "4",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "62": {
+        "name": "Matrix_Vector_Activate_Batch.2_Pipeline_VITIS_LOOP_122_1",
+        "file": "..\/top.cpp",
+        "fileloc": "146",
+        "instructions": "2137",
+        "total_instructions": "2137",
+        "calls": "",
+        "basicblocks": "523",
+        "loads": {
+            "G": "4",
+            "L": "520"
+        },
+        "stores": {
+            "L": "526"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "63": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc830_Pipeline_VITIS_LOOP_300_3",
+        "file": "..\/top.cpp",
+        "fileloc": "134",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "64": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc22_Pipeline_VITIS_LOOP_300_3",
+        "file": "..\/top.cpp",
+        "fileloc": "144",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "65": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc9",
+        "file": "..\/top.cpp",
+        "fileloc": "138",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "66": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc22",
+        "file": "..\/top.cpp",
+        "fileloc": "144",
+        "instructions": "9",
+        "total_instructions": "44",
+        "calls": "64",
+        "basicblocks": "1"
+    },
+    "67": {
+        "name": "ConvolutionInputGenerator<3u, 128u, 1u, 12u, 10u, 32u, 1u>",
+        "file": "..\/slidingwindow.h",
+        "fileloc": "81",
+        "instructions": "11",
+        "total_instructions": "205",
+        "calls": "68",
+        "basicblocks": "1"
+    },
+    "68": {
+        "name": "ConvolutionInputGenerator_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2.5",
+        "file": "..\/slidingwindow.h",
+        "fileloc": "88",
+        "instructions": "194",
+        "total_instructions": "194",
+        "calls": "",
+        "basicblocks": "34",
+        "loads": {
+            "L": "21"
+        },
+        "stores": {
+            "L": "51"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "69": {
+        "name": "DoCompute_Loop_VITIS_LOOP_300_3_proc26",
+        "file": "..\/top.cpp",
+        "fileloc": "129",
+        "instructions": "10",
+        "total_instructions": "45",
+        "calls": "4",
+        "basicblocks": "1"
+    },
+    "70": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc16_Pipeline_VITIS_LOOP_268_1",
+        "file": "..\/top.cpp",
+        "fileloc": "142",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "71": {
+        "name": "ConvolutionInputGenerator_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2.1",
+        "file": "..\/slidingwindow.h",
+        "fileloc": "88",
+        "instructions": "194",
+        "total_instructions": "194",
+        "calls": "",
+        "basicblocks": "34",
+        "loads": {
+            "L": "21"
+        },
+        "stores": {
+            "L": "51"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "72": {
+        "name": "ConvolutionInputGenerator<3u, 256u, 1u, 3u, 1u, 32u, 1u>",
+        "file": "..\/slidingwindow.h",
+        "fileloc": "81",
+        "instructions": "14",
+        "total_instructions": "182",
+        "calls": "7",
+        "basicblocks": "1"
+    },
+    "73": {
+        "name": "StreamingDataWidthConverter_Batch<64u, 192u, 384u>",
+        "file": "..\/top.cpp",
+        "fileloc": "126",
+        "instructions": "12",
+        "total_instructions": "47",
+        "calls": "8",
+        "basicblocks": "1"
+    },
+    "74": {
+        "name": "Matrix_Vector_Activate_Batch.2",
+        "file": "..\/top.cpp",
+        "fileloc": "146",
+        "instructions": "10",
+        "total_instructions": "2147",
+        "calls": "62",
+        "basicblocks": "1"
+    },
+    "75": {
+        "name": "StreamingMaxPool_Batch<10u, 2u, 128u>_Pipeline_VITIS_LOOP_74_3_VITIS_LOOP_75_4",
+        "file": "..\/maxpool.h",
+        "fileloc": "110",
+        "instructions": "29",
+        "total_instructions": "29",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "76": {
+        "name": "StreamingDataWidthConverter_Batch<192u, 24u, 128u>_Pipeline_VITIS_LOOP_268_1",
+        "file": "..\/top.cpp",
+        "fileloc": "127",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "77": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc27",
+        "file": "..\/top.cpp",
+        "fileloc": "130",
+        "instructions": "10",
+        "total_instructions": "45",
+        "calls": "28",
+        "basicblocks": "1"
+    },
+    "78": {
+        "name": "ConvolutionInputGenerator_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2",
+        "file": "..\/slidingwindow.h",
+        "fileloc": "88",
+        "instructions": "194",
+        "total_instructions": "194",
+        "calls": "",
+        "basicblocks": "34",
+        "loads": {
+            "L": "21"
+        },
+        "stores": {
+            "L": "51"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "79": {
+        "name": "Mem2Stream_Batch<64u, 3072u>_Pipeline_VITIS_LOOP_140_16",
+        "file": "..\/dma.h",
+        "fileloc": "174",
+        "instructions": "20",
+        "total_instructions": "20",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "80": {
+        "name": "Matrix_Vector_Activate_Batch_Pipeline_VITIS_LOOP_122_1",
+        "file": "..\/top.cpp",
+        "fileloc": "130",
+        "instructions": "6396",
+        "total_instructions": "6396",
+        "calls": "",
+        "basicblocks": "28",
+        "loads": {
+            "G": "64",
+            "L": "54"
+        },
+        "stores": {
+            "L": "60"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "81": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc24",
+        "file": "top.cpp",
+        "fileloc": "0",
+        "instructions": "7",
+        "total_instructions": "42",
+        "calls": "11",
+        "basicblocks": "1"
+    },
+    "82": {
+        "name": "StreamingMaxPool_Batch<28u, 2u, 64u>_Pipeline_VITIS_LOOP_85_6",
+        "file": "..\/maxpool.h",
+        "fileloc": "110",
+        "instructions": "19",
+        "total_instructions": "19",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "83": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc20_Pipeline_VITIS_LOOP_268_1",
+        "file": "..\/top.cpp",
+        "fileloc": "144",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "84": {
+        "name": "DoCompute_Loop_VITIS_LOOP_268_1_proc20",
+        "file": "top.cpp",
+        "fileloc": "0",
+        "instructions": "7",
+        "total_instructions": "42",
+        "calls": "83",
+        "basicblocks": "1"
+    },
+    "85": {
+        "name": "StreamingMaxPool_Batch<28u, 2u, 64u>",
+        "file": "..\/maxpool.h",
+        "fileloc": "107",
+        "instructions": "59",
+        "total_instructions": "107",
+        "calls": "39 82",
+        "basicblocks": "7",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "16"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    }
+}

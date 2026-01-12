@@ -1,0 +1,114 @@
+
+
+================================================================
+== Vitis HLS Report for 'DoCompute_Block_ZN24WidthAdjustedInputStreamILj128ELj32ELj25EEC2ERN3hls6streamI'
+================================================================
+* Date:           Thu May 29 09:36:03 2025
+
+* Version:        2023.2.2 (Build 4101106 on Feb  9 2024)
+* Project:        hw
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.948 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.94>
+ST_1 : Operation 2 [1/1] (3.63ns)   --->   "%numReps_read = read i29 @_ssdm_op_Read.ap_auto.i29, i29 %numReps" [../convlayer.h:121->../top.cpp:138]   --->   Operation 2 'read' 'numReps_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i29.i3, i29 %numReps_read, i3 0" [../convlayer.h:121->../top.cpp:138]   --->   Operation 3 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%trunc_ln121 = trunc i29 %numReps_read" [../convlayer.h:121->../top.cpp:138]   --->   Operation 4 'trunc' 'trunc_ln121' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%trunc_ln_i = bitconcatenate i24 @_ssdm_op_BitConcatenate.i24.i21.i3, i21 %trunc_ln121, i3 0" [../convlayer.h:121->../top.cpp:138]   --->   Operation 5 'bitconcatenate' 'trunc_ln_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%empty = trunc i29 %numReps_read" [../convlayer.h:121->../top.cpp:138]   --->   Operation 6 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (2.31ns)   --->   "%add_ln121 = add i24 %trunc_ln_i, i24 %empty" [../convlayer.h:121->../top.cpp:138]   --->   Operation 7 'add' 'add_ln121' <Predicate = true> <Delay = 2.31> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%mrv_i = insertvalue i56 <undef>, i32 %tmp" [../convlayer.h:121->../top.cpp:138]   --->   Operation 8 'insertvalue' 'mrv_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%mrv_1_i = insertvalue i56 %mrv_i, i24 %add_ln121" [../convlayer.h:121->../top.cpp:138]   --->   Operation 9 'insertvalue' 'mrv_1_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%ret_ln121 = ret i56 %mrv_1_i" [../convlayer.h:121->../top.cpp:138]   --->   Operation 10 'ret' 'ret_ln121' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.948ns
+The critical path consists of the following:
+	wire read operation ('numReps_read', ../convlayer.h:121->../top.cpp:138) on port 'numReps' (../convlayer.h:121->../top.cpp:138) [2]  (3.634 ns)
+	'add' operation 24 bit ('add_ln121', ../convlayer.h:121->../top.cpp:138) [7]  (2.314 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

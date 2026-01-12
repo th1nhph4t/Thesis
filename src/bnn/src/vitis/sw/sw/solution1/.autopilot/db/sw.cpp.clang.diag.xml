@@ -1,0 +1,21 @@
+<dict>
+  <key>main-file</key>
+  <string>sw.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>fatal error</string>
+      <key>filename</key>
+      <string>./layer_factory_impl.h</string>
+      <key>line</key>
+      <integer>36</integer>
+      <key>column</key>
+      <integer>10</integer>
+      <key>message</key>
+      <string>&apos;caffe.pb.h&apos; file not found</string>
+      <key>ID</key>
+      <integer>812</integer>
+    </dict>
+  </array>
+</dict>

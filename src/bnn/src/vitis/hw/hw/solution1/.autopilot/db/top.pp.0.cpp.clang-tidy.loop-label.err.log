@@ -1,0 +1,5 @@
+7 warnings and 3 errors generated.
+Error while processing E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp.
+clang-tidy applied 90 of 90 suggested fixes.
+Suppressed 97 warnings (90 in non-user code, 7 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

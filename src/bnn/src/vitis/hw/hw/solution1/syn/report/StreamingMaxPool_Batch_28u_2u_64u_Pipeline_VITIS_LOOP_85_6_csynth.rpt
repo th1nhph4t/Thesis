@@ -1,0 +1,147 @@
+
+
+================================================================
+== Vitis HLS Report for 'StreamingMaxPool_Batch_28u_2u_64u_Pipeline_VITIS_LOOP_85_6'
+================================================================
+* Date:           Thu May 29 09:36:41 2025
+
+* Version:        2023.2.2 (Build 4101106 on Feb  9 2024)
+* Project:        hw
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.850 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       16|       16|  0.160 us|  0.160 us|   16|   16|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_85_6  |       14|       14|         2|          1|          1|    14|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     30|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     45|    -|
+|Register         |        -|    -|       7|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|       7|     75|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln85_fu_76_p2          |         +|   0|  0|  13|           4|           1|
+    |ap_block_pp0_stage0_01001  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln85_fu_70_p2         |      icmp|   0|  0|  13|           4|           3|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  30|          10|           7|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_done_int                |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1    |   9|          2|    1|          2|
+    |ap_sig_allocacmp_outpix_1  |   9|          2|    4|          8|
+    |inter3_blk_n               |   9|          2|    1|          2|
+    |outpix_fu_36               |   9|          2|    4|          8|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      |  45|         10|   11|         22|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+---+----+-----+-----------+
+    |           Name          | FF| LUT| Bits| Const Bits|
+    +-------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                |  1|   0|    1|          0|
+    |ap_done_reg              |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |  1|   0|    1|          0|
+    |outpix_fu_36             |  4|   0|    4|          0|
+    +-------------------------+---+----+-----+-----------+
+    |Total                    |  7|   0|    7|          0|
+    +-------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+---------------------------------------------------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |                         Source Object                         |    C Type    |
++-----------------------+-----+-----+------------+---------------------------------------------------------------+--------------+
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  StreamingMaxPool_Batch<28u, 2u, 64u>_Pipeline_VITIS_LOOP_85_6|  return value|
+|ap_rst                 |   in|    1|  ap_ctrl_hs|  StreamingMaxPool_Batch<28u, 2u, 64u>_Pipeline_VITIS_LOOP_85_6|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|  StreamingMaxPool_Batch<28u, 2u, 64u>_Pipeline_VITIS_LOOP_85_6|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|  StreamingMaxPool_Batch<28u, 2u, 64u>_Pipeline_VITIS_LOOP_85_6|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|  StreamingMaxPool_Batch<28u, 2u, 64u>_Pipeline_VITIS_LOOP_85_6|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|  StreamingMaxPool_Batch<28u, 2u, 64u>_Pipeline_VITIS_LOOP_85_6|  return value|
+|inter3_din             |  out|   64|     ap_fifo|                                                         inter3|       pointer|
+|inter3_num_data_valid  |   in|    8|     ap_fifo|                                                         inter3|       pointer|
+|inter3_fifo_cap        |   in|    8|     ap_fifo|                                                         inter3|       pointer|
+|inter3_full_n          |   in|    1|     ap_fifo|                                                         inter3|       pointer|
+|inter3_write           |  out|    1|     ap_fifo|                                                         inter3|       pointer|
+|buf_r_address0         |  out|    4|   ap_memory|                                                          buf_r|         array|
+|buf_r_ce0              |  out|    1|   ap_memory|                                                          buf_r|         array|
+|buf_r_we0              |  out|    1|   ap_memory|                                                          buf_r|         array|
+|buf_r_d0               |  out|   64|   ap_memory|                                                          buf_r|         array|
+|buf_r_q0               |   in|   64|   ap_memory|                                                          buf_r|         array|
++-----------------------+-----+-----+------------+---------------------------------------------------------------+--------------+
+

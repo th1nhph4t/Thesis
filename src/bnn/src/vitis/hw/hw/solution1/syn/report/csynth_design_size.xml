@@ -1,0 +1,461 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 15765, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll, 31436, user unroll pragmas are applied</column>
+            <column name="">(2) simplification, 23503, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline, 23220, user inline pragmas are applied</column>
+            <column name="">(4) simplification, 22733, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition, 30231, user array partition pragmas are applied</column>
+            <column name="">(2) simplification, 26327, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate , 26327, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape, 26301, apply array reshape pragmas</column>
+            <column name="">(5) access patterns, 26391, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification, 26049, loop and instruction simplification</column>
+            <column name="">(2) parallelization, 25543, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition, 25543, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification, 25543, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering, 25535, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations, 25664, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="BlackBoxJam" col1="top.cpp:152" col2="15765" col3="22733" col4="26391" col5="25543" col6="25664">
+                    <row id="82" col0="DoMemInit" col1="top.cpp:36" col2="837" col3="" col4="" col5="" col6=""/>
+                    <row id="10" col0="DoCompute" col1="top.cpp:95" col2="14883" col3="22579" col4="25599" col5="24751" col6="24858">
+                        <row id="66" col0="Mem2Stream_Batch&lt;64, 3072&gt;" col1="dma.h:161" col2="72" col3="35" col4="37" col5="36" col6="50">
+                            <row id="118" col0="Mem2Stream&lt;64, 49152&gt;" col1="dma.h:136" col2="24" col3="" col4="" col5="" col6=""/>
+                            <row id="119" col0="Mem2Stream&lt;64, 3072&gt;" col1="dma.h:136" col2="24" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="28" col0="StreamingDataWidthConverter_Batch&lt;64, 192, 384&gt;" col1="streamtools.h:259" col2="368" col3="21" col4="21" col5="20" col6="25"/>
+                        <row id="85" col0="StreamingDataWidthConverter_Batch&lt;192, 24, 128&gt;" col1="streamtools.h:259" col2="368" col3="25" col4="25" col5="24" col6="27"/>
+                        <row id="31" col0="ConvLayer_Batch&lt;3, 3, 32, 64, 30, 3, 16, Slice&lt;ap_fixed&lt;8, 1, AP_TRN, AP_SAT, 0&gt;, 8&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Recast&lt;Binary&gt;, 24, 64, BinaryWeights&lt;3, 16, 36&gt;, ThresholdsActivation&lt;4, 16, 1, ap_fixed&lt;24, 16, AP_TRN, AP_WRAP, 0&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_fixed&lt;24, 16, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;, ap_resource_lut&gt;" col1="convlayer.h:103" col2="1681" col3="" col4="" col5="" col6="">
+                            <row id="77" col0="WidthAdjustedInputStream" col1="streamtools.h:735" col2="3" col3="" col4="" col5="" col6=""/>
+                            <row id="15" col0="WidthAdjustedOutputStream" col1="streamtools.h:752" col2="8" col3="" col4="" col5="" col6=""/>
+                            <row id="76" col0="operator hls::stream&lt;ap_uint&lt;24&gt;, 0&gt; &amp;" col1="streamtools.h:739" col2="3" col3="" col4="" col5="" col6=""/>
+                            <row id="45" col0="ConvolutionInputGenerator&lt;3, 3, 8, 32, 30, 3, 1&gt;" col1="slidingwindow.h:80" col2="227" col3="" col4="" col5="" col6=""/>
+                            <row id="26" col0="operator hls::stream&lt;ap_uint&lt;16&gt;, 0&gt; &amp;" col1="streamtools.h:758" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="52" col0="Matrix_Vector_Activate_Batch&lt;27, 64, 3, 16, 1, Slice&lt;ap_fixed&lt;8, 1, AP_TRN, AP_SAT, 0&gt;, 8&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Recast&lt;Binary&gt;, ap_uint&lt;24&gt;, ap_uint&lt;16&gt;, BinaryWeights&lt;3, 16, 36&gt;, ThresholdsActivation&lt;4, 16, 1, ap_fixed&lt;24, 16, AP_TRN, AP_WRAP, 0&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_fixed&lt;24, 16, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="1033" col3="" col4="" col5="" col6="">
+                                <row id="16" col0="init" col1="activations.hpp:131" col2="52" col3="" col4="" col5="" col6=""/>
+                                <row id="18" col0="weights" col1="weights.hpp:94" col2="7" col3="" col4="" col5="" col6="">
+                                    <row id="20" col0="TileIndex" col1="weights.hpp:81" col2="5" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="19" col0="operator[]" col1="weights.hpp:87" col2="12" col3="" col4="" col5="" col6=""/>
+                                <row id="106" col0="operator()&lt;ap_uint&lt;3&gt; &gt;" col1="interpret.hpp:161" col2="6" col3="" col4="" col5="" col6="">
+                                    <row id="6" col0="Container" col1="interpret.hpp:136" col2="4" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="95" col0="operator()&lt;ap_uint&lt;24&gt; &gt;" col1="interpret.hpp:240" col2="6" col3="" col4="" col5="" col6="">
+                                    <row id="62" col0="Container" col1="interpret.hpp:205" col2="4" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="25" col0="mac&lt;3, ap_fixed&lt;24, 16, AP_TRN, AP_WRAP, 0&gt;, Recast&lt;Binary&gt;::Container&lt;ap_uint&lt;3&gt; &gt;, Slice&lt;ap_fixed&lt;8, 1, AP_TRN, AP_SAT, 0&gt;, 8&gt;::Container&lt;ap_uint&lt;24&gt; &gt;, ap_resource_lut&gt;" col1="mac.hpp:164" col2="588" col3="" col4="" col5="" col6="">
+                                    <row id="102" col0="operator[]" col1="interpret.hpp:141" col2="51" col3="" col4="" col5="" col6="">
+                                        <row id="41" col0="Binary" col1="interpret.hpp:78" col2="4" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="97" col0="operator()" col1="interpret.hpp:213" col2="109" col3="" col4="" col5="" col6="">
+                                        <row id="30" col0="cast&lt;8&gt;" col1="interpret.hpp:186" col2="4" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="2" col0="mul&lt;Binary, ap_fixed&lt;8, 1, AP_TRN, AP_SAT, 0&gt; &gt;" col1="mac.hpp:113" col2="178" col3="" col4="" col5="" col6="">
+                                        <row id="98" col0="operator*&lt;ap_fixed&lt;8, 1, AP_TRN, AP_SAT, 0&gt; &gt;" col1="interpret.hpp:87" col2="174" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                </row>
+                                <row id="5" col0="operator()&lt;ap_uint&lt;16&gt; &gt;" col1="interpret.hpp:235" col2="4" col3="" col4="" col5="" col6="">
+                                    <row id="22" col0="Container" col1="interpret.hpp:202" col2="2" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="8" col0="activate" col1="activations.hpp:137" col2="82" col3="" col4="" col5="" col6="">
+                                    <row id="51" col0="operator()" col1="stl_function.h:385" col2="14" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="11" col0="operator()" col1="interpret.hpp:209" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="94" col0="operator const ap_uint&lt;16&gt; &amp;" col1="interpret.hpp:222" col2="2" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="1" col0="~WidthAdjustedOutputStream" col1="streamtools.h:753" col2="376" col3="" col4="" col5="" col6="">
+                                <row id="88" col0="StreamingDataWidthConverter_Batch&lt;16, 64, 3600&gt;" col1="streamtools.h:259" col2="369" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="43" col0="~WidthAdjustedInputStream" col1="streamtools.h:736" col2="1" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="37" col0="ConvLayer_Batch&lt;3, 64, 30, 64, 28, 32, 32, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, 64, 64, BinaryWeights&lt;32, 32, 36&gt;, ThresholdsActivation&lt;2, 32, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="convlayer.h:103" col2="1595" col3="" col4="" col5="" col6="">
+                            <row id="50" col0="WidthAdjustedInputStream" col1="streamtools.h:719" col2="370" col3="" col4="" col5="" col6="">
+                                <row id="70" col0="StreamingDataWidthConverter_Batch&lt;64, 32, 900&gt;" col1="streamtools.h:259" col2="364" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="15" col0="WidthAdjustedOutputStream" col1="streamtools.h:752" col2="8" col3="" col4="" col5="" col6=""/>
+                            <row id="39" col0="operator hls::stream&lt;ap_uint&lt;32&gt;, 0&gt; &amp;" col1="streamtools.h:725" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="78" col0="ConvolutionInputGenerator&lt;3, 64, 1, 30, 28, 32, 1&gt;" col1="slidingwindow.h:80" col2="227" col3="" col4="" col5="" col6=""/>
+                            <row id="54" col0="operator hls::stream&lt;ap_uint&lt;32&gt;, 0&gt; &amp;" col1="streamtools.h:758" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="79" col0="Matrix_Vector_Activate_Batch&lt;576, 64, 32, 32, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, BinaryWeights&lt;32, 32, 36&gt;, ThresholdsActivation&lt;2, 32, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="585" col3="" col4="" col5="" col6="">
+                                <row id="16" col0="init" col1="activations.hpp:131" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="18" col0="weights" col1="weights.hpp:94" col2="7" col3="" col4="" col5="" col6="">
+                                    <row id="20" col0="TileIndex" col1="weights.hpp:81" col2="5" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="19" col0="operator[]" col1="weights.hpp:87" col2="12" col3="" col4="" col5="" col6=""/>
+                                <row id="21" col0="operator()&lt;ap_uint&lt;32&gt; &gt;" col1="interpret.hpp:114" col2="1" col3="" col4="" col5="" col6=""/>
+                                <row id="23" col0="operator()&lt;ap_uint&lt;32&gt; &gt;" col1="interpret.hpp:166" col2="6" col3="" col4="" col5="" col6="">
+                                    <row id="6" col0="Container" col1="interpret.hpp:136" col2="4" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="71" col0="mac&lt;32, ap_int&lt;16&gt;, ap_uint&lt;32&gt;, Recast&lt;XnorMul&gt;::Container&lt;ap_uint&lt;32&gt; &gt;, ap_resource_lut&gt;" col1="mac.hpp:164" col2="176" col3="" col4="" col5="" col6="">
+                                    <row id="3" col0="operator()" col1="interpret.hpp:149" col2="50" col3="" col4="" col5="" col6="">
+                                        <row id="72" col0="XnorMul" col1="interpret.hpp:60" col2="4" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="63" col0="mul&lt;bool, XnorMul&gt;" col1="mac.hpp:113" col2="45" col3="" col4="" col5="" col6="">
+                                        <row id="29" col0="operator*" col1="interpret.hpp:70" col2="19" col3="" col4="" col5="" col6="">
+                                            <row id="42" col0="operator*" col1="interpret.hpp:65" col2="17" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                    </row>
+                                </row>
+                                <row id="61" col0="operator()&lt;ap_uint&lt;32&gt; &gt;" col1="interpret.hpp:235" col2="4" col3="" col4="" col5="" col6="">
+                                    <row id="22" col0="Container" col1="interpret.hpp:202" col2="2" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="8" col0="activate" col1="activations.hpp:137" col2="82" col3="" col4="" col5="" col6="">
+                                    <row id="51" col0="operator()" col1="stl_function.h:385" col2="14" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="11" col0="operator()" col1="interpret.hpp:209" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="81" col0="operator const ap_uint&lt;32&gt; &amp;" col1="interpret.hpp:222" col2="2" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="1" col0="~WidthAdjustedOutputStream" col1="streamtools.h:753" col2="372" col3="" col4="" col5="" col6="">
+                                <row id="73" col0="StreamingDataWidthConverter_Batch&lt;32, 64, 1568&gt;" col1="streamtools.h:259" col2="365" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="38" col0="~WidthAdjustedInputStream" col1="streamtools.h:722" col2="1" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="13" col0="StreamingMaxPool_Batch&lt;28, 2, 64&gt;" col1="maxpool.h:107" col2="238" col3="72" col4="73" col5="72" col6="89">
+                            <row id="115" col0="StreamingMaxPool&lt;28, 2, 64&gt;" col1="maxpool.h:63" col2="227" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="111" col0="ConvLayer_Batch&lt;3, 64, 14, 128, 12, 32, 16, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, 64, 128, BinaryWeights&lt;32, 16, 144&gt;, ThresholdsActivation&lt;8, 16, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="convlayer.h:103" col2="1599" col3="" col4="" col5="" col6="">
+                            <row id="50" col0="WidthAdjustedInputStream" col1="streamtools.h:719" col2="370" col3="" col4="" col5="" col6="">
+                                <row id="108" col0="StreamingDataWidthConverter_Batch&lt;64, 32, 196&gt;" col1="streamtools.h:259" col2="364" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="15" col0="WidthAdjustedOutputStream" col1="streamtools.h:752" col2="8" col3="" col4="" col5="" col6=""/>
+                            <row id="39" col0="operator hls::stream&lt;ap_uint&lt;32&gt;, 0&gt; &amp;" col1="streamtools.h:725" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="7" col0="ConvolutionInputGenerator&lt;3, 64, 1, 14, 12, 32, 1&gt;" col1="slidingwindow.h:80" col2="227" col3="" col4="" col5="" col6=""/>
+                            <row id="26" col0="operator hls::stream&lt;ap_uint&lt;16&gt;, 0&gt; &amp;" col1="streamtools.h:758" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="87" col0="Matrix_Vector_Activate_Batch&lt;576, 128, 32, 16, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;32&gt;, ap_uint&lt;16&gt;, BinaryWeights&lt;32, 16, 144&gt;, ThresholdsActivation&lt;8, 16, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="585" col3="" col4="" col5="" col6="">
+                                <row id="16" col0="init" col1="activations.hpp:131" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="18" col0="weights" col1="weights.hpp:94" col2="7" col3="" col4="" col5="" col6="">
+                                    <row id="20" col0="TileIndex" col1="weights.hpp:81" col2="5" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="19" col0="operator[]" col1="weights.hpp:87" col2="12" col3="" col4="" col5="" col6=""/>
+                                <row id="21" col0="operator()&lt;ap_uint&lt;32&gt; &gt;" col1="interpret.hpp:114" col2="1" col3="" col4="" col5="" col6=""/>
+                                <row id="23" col0="operator()&lt;ap_uint&lt;32&gt; &gt;" col1="interpret.hpp:166" col2="6" col3="" col4="" col5="" col6="">
+                                    <row id="6" col0="Container" col1="interpret.hpp:136" col2="4" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="71" col0="mac&lt;32, ap_int&lt;16&gt;, ap_uint&lt;32&gt;, Recast&lt;XnorMul&gt;::Container&lt;ap_uint&lt;32&gt; &gt;, ap_resource_lut&gt;" col1="mac.hpp:164" col2="176" col3="" col4="" col5="" col6="">
+                                    <row id="3" col0="operator()" col1="interpret.hpp:149" col2="50" col3="" col4="" col5="" col6="">
+                                        <row id="72" col0="XnorMul" col1="interpret.hpp:60" col2="4" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="63" col0="mul&lt;bool, XnorMul&gt;" col1="mac.hpp:113" col2="45" col3="" col4="" col5="" col6="">
+                                        <row id="29" col0="operator*" col1="interpret.hpp:70" col2="19" col3="" col4="" col5="" col6="">
+                                            <row id="42" col0="operator*" col1="interpret.hpp:65" col2="17" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                    </row>
+                                </row>
+                                <row id="5" col0="operator()&lt;ap_uint&lt;16&gt; &gt;" col1="interpret.hpp:235" col2="4" col3="" col4="" col5="" col6="">
+                                    <row id="22" col0="Container" col1="interpret.hpp:202" col2="2" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="8" col0="activate" col1="activations.hpp:137" col2="82" col3="" col4="" col5="" col6="">
+                                    <row id="51" col0="operator()" col1="stl_function.h:385" col2="14" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="11" col0="operator()" col1="interpret.hpp:209" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="94" col0="operator const ap_uint&lt;16&gt; &amp;" col1="interpret.hpp:222" col2="2" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="1" col0="~WidthAdjustedOutputStream" col1="streamtools.h:753" col2="376" col3="" col4="" col5="" col6="">
+                                <row id="89" col0="StreamingDataWidthConverter_Batch&lt;16, 128, 1152&gt;" col1="streamtools.h:259" col2="369" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="38" col0="~WidthAdjustedInputStream" col1="streamtools.h:722" col2="1" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="32" col0="ConvLayer_Batch&lt;3, 128, 12, 128, 10, 32, 16, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, 128, 128, BinaryWeights&lt;32, 16, 288&gt;, ThresholdsActivation&lt;8, 16, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="convlayer.h:103" col2="1599" col3="" col4="" col5="" col6="">
+                            <row id="50" col0="WidthAdjustedInputStream" col1="streamtools.h:719" col2="370" col3="" col4="" col5="" col6="">
+                                <row id="96" col0="StreamingDataWidthConverter_Batch&lt;128, 32, 144&gt;" col1="streamtools.h:259" col2="364" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="15" col0="WidthAdjustedOutputStream" col1="streamtools.h:752" col2="8" col3="" col4="" col5="" col6=""/>
+                            <row id="39" col0="operator hls::stream&lt;ap_uint&lt;32&gt;, 0&gt; &amp;" col1="streamtools.h:725" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="53" col0="ConvolutionInputGenerator&lt;3, 128, 1, 12, 10, 32, 1&gt;" col1="slidingwindow.h:80" col2="227" col3="" col4="" col5="" col6=""/>
+                            <row id="26" col0="operator hls::stream&lt;ap_uint&lt;16&gt;, 0&gt; &amp;" col1="streamtools.h:758" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="93" col0="Matrix_Vector_Activate_Batch&lt;1152, 128, 32, 16, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;32&gt;, ap_uint&lt;16&gt;, BinaryWeights&lt;32, 16, 288&gt;, ThresholdsActivation&lt;8, 16, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="585" col3="" col4="" col5="" col6="">
+                                <row id="16" col0="init" col1="activations.hpp:131" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="18" col0="weights" col1="weights.hpp:94" col2="7" col3="" col4="" col5="" col6="">
+                                    <row id="20" col0="TileIndex" col1="weights.hpp:81" col2="5" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="19" col0="operator[]" col1="weights.hpp:87" col2="12" col3="" col4="" col5="" col6=""/>
+                                <row id="21" col0="operator()&lt;ap_uint&lt;32&gt; &gt;" col1="interpret.hpp:114" col2="1" col3="" col4="" col5="" col6=""/>
+                                <row id="23" col0="operator()&lt;ap_uint&lt;32&gt; &gt;" col1="interpret.hpp:166" col2="6" col3="" col4="" col5="" col6="">
+                                    <row id="6" col0="Container" col1="interpret.hpp:136" col2="4" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="71" col0="mac&lt;32, ap_int&lt;16&gt;, ap_uint&lt;32&gt;, Recast&lt;XnorMul&gt;::Container&lt;ap_uint&lt;32&gt; &gt;, ap_resource_lut&gt;" col1="mac.hpp:164" col2="176" col3="" col4="" col5="" col6="">
+                                    <row id="3" col0="operator()" col1="interpret.hpp:149" col2="50" col3="" col4="" col5="" col6="">
+                                        <row id="72" col0="XnorMul" col1="interpret.hpp:60" col2="4" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="63" col0="mul&lt;bool, XnorMul&gt;" col1="mac.hpp:113" col2="45" col3="" col4="" col5="" col6="">
+                                        <row id="29" col0="operator*" col1="interpret.hpp:70" col2="19" col3="" col4="" col5="" col6="">
+                                            <row id="42" col0="operator*" col1="interpret.hpp:65" col2="17" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                    </row>
+                                </row>
+                                <row id="5" col0="operator()&lt;ap_uint&lt;16&gt; &gt;" col1="interpret.hpp:235" col2="4" col3="" col4="" col5="" col6="">
+                                    <row id="22" col0="Container" col1="interpret.hpp:202" col2="2" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="8" col0="activate" col1="activations.hpp:137" col2="82" col3="" col4="" col5="" col6="">
+                                    <row id="51" col0="operator()" col1="stl_function.h:385" col2="14" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="11" col0="operator()" col1="interpret.hpp:209" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="94" col0="operator const ap_uint&lt;16&gt; &amp;" col1="interpret.hpp:222" col2="2" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="1" col0="~WidthAdjustedOutputStream" col1="streamtools.h:753" col2="376" col3="" col4="" col5="" col6="">
+                                <row id="103" col0="StreamingDataWidthConverter_Batch&lt;16, 128, 800&gt;" col1="streamtools.h:259" col2="369" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="38" col0="~WidthAdjustedInputStream" col1="streamtools.h:722" col2="1" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="114" col0="StreamingMaxPool_Batch&lt;10, 2, 128&gt;" col1="maxpool.h:107" col2="238" col3="54" col4="55" col5="54" col6="71">
+                            <row id="109" col0="StreamingMaxPool&lt;10, 2, 128&gt;" col1="maxpool.h:63" col2="227" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="14" col0="ConvLayer_Batch&lt;3, 128, 5, 256, 3, 32, 4, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, 128, 256, BinaryWeights&lt;32, 4, 2304&gt;, ThresholdsActivation&lt;64, 4, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="convlayer.h:103" col2="1599" col3="" col4="" col5="" col6="">
+                            <row id="50" col0="WidthAdjustedInputStream" col1="streamtools.h:719" col2="370" col3="" col4="" col5="" col6="">
+                                <row id="12" col0="StreamingDataWidthConverter_Batch&lt;128, 32, 25&gt;" col1="streamtools.h:259" col2="364" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="15" col0="WidthAdjustedOutputStream" col1="streamtools.h:752" col2="8" col3="" col4="" col5="" col6=""/>
+                            <row id="39" col0="operator hls::stream&lt;ap_uint&lt;32&gt;, 0&gt; &amp;" col1="streamtools.h:725" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="57" col0="ConvolutionInputGenerator&lt;3, 128, 1, 5, 3, 32, 1&gt;" col1="slidingwindow.h:80" col2="227" col3="" col4="" col5="" col6=""/>
+                            <row id="100" col0="operator hls::stream&lt;ap_uint&lt;4&gt;, 0&gt; &amp;" col1="streamtools.h:758" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="90" col0="Matrix_Vector_Activate_Batch&lt;1152, 256, 32, 4, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;, BinaryWeights&lt;32, 4, 2304&gt;, ThresholdsActivation&lt;64, 4, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="585" col3="" col4="" col5="" col6="">
+                                <row id="16" col0="init" col1="activations.hpp:131" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="18" col0="weights" col1="weights.hpp:94" col2="7" col3="" col4="" col5="" col6="">
+                                    <row id="20" col0="TileIndex" col1="weights.hpp:81" col2="5" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="19" col0="operator[]" col1="weights.hpp:87" col2="12" col3="" col4="" col5="" col6=""/>
+                                <row id="21" col0="operator()&lt;ap_uint&lt;32&gt; &gt;" col1="interpret.hpp:114" col2="1" col3="" col4="" col5="" col6=""/>
+                                <row id="23" col0="operator()&lt;ap_uint&lt;32&gt; &gt;" col1="interpret.hpp:166" col2="6" col3="" col4="" col5="" col6="">
+                                    <row id="6" col0="Container" col1="interpret.hpp:136" col2="4" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="71" col0="mac&lt;32, ap_int&lt;16&gt;, ap_uint&lt;32&gt;, Recast&lt;XnorMul&gt;::Container&lt;ap_uint&lt;32&gt; &gt;, ap_resource_lut&gt;" col1="mac.hpp:164" col2="176" col3="" col4="" col5="" col6="">
+                                    <row id="3" col0="operator()" col1="interpret.hpp:149" col2="50" col3="" col4="" col5="" col6="">
+                                        <row id="72" col0="XnorMul" col1="interpret.hpp:60" col2="4" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="63" col0="mul&lt;bool, XnorMul&gt;" col1="mac.hpp:113" col2="45" col3="" col4="" col5="" col6="">
+                                        <row id="29" col0="operator*" col1="interpret.hpp:70" col2="19" col3="" col4="" col5="" col6="">
+                                            <row id="42" col0="operator*" col1="interpret.hpp:65" col2="17" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                    </row>
+                                </row>
+                                <row id="46" col0="operator()&lt;ap_uint&lt;4&gt; &gt;" col1="interpret.hpp:235" col2="4" col3="" col4="" col5="" col6="">
+                                    <row id="22" col0="Container" col1="interpret.hpp:202" col2="2" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="8" col0="activate" col1="activations.hpp:137" col2="82" col3="" col4="" col5="" col6="">
+                                    <row id="51" col0="operator()" col1="stl_function.h:385" col2="14" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="11" col0="operator()" col1="interpret.hpp:209" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="48" col0="operator const ap_uint&lt;4&gt; &amp;" col1="interpret.hpp:222" col2="2" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="1" col0="~WidthAdjustedOutputStream" col1="streamtools.h:753" col2="376" col3="" col4="" col5="" col6="">
+                                <row id="86" col0="StreamingDataWidthConverter_Batch&lt;4, 256, 576&gt;" col1="streamtools.h:259" col2="369" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="38" col0="~WidthAdjustedInputStream" col1="streamtools.h:722" col2="1" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="60" col0="ConvLayer_Batch&lt;3, 256, 3, 256, 1, 32, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, 256, 256, BinaryWeights&lt;32, 1, 18432&gt;, ThresholdsActivation&lt;256, 1, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="convlayer.h:103" col2="1583" col3="" col4="" col5="" col6="">
+                            <row id="50" col0="WidthAdjustedInputStream" col1="streamtools.h:719" col2="370" col3="" col4="" col5="" col6="">
+                                <row id="92" col0="StreamingDataWidthConverter_Batch&lt;256, 32, 9&gt;" col1="streamtools.h:259" col2="364" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="15" col0="WidthAdjustedOutputStream" col1="streamtools.h:752" col2="8" col3="" col4="" col5="" col6=""/>
+                            <row id="39" col0="operator hls::stream&lt;ap_uint&lt;32&gt;, 0&gt; &amp;" col1="streamtools.h:725" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="36" col0="ConvolutionInputGenerator&lt;3, 256, 1, 3, 1, 32, 1&gt;" col1="slidingwindow.h:80" col2="227" col3="" col4="" col5="" col6=""/>
+                            <row id="99" col0="operator hls::stream&lt;ap_uint&lt;1&gt;, 0&gt; &amp;" col1="streamtools.h:758" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="44" col0="Matrix_Vector_Activate_Batch&lt;2304, 256, 32, 1, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;32&gt;, ap_uint&lt;1&gt;, BinaryWeights&lt;32, 1, 18432&gt;, ThresholdsActivation&lt;256, 1, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="569" col3="" col4="" col5="" col6="">
+                                <row id="16" col0="init" col1="activations.hpp:131" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="18" col0="weights" col1="weights.hpp:94" col2="7" col3="" col4="" col5="" col6="">
+                                    <row id="20" col0="TileIndex" col1="weights.hpp:81" col2="5" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="19" col0="operator[]" col1="weights.hpp:87" col2="12" col3="" col4="" col5="" col6=""/>
+                                <row id="21" col0="operator()&lt;ap_uint&lt;32&gt; &gt;" col1="interpret.hpp:114" col2="1" col3="" col4="" col5="" col6=""/>
+                                <row id="23" col0="operator()&lt;ap_uint&lt;32&gt; &gt;" col1="interpret.hpp:166" col2="6" col3="" col4="" col5="" col6="">
+                                    <row id="6" col0="Container" col1="interpret.hpp:136" col2="4" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="71" col0="mac&lt;32, ap_int&lt;16&gt;, ap_uint&lt;32&gt;, Recast&lt;XnorMul&gt;::Container&lt;ap_uint&lt;32&gt; &gt;, ap_resource_lut&gt;" col1="mac.hpp:164" col2="176" col3="" col4="" col5="" col6="">
+                                    <row id="3" col0="operator()" col1="interpret.hpp:149" col2="50" col3="" col4="" col5="" col6="">
+                                        <row id="72" col0="XnorMul" col1="interpret.hpp:60" col2="4" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="63" col0="mul&lt;bool, XnorMul&gt;" col1="mac.hpp:113" col2="45" col3="" col4="" col5="" col6="">
+                                        <row id="29" col0="operator*" col1="interpret.hpp:70" col2="19" col3="" col4="" col5="" col6="">
+                                            <row id="42" col0="operator*" col1="interpret.hpp:65" col2="17" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                    </row>
+                                </row>
+                                <row id="116" col0="operator()&lt;ap_uint&lt;1&gt; &gt;" col1="interpret.hpp:235" col2="4" col3="" col4="" col5="" col6="">
+                                    <row id="22" col0="Container" col1="interpret.hpp:202" col2="2" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="8" col0="activate" col1="activations.hpp:137" col2="82" col3="" col4="" col5="" col6="">
+                                    <row id="51" col0="operator()" col1="stl_function.h:385" col2="14" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="11" col0="operator()" col1="interpret.hpp:209" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="74" col0="operator const ap_uint&lt;1&gt; &amp;" col1="interpret.hpp:222" col2="2" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="1" col0="~WidthAdjustedOutputStream" col1="streamtools.h:753" col2="376" col3="" col4="" col5="" col6="">
+                                <row id="113" col0="StreamingDataWidthConverter_Batch&lt;1, 256, 256&gt;" col1="streamtools.h:259" col2="369" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="38" col0="~WidthAdjustedInputStream" col1="streamtools.h:722" col2="1" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="34" col0="WidthAdjustedOutputStream" col1="streamtools.h:767" col2="3" col3="" col4="" col5="" col6=""/>
+                        <row id="112" col0="StreamingFCLayer_Batch&lt;256, 512, 4, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, 256, 64, BinaryWeights&lt;4, 1, 32768&gt;, ThresholdsActivation&lt;512, 1, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="fclayer.h:94" col2="1352" col3="" col4="" col5="" col6="">
+                            <row id="50" col0="WidthAdjustedInputStream" col1="streamtools.h:719" col2="374" col3="" col4="" col5="" col6="">
+                                <row id="67" col0="StreamingDataWidthConverter_Batch&lt;256, 4, 1&gt;" col1="streamtools.h:259" col2="368" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="15" col0="WidthAdjustedOutputStream" col1="streamtools.h:752" col2="8" col3="" col4="" col5="" col6=""/>
+                            <row id="55" col0="operator hls::stream&lt;ap_uint&lt;4&gt;, 0&gt; &amp;" col1="streamtools.h:725" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="99" col0="operator hls::stream&lt;ap_uint&lt;1&gt;, 0&gt; &amp;" col1="streamtools.h:758" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="56" col0="Matrix_Vector_Activate_Batch&lt;256, 512, 4, 1, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;4&gt;, ap_uint&lt;1&gt;, BinaryWeights&lt;4, 1, 32768&gt;, ThresholdsActivation&lt;512, 1, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="571" col3="" col4="" col5="" col6="">
+                                <row id="16" col0="init" col1="activations.hpp:131" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="18" col0="weights" col1="weights.hpp:94" col2="7" col3="" col4="" col5="" col6="">
+                                    <row id="20" col0="TileIndex" col1="weights.hpp:81" col2="5" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="19" col0="operator[]" col1="weights.hpp:87" col2="12" col3="" col4="" col5="" col6=""/>
+                                <row id="24" col0="operator()&lt;ap_uint&lt;4&gt; &gt;" col1="interpret.hpp:114" col2="1" col3="" col4="" col5="" col6=""/>
+                                <row id="107" col0="operator()&lt;ap_uint&lt;4&gt; &gt;" col1="interpret.hpp:166" col2="6" col3="" col4="" col5="" col6="">
+                                    <row id="6" col0="Container" col1="interpret.hpp:136" col2="4" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="110" col0="mac&lt;4, ap_int&lt;16&gt;, ap_uint&lt;4&gt;, Recast&lt;XnorMul&gt;::Container&lt;ap_uint&lt;4&gt; &gt;, ap_resource_lut&gt;" col1="mac.hpp:164" col2="178" col3="" col4="" col5="" col6="">
+                                    <row id="3" col0="operator()" col1="interpret.hpp:149" col2="51" col3="" col4="" col5="" col6="">
+                                        <row id="72" col0="XnorMul" col1="interpret.hpp:60" col2="4" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="63" col0="mul&lt;bool, XnorMul&gt;" col1="mac.hpp:113" col2="45" col3="" col4="" col5="" col6="">
+                                        <row id="29" col0="operator*" col1="interpret.hpp:70" col2="19" col3="" col4="" col5="" col6="">
+                                            <row id="42" col0="operator*" col1="interpret.hpp:65" col2="17" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                    </row>
+                                </row>
+                                <row id="116" col0="operator()&lt;ap_uint&lt;1&gt; &gt;" col1="interpret.hpp:235" col2="4" col3="" col4="" col5="" col6="">
+                                    <row id="22" col0="Container" col1="interpret.hpp:202" col2="2" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="8" col0="activate" col1="activations.hpp:137" col2="82" col3="" col4="" col5="" col6="">
+                                    <row id="51" col0="operator()" col1="stl_function.h:385" col2="14" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="11" col0="operator()" col1="interpret.hpp:209" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="74" col0="operator const ap_uint&lt;1&gt; &amp;" col1="interpret.hpp:222" col2="2" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="1" col0="~WidthAdjustedOutputStream" col1="streamtools.h:753" col2="376" col3="" col4="" col5="" col6="">
+                                <row id="75" col0="StreamingDataWidthConverter_Batch&lt;1, 64, 512&gt;" col1="streamtools.h:259" col2="369" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="38" col0="~WidthAdjustedInputStream" col1="streamtools.h:722" col2="1" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="65" col0="StreamingFCLayer_Batch&lt;512, 512, 8, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, 64, 64, BinaryWeights&lt;8, 1, 32768&gt;, ThresholdsActivation&lt;512, 1, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="fclayer.h:94" col2="1352" col3="" col4="" col5="" col6="">
+                            <row id="50" col0="WidthAdjustedInputStream" col1="streamtools.h:719" col2="374" col3="" col4="" col5="" col6="">
+                                <row id="27" col0="StreamingDataWidthConverter_Batch&lt;64, 8, 8&gt;" col1="streamtools.h:259" col2="368" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="15" col0="WidthAdjustedOutputStream" col1="streamtools.h:752" col2="8" col3="" col4="" col5="" col6=""/>
+                            <row id="80" col0="operator hls::stream&lt;ap_uint&lt;8&gt;, 0&gt; &amp;" col1="streamtools.h:725" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="99" col0="operator hls::stream&lt;ap_uint&lt;1&gt;, 0&gt; &amp;" col1="streamtools.h:758" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="91" col0="Matrix_Vector_Activate_Batch&lt;512, 512, 8, 1, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;8&gt;, ap_uint&lt;1&gt;, BinaryWeights&lt;8, 1, 32768&gt;, ThresholdsActivation&lt;512, 1, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="571" col3="" col4="" col5="" col6="">
+                                <row id="16" col0="init" col1="activations.hpp:131" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="18" col0="weights" col1="weights.hpp:94" col2="7" col3="" col4="" col5="" col6="">
+                                    <row id="20" col0="TileIndex" col1="weights.hpp:81" col2="5" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="19" col0="operator[]" col1="weights.hpp:87" col2="12" col3="" col4="" col5="" col6=""/>
+                                <row id="69" col0="operator()&lt;ap_uint&lt;8&gt; &gt;" col1="interpret.hpp:114" col2="1" col3="" col4="" col5="" col6=""/>
+                                <row id="33" col0="operator()&lt;ap_uint&lt;8&gt; &gt;" col1="interpret.hpp:166" col2="6" col3="" col4="" col5="" col6="">
+                                    <row id="6" col0="Container" col1="interpret.hpp:136" col2="4" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="105" col0="mac&lt;8, ap_int&lt;16&gt;, ap_uint&lt;8&gt;, Recast&lt;XnorMul&gt;::Container&lt;ap_uint&lt;8&gt; &gt;, ap_resource_lut&gt;" col1="mac.hpp:164" col2="178" col3="" col4="" col5="" col6="">
+                                    <row id="3" col0="operator()" col1="interpret.hpp:149" col2="51" col3="" col4="" col5="" col6="">
+                                        <row id="72" col0="XnorMul" col1="interpret.hpp:60" col2="4" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="63" col0="mul&lt;bool, XnorMul&gt;" col1="mac.hpp:113" col2="45" col3="" col4="" col5="" col6="">
+                                        <row id="29" col0="operator*" col1="interpret.hpp:70" col2="19" col3="" col4="" col5="" col6="">
+                                            <row id="42" col0="operator*" col1="interpret.hpp:65" col2="17" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                    </row>
+                                </row>
+                                <row id="116" col0="operator()&lt;ap_uint&lt;1&gt; &gt;" col1="interpret.hpp:235" col2="4" col3="" col4="" col5="" col6="">
+                                    <row id="22" col0="Container" col1="interpret.hpp:202" col2="2" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="8" col0="activate" col1="activations.hpp:137" col2="82" col3="" col4="" col5="" col6="">
+                                    <row id="51" col0="operator()" col1="stl_function.h:385" col2="14" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="11" col0="operator()" col1="interpret.hpp:209" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="74" col0="operator const ap_uint&lt;1&gt; &amp;" col1="interpret.hpp:222" col2="2" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="1" col0="~WidthAdjustedOutputStream" col1="streamtools.h:753" col2="376" col3="" col4="" col5="" col6="">
+                                <row id="75" col0="StreamingDataWidthConverter_Batch&lt;1, 64, 512&gt;" col1="streamtools.h:259" col2="369" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="38" col0="~WidthAdjustedInputStream" col1="streamtools.h:722" col2="1" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="104" col0="operator hls::stream&lt;ap_uint&lt;64&gt;, 0&gt; &amp;" col1="streamtools.h:772" col2="3" col3="" col4="" col5="" col6=""/>
+                        <row id="40" col0="StreamingFCLayer_Batch&lt;512, 64, 1, 4, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;16&gt;, 16&gt;, Identity, 64, 64, BinaryWeights&lt;1, 4, 8192&gt;, PassThroughActivation&lt;ap_uint&lt;16&gt; &gt;, ap_resource_lut&gt;" col1="fclayer.h:94" col2="911" col3="" col4="" col5="" col6="">
+                            <row id="50" col0="WidthAdjustedInputStream" col1="streamtools.h:719" col2="374" col3="" col4="" col5="" col6="">
+                                <row id="59" col0="StreamingDataWidthConverter_Batch&lt;64, 1, 8&gt;" col1="streamtools.h:259" col2="368" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="34" col0="WidthAdjustedOutputStream" col1="streamtools.h:767" col2="3" col3="" col4="" col5="" col6=""/>
+                            <row id="101" col0="operator hls::stream&lt;ap_uint&lt;1&gt;, 0&gt; &amp;" col1="streamtools.h:725" col2="2" col3="" col4="" col5="" col6=""/>
+                            <row id="104" col0="operator hls::stream&lt;ap_uint&lt;64&gt;, 0&gt; &amp;" col1="streamtools.h:772" col2="3" col3="" col4="" col5="" col6=""/>
+                            <row id="17" col0="Matrix_Vector_Activate_Batch&lt;512, 64, 1, 4, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;16&gt;, 16&gt;, Identity, ap_uint&lt;1&gt;, ap_uint&lt;64&gt;, BinaryWeights&lt;1, 4, 8192&gt;, PassThroughActivation&lt;ap_uint&lt;16&gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="509" col3="" col4="" col5="" col6="">
+                                <row id="117" col0="init" col1="activations.hpp:68" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="18" col0="weights" col1="weights.hpp:94" col2="7" col3="" col4="" col5="" col6="">
+                                    <row id="20" col0="TileIndex" col1="weights.hpp:81" col2="5" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="19" col0="operator[]" col1="weights.hpp:87" col2="12" col3="" col4="" col5="" col6=""/>
+                                <row id="47" col0="operator()&lt;ap_uint&lt;1&gt; &gt;" col1="interpret.hpp:114" col2="1" col3="" col4="" col5="" col6=""/>
+                                <row id="83" col0="operator()&lt;ap_uint&lt;1&gt; &gt;" col1="interpret.hpp:166" col2="6" col3="" col4="" col5="" col6="">
+                                    <row id="6" col0="Container" col1="interpret.hpp:136" col2="4" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="35" col0="mac&lt;1, ap_uint&lt;16&gt;, ap_uint&lt;1&gt;, Recast&lt;XnorMul&gt;::Container&lt;ap_uint&lt;1&gt; &gt;, ap_resource_lut&gt;" col1="mac.hpp:164" col2="178" col3="" col4="" col5="" col6="">
+                                    <row id="3" col0="operator()" col1="interpret.hpp:149" col2="51" col3="" col4="" col5="" col6="">
+                                        <row id="72" col0="XnorMul" col1="interpret.hpp:60" col2="4" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="63" col0="mul&lt;bool, XnorMul&gt;" col1="mac.hpp:113" col2="45" col3="" col4="" col5="" col6="">
+                                        <row id="29" col0="operator*" col1="interpret.hpp:70" col2="19" col3="" col4="" col5="" col6="">
+                                            <row id="42" col0="operator*" col1="interpret.hpp:65" col2="17" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                    </row>
+                                </row>
+                                <row id="58" col0="operator()&lt;ap_uint&lt;64&gt; &gt;" col1="interpret.hpp:235" col2="4" col3="" col4="" col5="" col6="">
+                                    <row id="22" col0="Container" col1="interpret.hpp:202" col2="2" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="49" col0="activate" col1="activations.hpp:86" col2="3" col3="" col4="" col5="" col6=""/>
+                                <row id="11" col0="operator()" col1="interpret.hpp:209" col2="19" col3="" col4="" col5="" col6=""/>
+                                <row id="84" col0="operator const ap_uint&lt;64&gt; &amp;" col1="interpret.hpp:222" col2="2" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="9" col0="~WidthAdjustedOutputStream" col1="streamtools.h:769" col2="1" col3="" col4="" col5="" col6=""/>
+                            <row id="38" col0="~WidthAdjustedInputStream" col1="streamtools.h:722" col2="1" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="4" col0="Stream2Mem_Batch&lt;64, 128&gt;" col1="dma.h:182" col2="76" col3="38" col4="40" col5="39" col6="52">
+                            <row id="64" col0="Stream2Mem&lt;64, 2048&gt;" col1="dma.h:149" col2="26" col3="" col4="" col5="" col6=""/>
+                            <row id="68" col0="Stream2Mem&lt;64, 128&gt;" col1="dma.h:149" col2="26" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="9" col0="~WidthAdjustedOutputStream" col1="streamtools.h:769" col2="1" col3="" col4="" col5="" col6=""/>
+                        <row id="45" col0="ConvolutionInputGenerator&lt;3, 3, 8, 32, 30, 3, 1&gt;" col1="slidingwindow.h:80" col2="" col3="119" col4="167" col5="158" col6="165"/>
+                        <row id="52" col0="Matrix_Vector_Activate_Batch&lt;27, 64, 3, 16, 1, Slice&lt;ap_fixed&lt;8, 1, AP_TRN, AP_SAT, 0&gt;, 8&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Recast&lt;Binary&gt;, ap_uint&lt;24&gt;, ap_uint&lt;16&gt;, BinaryWeights&lt;3, 16, 36&gt;, ThresholdsActivation&lt;4, 16, 1, ap_fixed&lt;24, 16, AP_TRN, AP_WRAP, 0&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_fixed&lt;24, 16, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="" col3="1642" col4="1628" col5="965" col6="965">
+                            <row id="30" col0="cast&lt;8&gt;" col1="interpret.hpp:186" col2="" col3="144" col3_disp="  144 (48 calls)" col4="144" col4_disp="  144 (48 calls)" col5="" col6=""/>
+                        </row>
+                        <row id="78" col0="ConvolutionInputGenerator&lt;3, 64, 1, 30, 28, 32, 1&gt;" col1="slidingwindow.h:80" col2="" col3="128" col4="177" col5="167" col6="174"/>
+                        <row id="79" col0="Matrix_Vector_Activate_Batch&lt;576, 64, 32, 32, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, BinaryWeights&lt;32, 32, 36&gt;, ThresholdsActivation&lt;2, 32, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="" col3="8693" col4="8740" col5="8641" col6="8641">
+                            <row id="51" col0="operator()" col1="stl_function.h:385" col2="" col3="128" col3_disp="  128 (32 calls)" col4="128" col4_disp="  128 (32 calls)" col5="64" col5_disp="   64 (32 calls)" col6="64" col6_disp="   64 (32 calls)"/>
+                        </row>
+                        <row id="7" col0="ConvolutionInputGenerator&lt;3, 64, 1, 14, 12, 32, 1&gt;" col1="slidingwindow.h:80" col2="" col3="128" col4="177" col5="167" col6="174"/>
+                        <row id="87" col0="Matrix_Vector_Activate_Batch&lt;576, 128, 32, 16, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;32&gt;, ap_uint&lt;16&gt;, BinaryWeights&lt;32, 16, 144&gt;, ThresholdsActivation&lt;8, 16, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="" col3="4357" col4="4370" col5="4369" col6="4369"/>
+                        <row id="53" col0="ConvolutionInputGenerator&lt;3, 128, 1, 12, 10, 32, 1&gt;" col1="slidingwindow.h:80" col2="" col3="128" col4="177" col5="167" col6="174"/>
+                        <row id="93" col0="Matrix_Vector_Activate_Batch&lt;1152, 128, 32, 16, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;32&gt;, ap_uint&lt;16&gt;, BinaryWeights&lt;32, 16, 288&gt;, ThresholdsActivation&lt;8, 16, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="" col3="4357" col4="4424" col5="4423" col6="4423"/>
+                        <row id="57" col0="ConvolutionInputGenerator&lt;3, 128, 1, 5, 3, 32, 1&gt;" col1="slidingwindow.h:80" col2="" col3="128" col4="177" col5="167" col6="174"/>
+                        <row id="90" col0="Matrix_Vector_Activate_Batch&lt;1152, 256, 32, 4, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;, BinaryWeights&lt;32, 4, 2304&gt;, ThresholdsActivation&lt;64, 4, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="" col3="1177" col4="1268" col5="1267" col6="1267"/>
+                        <row id="36" col0="ConvolutionInputGenerator&lt;3, 256, 1, 3, 1, 32, 1&gt;" col1="slidingwindow.h:80" col2="" col3="113" col4="160" col5="152" col6="159"/>
+                        <row id="44" col0="Matrix_Vector_Activate_Batch&lt;2304, 256, 32, 1, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;32&gt;, ap_uint&lt;1&gt;, BinaryWeights&lt;32, 1, 18432&gt;, ThresholdsActivation&lt;256, 1, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="" col3="381" col4="586" col5="585" col6="585"/>
+                        <row id="56" col0="Matrix_Vector_Activate_Batch&lt;256, 512, 4, 1, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;4&gt;, ap_uint&lt;1&gt;, BinaryWeights&lt;4, 1, 32768&gt;, ThresholdsActivation&lt;512, 1, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="" col3="102" col4="281" col5="280" col6="279"/>
+                        <row id="91" col0="Matrix_Vector_Activate_Batch&lt;512, 512, 8, 1, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;1&gt;, 1&gt;, Identity, ap_uint&lt;8&gt;, ap_uint&lt;1&gt;, BinaryWeights&lt;8, 1, 32768&gt;, ThresholdsActivation&lt;512, 1, 1, ap_int&lt;16&gt;, ap_uint&lt;1&gt;, 0, std::less&lt;ap_int&lt;16&gt; &gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="" col3="142" col4="321" col5="320" col6="319"/>
+                        <row id="17" col0="Matrix_Vector_Activate_Batch&lt;512, 64, 1, 4, 1, Recast&lt;XnorMul&gt;, Slice&lt;ap_uint&lt;16&gt;, 16&gt;, Identity, ap_uint&lt;1&gt;, ap_uint&lt;64&gt;, BinaryWeights&lt;1, 4, 8192&gt;, PassThroughActivation&lt;ap_uint&lt;16&gt; &gt;, ap_resource_lut&gt;" col1="mvau.hpp:92" col2="" col3="99" col4="2131" col5="2130" col6="2129"/>
+                    </row>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

@@ -1,0 +1,174 @@
+<stg><name>DoCompute_Block__ZN24WidthAdjustedInputStreamILj64ELj32ELj196EEC2ERN3hls6streamI</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>FIFO_SRL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="25" op_0_bw="25" op_1_bw="25">
+<![CDATA[
+entry:0 %numReps_read = read i25 @_ssdm_op_Read.ap_auto.i25, i25 %numReps
+
+]]></Node>
+<StgValue><ssdm name="numReps_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="32" op_0_bw="32" op_1_bw="25" op_2_bw="7">
+<![CDATA[
+entry:1 %tmp = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i25.i7, i25 %numReps_read, i7 0
+
+]]></Node>
+<StgValue><ssdm name="tmp"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="21" op_0_bw="25">
+<![CDATA[
+entry:2 %trunc_ln121 = trunc i25 %numReps_read
+
+]]></Node>
+<StgValue><ssdm name="trunc_ln121"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="28" op_0_bw="28" op_1_bw="21" op_2_bw="7">
+<![CDATA[
+entry:3 %trunc_ln_i = bitconcatenate i28 @_ssdm_op_BitConcatenate.i28.i21.i7, i21 %trunc_ln121, i7 0
+
+]]></Node>
+<StgValue><ssdm name="trunc_ln_i"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="24" op_0_bw="25">
+<![CDATA[
+entry:4 %trunc_ln121_1 = trunc i25 %numReps_read
+
+]]></Node>
+<StgValue><ssdm name="trunc_ln121_1"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="28" op_0_bw="28" op_1_bw="24" op_2_bw="4">
+<![CDATA[
+entry:5 %shl_ln121_1_i = bitconcatenate i28 @_ssdm_op_BitConcatenate.i28.i24.i4, i24 %trunc_ln121_1, i4 0
+
+]]></Node>
+<StgValue><ssdm name="shl_ln121_1_i"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="28" op_0_bw="28" op_1_bw="28">
+<![CDATA[
+entry:6 %add_ln121 = add i28 %trunc_ln_i, i28 %shl_ln121_1_i
+
+]]></Node>
+<StgValue><ssdm name="add_ln121"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="60" op_0_bw="60" op_1_bw="32">
+<![CDATA[
+entry:7 %mrv_i = insertvalue i60 <undef>, i32 %tmp
+
+]]></Node>
+<StgValue><ssdm name="mrv_i"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="60" op_0_bw="60" op_1_bw="28">
+<![CDATA[
+entry:8 %mrv_1_i = insertvalue i60 %mrv_i, i28 %add_ln121
+
+]]></Node>
+<StgValue><ssdm name="mrv_1_i"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="0" op_0_bw="60">
+<![CDATA[
+entry:9 %ret_ln121 = ret i60 %mrv_1_i
+
+]]></Node>
+<StgValue><ssdm name="ret_ln121"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

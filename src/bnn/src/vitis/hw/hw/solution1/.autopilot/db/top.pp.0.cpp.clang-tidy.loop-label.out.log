@@ -1,0 +1,459 @@
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:1449:7: warning: Added loop label VITIS_LOOP_1207_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1207_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:1449:7: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:2423:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:2423:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:2437:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:2437:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:2451:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:2451:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:4080:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:4080:7: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31435:3: warning: Added loop label VITIS_LOOP_75_1:   [xilinx-label-all-loops]
+  for (unsigned int i = 0; i < NumTotal; i++) {
+  ^~~
+  VITIS_LOOP_75_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31435:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31451:3: warning: Added loop label VITIS_LOOP_107_1:   [xilinx-label-all-loops]
+  for (unsigned int rep = 0; rep < numReps; rep++) {
+  ^~~
+  VITIS_LOOP_107_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31451:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31484:2: warning: Added loop label VITIS_LOOP_158_1:   [xilinx-label-all-loops]
+ for(unsigned int y = 0; y<OutputDim; y++){
+ ^~~
+ VITIS_LOOP_158_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31484:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31485:3: warning: Added loop label VITIS_LOOP_159_2:   [xilinx-label-all-loops]
+  for(unsigned int x=0; x < OutputDim; x++){
+  ^~~
+  VITIS_LOOP_159_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31485:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31516:2: warning: Added loop label VITIS_LOOP_209_1:   [xilinx-label-all-loops]
+ for (unsigned int rep = 0; rep < numReps; rep++) {
+ ^~~
+ VITIS_LOOP_209_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31516:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31524:3: warning: Added loop label VITIS_LOOP_232_1:   [xilinx-label-all-loops]
+  for(unsigned int i = 0; i < numReps; i++) {
+  ^~~
+  VITIS_LOOP_232_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31524:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31543:5: warning: Added loop label VITIS_LOOP_268_1:   [xilinx-label-all-loops]
+    for (unsigned int t = 0; t < totalIters; t++) {
+    ^~~
+    VITIS_LOOP_268_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31543:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31563:5: warning: Added loop label VITIS_LOOP_288_2:   [xilinx-label-all-loops]
+    for (unsigned int i = 0; i < NumInWords * numReps; i++) {
+    ^~~
+    VITIS_LOOP_288_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31563:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31575:5: warning: Added loop label VITIS_LOOP_300_3:   [xilinx-label-all-loops]
+    for (unsigned int t = 0; t < totalIters; t++) {
+    ^~~
+    VITIS_LOOP_300_3: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31575:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31615:7: warning: Added loop label VITIS_LOOP_354_1:   [xilinx-label-all-loops]
+      for (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){
+      ^~~
+      VITIS_LOOP_354_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31615:7: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31633:7: warning: Added loop label VITIS_LOOP_372_2:   [xilinx-label-all-loops]
+      for (; offset <= (OutWidth-InWidth); offset+=InWidth){
+      ^~~
+      VITIS_LOOP_372_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31633:7: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31656:2: warning: Added loop label VITIS_LOOP_409_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < NumTotal; i++) {
+ ^~~
+ VITIS_LOOP_409_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31656:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31670:2: warning: Added loop label VITIS_LOOP_437_1:   [xilinx-label-all-loops]
+ for (unsigned int image = 0; image < numReps; image++) {
+ ^~~
+ VITIS_LOOP_437_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31670:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31684:3: warning: Added loop label VITIS_LOOP_467_1:   [xilinx-label-all-loops]
+  for (unsigned int i = 0; i < NumTotal; i++) {
+  ^~~
+  VITIS_LOOP_467_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31684:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31689:5: warning: Added loop label VITIS_LOOP_472_2:   [xilinx-label-all-loops]
+    for (unsigned int j = 0; j < NumChannels; j++) {
+    ^~~
+    VITIS_LOOP_472_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31689:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31708:3: warning: Added loop label VITIS_LOOP_510_1:   [xilinx-label-all-loops]
+  for (unsigned int image = 0; image < numReps; image++) {
+  ^~~
+  VITIS_LOOP_510_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31708:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31749:3: warning: Added loop label VITIS_LOOP_588_1:   [xilinx-label-all-loops]
+  for (unsigned int t = 0; t < totalIters; t++) {
+  ^~~
+  VITIS_LOOP_588_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31749:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31756:4: warning: Added loop label VITIS_LOOP_595_2:   [xilinx-label-all-loops]
+   for(unsigned int v = 0; v < NumVecs; v++) {
+   ^~~
+   VITIS_LOOP_595_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31756:4: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31772:3: warning: Added loop label VITIS_LOOP_611_3:   [xilinx-label-all-loops]
+  for (unsigned int i = 0; i < NumInWords * numReps; i++) {
+  ^~~
+  VITIS_LOOP_611_3: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31772:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31778:4: warning: Added loop label VITIS_LOOP_617_4:   [xilinx-label-all-loops]
+   for(unsigned int v=0; v < NumVecs; v++) {
+   ^~~
+   VITIS_LOOP_617_4: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31778:4: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31791:3: warning: Added loop label VITIS_LOOP_630_5:   [xilinx-label-all-loops]
+  for (unsigned int t = 0; t < totalIters; t++) {
+  ^~~
+  VITIS_LOOP_630_5: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31791:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31795:4: warning: Added loop label VITIS_LOOP_634_6:   [xilinx-label-all-loops]
+   for(unsigned int v = 0; v < NumVecs; v++) {
+   ^~~
+   VITIS_LOOP_634_6: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31795:4: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31817:2: warning: Added loop label VITIS_LOOP_670_1:   [xilinx-label-all-loops]
+ for(unsigned int r = 0; r < numReps; r++) {
+ ^~~
+ VITIS_LOOP_670_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31817:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31821:3: warning: Added loop label VITIS_LOOP_674_2:   [xilinx-label-all-loops]
+  for(unsigned int v = 0; v < NumChannels; v++) {
+  ^~~
+  VITIS_LOOP_674_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31821:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31835:2: warning: Added loop label VITIS_LOOP_701_1:   [xilinx-label-all-loops]
+ for(unsigned int r = 0; r < numReps; r++) {
+ ^~~
+ VITIS_LOOP_701_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31835:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31839:3: warning: Added loop label VITIS_LOOP_705_2:   [xilinx-label-all-loops]
+  for(unsigned int v = 0; v < NumChannels; v++) {
+  ^~~
+  VITIS_LOOP_705_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31839:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31929:5: warning: Added loop label VITIS_LOOP_113_1:   [xilinx-label-all-loops]
+    while (rep != numReps) {
+    ^~~~~
+    VITIS_LOOP_113_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31929:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31943:3: warning: Added loop label VITIS_LOOP_140_1:   [xilinx-label-all-loops]
+  for (unsigned int i = 0; i < numWords; i++) {
+  ^~~
+  VITIS_LOOP_140_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31943:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31956:3: warning: Added loop label VITIS_LOOP_153_1:   [xilinx-label-all-loops]
+  for (unsigned int i = 0; i < numWords; i++) {
+  ^~~
+  VITIS_LOOP_153_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31956:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31969:3: warning: Added loop label VITIS_LOOP_166_1:   [xilinx-label-all-loops]
+  while (rep != numReps) {
+  ^~~~~
+  VITIS_LOOP_166_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31969:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31990:3: warning: Added loop label VITIS_LOOP_187_1:   [xilinx-label-all-loops]
+  while (rep != numReps) {
+  ^~~~~
+  VITIS_LOOP_187_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:31990:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32037:2: warning: Added loop label VITIS_LOOP_104_1:   [xilinx-label-all-loops]
+ for (unsigned int count_image = 0; count_image < numReps; count_image++) {
+ ^~~
+ VITIS_LOOP_104_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32037:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32038:5: warning: Added loop label VITIS_LOOP_105_2:   [xilinx-label-all-loops]
+    for (unsigned int i = 0; i < baseIter; i++) {
+    ^~~
+    VITIS_LOOP_105_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32038:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32150:2: warning: Added loop label VITIS_LOOP_235_1:   [xilinx-label-all-loops]
+ for (unsigned int count_image = 0; count_image < numReps; count_image++) {
+ ^~~
+ VITIS_LOOP_235_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32150:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32151:3: warning: Added loop label VITIS_LOOP_236_2:   [xilinx-label-all-loops]
+  for (unsigned int i = 0; i < baseIter; i++) {
+  ^~~
+  VITIS_LOOP_236_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32151:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32157:5: warning: Added loop label VITIS_LOOP_242_3:   [xilinx-label-all-loops]
+    for(unsigned int v = 0; v < MMV; v++)
+    ^~~
+    VITIS_LOOP_242_3: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32157:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32184:6: warning: Added loop label VITIS_LOOP_269_4:   [xilinx-label-all-loops]
+     for(unsigned int v = 0; v < MMV; v++) {
+     ^~~
+     VITIS_LOOP_269_4: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32184:6: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32217:6: warning: Added loop label VITIS_LOOP_302_5:   [xilinx-label-all-loops]
+     for(unsigned int v = 0; v < MMV; v++) {
+     ^~~
+     VITIS_LOOP_302_5: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:32217:6: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33711:3: warning: Added loop label VITIS_LOOP_68_1:   [xilinx-label-all-loops]
+  for(unsigned int i = 0; i < ImgDim / PoolDim; i++) {
+  ^~~
+  VITIS_LOOP_68_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33711:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33716:3: warning: Added loop label VITIS_LOOP_73_2:   [xilinx-label-all-loops]
+  for (unsigned int yp = 0; yp < ImgDim / PoolDim; yp++) {
+  ^~~
+  VITIS_LOOP_73_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33716:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33717:5: warning: Added loop label VITIS_LOOP_74_3:   [xilinx-label-all-loops]
+    for (unsigned int ky = 0; ky < PoolDim; ky++) {
+    ^~~
+    VITIS_LOOP_74_3: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33717:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33718:7: warning: Added loop label VITIS_LOOP_75_4:   [xilinx-label-all-loops]
+      for (unsigned int xp = 0; xp < ImgDim / PoolDim; xp++) {
+      ^~~
+      VITIS_LOOP_75_4: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33718:7: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33721:9: warning: Added loop label VITIS_LOOP_78_5:   [xilinx-label-all-loops]
+        for (unsigned int kx = 0; kx < PoolDim; kx++) {
+        ^~~
+        VITIS_LOOP_78_5: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33721:9: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33728:2: warning: Added loop label VITIS_LOOP_85_6:   [xilinx-label-all-loops]
+ for (unsigned int outpix = 0; outpix < ImgDim / PoolDim; outpix++) {
+ ^~~
+ VITIS_LOOP_85_6: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33728:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33740:3: warning: Added loop label VITIS_LOOP_109_1:   [xilinx-label-all-loops]
+  for (unsigned int rep = 0; rep < numReps; rep++) {
+  ^~~
+  VITIS_LOOP_109_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33740:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33754:2: warning: Added loop label VITIS_LOOP_138_1:   [xilinx-label-all-loops]
+ for(unsigned int i = 0; i < ImgDim / PoolDim; i++) {
+ ^~~
+ VITIS_LOOP_138_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33754:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33755:5: warning: Added loop label VITIS_LOOP_139_2:   [xilinx-label-all-loops]
+    for(unsigned int ch = 0; ch<NumChannels; ch++){
+    ^~~
+    VITIS_LOOP_139_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33755:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33761:3: warning: Added loop label VITIS_LOOP_145_3:   [xilinx-label-all-loops]
+  for (unsigned int yp = 0; yp < ImgDim / PoolDim; yp++) {
+  ^~~
+  VITIS_LOOP_145_3: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33761:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33762:5: warning: Added loop label VITIS_LOOP_146_4:   [xilinx-label-all-loops]
+    for (unsigned int ky = 0; ky < PoolDim; ky++) {
+    ^~~
+    VITIS_LOOP_146_4: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33762:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33763:7: warning: Added loop label VITIS_LOOP_147_5:   [xilinx-label-all-loops]
+      for (unsigned int xp = 0; xp < ImgDim / PoolDim; xp++) {
+      ^~~
+      VITIS_LOOP_147_5: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33763:7: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33765:9: warning: Added loop label VITIS_LOOP_149_6:   [xilinx-label-all-loops]
+        for (unsigned int kx = 0; kx < PoolDim; kx++) {
+        ^~~
+        VITIS_LOOP_149_6: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33765:9: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33768:11: warning: Added loop label VITIS_LOOP_152_7:   [xilinx-label-all-loops]
+          for(unsigned int ch = 0; ch<NumChannels; ch++){
+          ^~~
+          VITIS_LOOP_152_7: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33768:11: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33781:5: warning: Added loop label VITIS_LOOP_165_8:   [xilinx-label-all-loops]
+    for (unsigned int outpix = 0; outpix < ImgDim / PoolDim; outpix++) {
+    ^~~
+    VITIS_LOOP_165_8: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33781:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33782:7: warning: Added loop label VITIS_LOOP_166_9:   [xilinx-label-all-loops]
+      for(unsigned int ch = 0; ch < NumChannels; ch++){
+      ^~~
+      VITIS_LOOP_166_9: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33782:7: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33805:3: warning: Added loop label VITIS_LOOP_203_1:   [xilinx-label-all-loops]
+  for (unsigned int rep = 0; rep < numReps; rep++) {
+  ^~~
+  VITIS_LOOP_203_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33805:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33825:2: warning: Added loop label VITIS_LOOP_239_1:   [xilinx-label-all-loops]
+ for(unsigned int reps=0; reps<numReps; reps++){
+ ^~~
+ VITIS_LOOP_239_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33825:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33826:3: warning: Added loop label VITIS_LOOP_240_2:   [xilinx-label-all-loops]
+  for(unsigned int pixel=0; pixel<ImgDim*ImgDim; pixel++){
+  ^~~
+  VITIS_LOOP_240_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33826:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33827:7: warning: Added loop label VITIS_LOOP_241_3:   [xilinx-label-all-loops]
+      for(unsigned int fold=0; fold<NumChannels/PECount; fold++){
+      ^~~
+      VITIS_LOOP_241_3: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33827:7: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33830:9: warning: Added loop label VITIS_LOOP_244_4:   [xilinx-label-all-loops]
+        for(unsigned int pe=0; pe<PECount; pe++){
+        ^~~
+        VITIS_LOOP_244_4: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33830:9: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33859:9: error: Resource with core_name: RAM_2P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable=accumulators core=RAM_2P_LUTRAM
+        ^
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33862:2: warning: Added loop label VITIS_LOOP_290_1:   [xilinx-label-all-loops]
+ for(unsigned int reps=0; reps<numReps; reps++){
+ ^~~
+ VITIS_LOOP_290_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33862:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33863:3: warning: Added loop label VITIS_LOOP_291_2:   [xilinx-label-all-loops]
+  for(unsigned int pixel=0; pixel<ImgDim*ImgDim; pixel++){
+  ^~~
+  VITIS_LOOP_291_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33863:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33864:7: warning: Added loop label VITIS_LOOP_292_3:   [xilinx-label-all-loops]
+      for(unsigned int fold=0; fold<NumChannels/PECount; fold++){
+      ^~~
+      VITIS_LOOP_292_3: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33864:7: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33868:9: warning: Added loop label VITIS_LOOP_296_4:   [xilinx-label-all-loops]
+        for(unsigned int pe=0; pe<PECount; pe++){
+        ^~~
+        VITIS_LOOP_296_4: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33868:9: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33885:5: warning: Added loop label VITIS_LOOP_313_5:   [xilinx-label-all-loops]
+    for (unsigned int fold = 0; fold < NumChannels / PECount; fold++)
+    ^~~
+    VITIS_LOOP_313_5: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33885:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33906:1: warning: Added loop label VITIS_LOOP_350_1:   [xilinx-label-all-loops]
+for(unsigned int reps=0; reps<numReps; reps++){
+^~~
+VITIS_LOOP_350_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33906:1: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33908:3: warning: Added loop label VITIS_LOOP_352_2:   [xilinx-label-all-loops]
+  for(unsigned int topx=0; topx<NumTop; topx++){
+  ^~~
+  VITIS_LOOP_352_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33908:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33912:3: warning: Added loop label VITIS_LOOP_356_3:   [xilinx-label-all-loops]
+  for(unsigned int block=0; block<(NumClasses/PECount); block++){
+  ^~~
+  VITIS_LOOP_356_3: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33912:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33915:5: warning: Added loop label VITIS_LOOP_359_4:   [xilinx-label-all-loops]
+    for(unsigned int elem=0; elem<PECount; elem++){
+    ^~~
+    VITIS_LOOP_359_4: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33915:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33919:7: warning: Added loop label VITIS_LOOP_363_5:   [xilinx-label-all-loops]
+      for(unsigned int topx=0; topx<NumTop; topx++){
+      ^~~
+      VITIS_LOOP_363_5: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33919:7: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33937:5: warning: Added loop label VITIS_LOOP_381_6:   [xilinx-label-all-loops]
+    for(unsigned int topx = 0; topx < NumTop; topx++){
+    ^~~
+    VITIS_LOOP_381_6: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:33937:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36342:3: warning: Added loop label VITIS_LOOP_90_1:   [xilinx-label-all-loops]
+  while(!log.empty()){
+  ^~~~~
+  VITIS_LOOP_90_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36342:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36348:3: warning: Added loop label VITIS_LOOP_96_2:   [xilinx-label-all-loops]
+  while(!tmp_stream.empty()){
+  ^~~~~
+  VITIS_LOOP_96_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36348:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36368:9: error: Resource with core_name: Mul_LUT pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable=res core=Mul_LUT
+        ^
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36376:9: error: Resource with core_name: DSP48 pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable=res core=DSP48
+        ^
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36384:3: warning: Added loop label VITIS_LOOP_167_1:   [xilinx-label-all-loops]
+  for(unsigned i = 0; i < N; i++) {
+  ^~~
+  VITIS_LOOP_167_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36384:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36395:3: warning: Added loop label VITIS_LOOP_194_1:   [xilinx-label-all-loops]
+  for(unsigned i = 0; i < N; i++) {
+  ^~~
+  VITIS_LOOP_194_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36395:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36701:3: warning: Added loop label VITIS_LOOP_122_1:   [xilinx-label-all-loops]
+  for(unsigned i = 0; i < reps * TOTAL_FOLD; i++) {
+  ^~~
+  VITIS_LOOP_122_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36701:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36717:7: warning: Added loop label VITIS_LOOP_138_2:   [xilinx-label-all-loops]
+      for(unsigned pe = 0; pe < PE; pe++) {
+      ^~~
+      VITIS_LOOP_138_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36717:7: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36718:9: warning: Added loop label VITIS_LOOP_139_3:   [xilinx-label-all-loops]
+        for(unsigned mmv = 0; mmv < MMV; mmv++) {
+        ^~~
+        VITIS_LOOP_139_3: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36718:9: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36727:5: warning: Added loop label VITIS_LOOP_148_4:   [xilinx-label-all-loops]
+    for(unsigned pe = 0; pe < PE; pe++) {
+    ^~~
+    VITIS_LOOP_148_4: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36727:5: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36730:7: warning: Added loop label VITIS_LOOP_151_5:   [xilinx-label-all-loops]
+      for (unsigned mmv = 0; mmv < MMV; mmv++){
+      ^~~
+      VITIS_LOOP_151_5: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36730:7: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36741:7: warning: Added loop label VITIS_LOOP_162_6:   [xilinx-label-all-loops]
+      for (unsigned pe = 0; pe < PE; pe++) {
+      ^~~
+      VITIS_LOOP_162_6: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36741:7: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36743:2: warning: Added loop label VITIS_LOOP_164_7:   [xilinx-label-all-loops]
+ for (unsigned mmv = 0; mmv < MMV; mmv++){
+ ^~~
+ VITIS_LOOP_164_7: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:36743:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:37571:4: warning: Added loop label VITIS_LOOP_134_1:   [xilinx-label-all-loops]
+   for(unsigned int i=0; i<SIMD; i++) {
+   ^~~
+   VITIS_LOOP_134_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:37571:4: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:37649:2: warning: Added loop label VITIS_LOOP_140_1:   [xilinx-label-all-loops]
+ for(unsigned int i=0; i< NumTH; i++){
+ ^~~
+ VITIS_LOOP_140_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:37649:2: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:37676:3: warning: Added loop label VITIS_LOOP_187_1:   [xilinx-label-all-loops]
+  for (unsigned i = 0; i < reps * ImgDim * ImgDim * NF; i++)
+  ^~~
+  VITIS_LOOP_187_1: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:37676:3: note: FIX-IT applied suggested code changes
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:37681:5: warning: Added loop label VITIS_LOOP_192_2:   [xilinx-label-all-loops]
+    for (unsigned pe = 0; pe < PE; pe++)
+    ^~~
+    VITIS_LOOP_192_2: 
+E:\Tai_lieu\DATN\vitis\hw\hw\solution1\.autopilot\db\top.pp.0.cpp:37681:5: note: FIX-IT applied suggested code changes

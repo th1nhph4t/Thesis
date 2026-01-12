@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2023.2.2 (64-bit)
+# SW Build 4126759 on Thu Feb  8 23:53:51 MST 2024
+# IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
+# SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
+# Start of session at: Thu May 29 20:46:12 2025
+# Process ID: 17664
+# Current directory: E:/Tai_lieu/DATN/vitis/hw/hw/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: E:/Tai_lieu/DATN/vitis/hw/hw/solution1/impl/ip/vivado.log
+# Journal file: E:/Tai_lieu/DATN/vitis/hw/hw/solution1/impl/ip\vivado.jou
+# Running On: ThinhPhat, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 17024 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 491.367 ; gain = 180.105
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu May 29 20:46:43 2025...

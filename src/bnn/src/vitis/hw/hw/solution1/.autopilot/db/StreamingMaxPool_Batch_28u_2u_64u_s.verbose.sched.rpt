@@ -1,0 +1,268 @@
+
+
+================================================================
+== Vitis HLS Report for 'StreamingMaxPool_Batch_28u_2u_64u_s'
+================================================================
+* Date:           Thu May 29 09:35:39 2025
+
+* Version:        2023.2.2 (Build 4101106 on Feb  9 2024)
+* Project:        hw
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.670 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_109_1  |        ?|        ?|      1114|          -|          -|     ?|        no|
+        | + VITIS_LOOP_73_2  |     1106|     1106|        79|          -|          -|    14|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 13
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 2 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 9 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.26>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%rep = alloca i32 1" [../maxpool.h:109]   --->   Operation 14 'alloca' 'rep' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %numReps, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (3.63ns)   --->   "%numReps_1 = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %numReps"   --->   Operation 16 'read' 'numReps_1' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %numReps_c152, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (3.63ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i32P0A, i32 %numReps_c152, i32 %numReps_1"   --->   Operation 18 'write' 'write_ln0' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %inter3, void @empty_11, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %inter2, void @empty_11, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%buf = alloca i64 1" [../maxpool.h:67->../maxpool.h:110]   --->   Operation 21 'alloca' 'buf' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%buf_addr = getelementptr i64 %buf, i64 0, i64 0"   --->   Operation 22 'getelementptr' 'buf_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%buf_addr_1 = getelementptr i64 %buf, i64 0, i64 1"   --->   Operation 23 'getelementptr' 'buf_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%buf_addr_2 = getelementptr i64 %buf, i64 0, i64 2"   --->   Operation 24 'getelementptr' 'buf_addr_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%buf_addr_3 = getelementptr i64 %buf, i64 0, i64 3"   --->   Operation 25 'getelementptr' 'buf_addr_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%buf_addr_4 = getelementptr i64 %buf, i64 0, i64 4"   --->   Operation 26 'getelementptr' 'buf_addr_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%buf_addr_5 = getelementptr i64 %buf, i64 0, i64 5"   --->   Operation 27 'getelementptr' 'buf_addr_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%buf_addr_6 = getelementptr i64 %buf, i64 0, i64 6"   --->   Operation 28 'getelementptr' 'buf_addr_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%buf_addr_7 = getelementptr i64 %buf, i64 0, i64 7"   --->   Operation 29 'getelementptr' 'buf_addr_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%buf_addr_8 = getelementptr i64 %buf, i64 0, i64 8"   --->   Operation 30 'getelementptr' 'buf_addr_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%buf_addr_9 = getelementptr i64 %buf, i64 0, i64 9"   --->   Operation 31 'getelementptr' 'buf_addr_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%buf_addr_10 = getelementptr i64 %buf, i64 0, i64 10"   --->   Operation 32 'getelementptr' 'buf_addr_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%buf_addr_11 = getelementptr i64 %buf, i64 0, i64 11"   --->   Operation 33 'getelementptr' 'buf_addr_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%buf_addr_12 = getelementptr i64 %buf, i64 0, i64 12"   --->   Operation 34 'getelementptr' 'buf_addr_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%buf_addr_13 = getelementptr i64 %buf, i64 0, i64 13"   --->   Operation 35 'getelementptr' 'buf_addr_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (1.58ns)   --->   "%store_ln109 = store i32 0, i32 %rep" [../maxpool.h:109]   --->   Operation 36 'store' 'store_ln109' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln109 = br void %for.inc" [../maxpool.h:109]   --->   Operation 37 'br' 'br_ln109' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 4.87>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%rep_1 = load i32 %rep" [../maxpool.h:109]   --->   Operation 38 'load' 'rep_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (2.55ns)   --->   "%icmp_ln109 = icmp_eq  i32 %rep_1, i32 %numReps_1" [../maxpool.h:109]   --->   Operation 39 'icmp' 'icmp_ln109' <Predicate = true> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (2.55ns)   --->   "%rep_2 = add i32 %rep_1, i32 1" [../maxpool.h:109]   --->   Operation 40 'add' 'rep_2' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln109 = br i1 %icmp_ln109, void %for.inc.split, void %for.end.loopexit" [../maxpool.h:109]   --->   Operation 41 'br' 'br_ln109' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 42 'store' 'store_ln70' <Predicate = (!icmp_ln109)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_2 : Operation 43 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr_1" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 43 'store' 'store_ln70' <Predicate = (!icmp_ln109)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%ret_ln112 = ret" [../maxpool.h:112]   --->   Operation 44 'ret' 'ret_ln112' <Predicate = (icmp_ln109)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 45 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr_2" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 45 'store' 'store_ln70' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_3 : Operation 46 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr_3" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 46 'store' 'store_ln70' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+
+State 4 <SV = 3> <Delay = 2.32>
+ST_4 : Operation 47 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr_4" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 47 'store' 'store_ln70' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_4 : Operation 48 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr_5" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 48 'store' 'store_ln70' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+
+State 5 <SV = 4> <Delay = 2.32>
+ST_5 : Operation 49 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr_6" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 49 'store' 'store_ln70' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_5 : Operation 50 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr_7" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 50 'store' 'store_ln70' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+
+State 6 <SV = 5> <Delay = 2.32>
+ST_6 : Operation 51 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr_8" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 51 'store' 'store_ln70' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_6 : Operation 52 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr_9" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 52 'store' 'store_ln70' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+
+State 7 <SV = 6> <Delay = 2.32>
+ST_7 : Operation 53 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr_10" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 53 'store' 'store_ln70' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_7 : Operation 54 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr_11" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 54 'store' 'store_ln70' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+
+State 8 <SV = 7> <Delay = 2.32>
+ST_8 : Operation 55 [1/1] (0.00ns)   --->   "%specloopname_ln109 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [../maxpool.h:109]   --->   Operation 55 'specloopname' 'specloopname_ln109' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 56 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr_12" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 56 'store' 'store_ln70' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_8 : Operation 57 [1/1] (2.32ns)   --->   "%store_ln70 = store i64 0, i4 %buf_addr_13" [../maxpool.h:70->../maxpool.h:110]   --->   Operation 57 'store' 'store_ln70' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 14> <RAM>
+ST_8 : Operation 58 [1/1] (1.58ns)   --->   "%br_ln73 = br void %VITIS_LOOP_74_3.i" [../maxpool.h:73->../maxpool.h:110]   --->   Operation 58 'br' 'br_ln73' <Predicate = true> <Delay = 1.58>
+
+State 9 <SV = 8> <Delay = 3.32>
+ST_9 : Operation 59 [1/1] (0.00ns)   --->   "%yp = phi i4 0, void %for.inc.split, i4 %yp_1, void %VITIS_LOOP_74_3.i.split"   --->   Operation 59 'phi' 'yp' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 60 [1/1] (1.73ns)   --->   "%icmp_ln73 = icmp_eq  i4 %yp, i4 14" [../maxpool.h:73->../maxpool.h:110]   --->   Operation 60 'icmp' 'icmp_ln73' <Predicate = true> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 61 [1/1] (1.73ns)   --->   "%yp_1 = add i4 %yp, i4 1" [../maxpool.h:73->../maxpool.h:110]   --->   Operation 61 'add' 'yp_1' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 62 [1/1] (0.00ns)   --->   "%br_ln73 = br i1 %icmp_ln73, void %VITIS_LOOP_74_3.i.split, void %_Z16StreamingMaxPoolILj28ELj2ELj64EEvRN3hls6streamI7ap_uintIXT1_EELi0EEES5_.exit" [../maxpool.h:73->../maxpool.h:110]   --->   Operation 62 'br' 'br_ln73' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 63 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 63 'wait' 'empty' <Predicate = (!icmp_ln73)> <Delay = 0.00>
+ST_9 : Operation 64 [2/2] (0.00ns)   --->   "%call_ln0 = call void @StreamingMaxPool_Batch<28u, 2u, 64u>_Pipeline_VITIS_LOOP_74_3_VITIS_LOOP_75_4, i64 %inter2, i64 %buf"   --->   Operation 64 'call' 'call_ln0' <Predicate = (!icmp_ln73)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 65 [1/1] (1.58ns)   --->   "%store_ln109 = store i32 %rep_2, i32 %rep" [../maxpool.h:109]   --->   Operation 65 'store' 'store_ln109' <Predicate = (icmp_ln73)> <Delay = 1.58>
+ST_9 : Operation 66 [1/1] (0.00ns)   --->   "%br_ln109 = br void %for.inc" [../maxpool.h:109]   --->   Operation 66 'br' 'br_ln109' <Predicate = (icmp_ln73)> <Delay = 0.00>
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 67 [1/2] (0.00ns)   --->   "%call_ln0 = call void @StreamingMaxPool_Batch<28u, 2u, 64u>_Pipeline_VITIS_LOOP_74_3_VITIS_LOOP_75_4, i64 %inter2, i64 %buf"   --->   Operation 67 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 68 [1/1] (0.00ns)   --->   "%empty_1185 = wait i32 @_ssdm_op_Wait"   --->   Operation 68 'wait' 'empty_1185' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 69 [1/1] (0.00ns)   --->   "%empty_1186 = wait i32 @_ssdm_op_Wait"   --->   Operation 69 'wait' 'empty_1186' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 70 [2/2] (0.00ns)   --->   "%call_ln0 = call void @StreamingMaxPool_Batch<28u, 2u, 64u>_Pipeline_VITIS_LOOP_85_6, i64 %buf, i64 %inter3"   --->   Operation 70 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 71 [1/1] (0.00ns)   --->   "%speclooptripcount_ln73 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 14, i64 14, i64 14" [../maxpool.h:73->../maxpool.h:110]   --->   Operation 71 'speclooptripcount' 'speclooptripcount_ln73' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 72 [1/1] (0.00ns)   --->   "%specloopname_ln73 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [../maxpool.h:73->../maxpool.h:110]   --->   Operation 72 'specloopname' 'specloopname_ln73' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 73 [1/2] (0.00ns)   --->   "%call_ln0 = call void @StreamingMaxPool_Batch<28u, 2u, 64u>_Pipeline_VITIS_LOOP_85_6, i64 %buf, i64 %inter3"   --->   Operation 73 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln73 = br void %VITIS_LOOP_74_3.i" [../maxpool.h:73->../maxpool.h:110]   --->   Operation 74 'br' 'br_ln73' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 7.268ns
+The critical path consists of the following:
+	fifo read operation ('numReps') on port 'numReps' [7]  (3.634 ns)
+	fifo write operation ('write_ln0') on port 'numReps_c152' [9]  (3.634 ns)
+
+ <State 2>: 4.874ns
+The critical path consists of the following:
+	'load' operation 32 bit ('rep', ../maxpool.h:109) on local variable 'rep', ../maxpool.h:109 [30]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln109', ../maxpool.h:109) [31]  (2.552 ns)
+	blocking operation 2.322 ns on control path)
+
+ <State 3>: 2.322ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln70', ../maxpool.h:70->../maxpool.h:110) of constant 0 on array 'buf', ../maxpool.h:67->../maxpool.h:110 [38]  (2.322 ns)
+
+ <State 4>: 2.322ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln70', ../maxpool.h:70->../maxpool.h:110) of constant 0 on array 'buf', ../maxpool.h:67->../maxpool.h:110 [40]  (2.322 ns)
+
+ <State 5>: 2.322ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln70', ../maxpool.h:70->../maxpool.h:110) of constant 0 on array 'buf', ../maxpool.h:67->../maxpool.h:110 [42]  (2.322 ns)
+
+ <State 6>: 2.322ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln70', ../maxpool.h:70->../maxpool.h:110) of constant 0 on array 'buf', ../maxpool.h:67->../maxpool.h:110 [44]  (2.322 ns)
+
+ <State 7>: 2.322ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln70', ../maxpool.h:70->../maxpool.h:110) of constant 0 on array 'buf', ../maxpool.h:67->../maxpool.h:110 [46]  (2.322 ns)
+
+ <State 8>: 2.322ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln70', ../maxpool.h:70->../maxpool.h:110) of constant 0 on array 'buf', ../maxpool.h:67->../maxpool.h:110 [48]  (2.322 ns)
+
+ <State 9>: 3.323ns
+The critical path consists of the following:
+	'phi' operation 4 bit ('yp') with incoming values : ('yp', ../maxpool.h:73->../maxpool.h:110) [52]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln73', ../maxpool.h:73->../maxpool.h:110) [53]  (1.735 ns)
+	blocking operation 1.588 ns on control path)
+
+ <State 10>: 0.000ns
+The critical path consists of the following:
+
+ <State 11>: 0.000ns
+The critical path consists of the following:
+
+ <State 12>: 0.000ns
+The critical path consists of the following:
+
+ <State 13>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

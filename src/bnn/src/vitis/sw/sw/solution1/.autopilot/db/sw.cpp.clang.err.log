@@ -1,0 +1,7 @@
+In file included from sw.cpp:3:
+In file included from ./tiny_cnn.h:35:
+In file included from ./layer_factory.h:33:
+./layer_factory_impl.h:36:10: fatal error: 'caffe.pb.h' file not found
+#include "caffe.pb.h"
+         ^~~~~~~~~~~~
+1 error generated.

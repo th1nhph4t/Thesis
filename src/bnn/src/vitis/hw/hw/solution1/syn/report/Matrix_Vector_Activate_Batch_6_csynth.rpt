@@ -1,0 +1,175 @@
+
+
+================================================================
+== Vitis HLS Report for 'Matrix_Vector_Activate_Batch_6'
+================================================================
+* Date:           Thu May 29 09:37:06 2025
+
+* Version:        2023.2.2 (Build 4101106 on Feb  9 2024)
+* Project:        hw
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  9.883 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------------------+----------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                                    |                                                          |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                              Instance                              |                          Module                          |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------------------------------------------------------------+----------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_Matrix_Vector_Activate_Batch_6_Pipeline_VITIS_LOOP_122_1_fu_58  |Matrix_Vector_Activate_Batch_6_Pipeline_VITIS_LOOP_122_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +--------------------------------------------------------------------+----------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     41|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|    2706|   1439|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     74|    -|
+|Register         |        -|    -|      59|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|    2765|   1554|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|       2|      2|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------------------+----------------------------------------------------------+---------+----+------+------+-----+
+    |                              Instance                              |                          Module                          | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +--------------------------------------------------------------------+----------------------------------------------------------+---------+----+------+------+-----+
+    |grp_Matrix_Vector_Activate_Batch_6_Pipeline_VITIS_LOOP_122_1_fu_58  |Matrix_Vector_Activate_Batch_6_Pipeline_VITIS_LOOP_122_1  |        0|   0|  2706|  1439|    0|
+    +--------------------------------------------------------------------+----------------------------------------------------------+---------+----+------+------+-----+
+    |Total                                                               |                                                          |        0|   0|  2706|  1439|    0|
+    +--------------------------------------------------------------------+----------------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |mul_i_fu_81_p2   |         +|   0|  0|  39|          32|          32|
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|  41|          33|          33|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm             |  20|          4|    1|          4|
+    |ap_done               |   9|          2|    1|          2|
+    |convInp_read          |   9|          2|    1|          2|
+    |mvOut_m_buffer_write  |   9|          2|    1|          2|
+    |numReps_blk_n         |   9|          2|    1|          2|
+    |numReps_c143_blk_n    |   9|          2|    1|          2|
+    |real_start            |   9|          2|    1|          2|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  74|         16|    7|         16|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                       Name                                      | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                        |   3|   0|    3|          0|
+    |ap_done_reg                                                                      |   1|   0|    1|          0|
+    |grp_Matrix_Vector_Activate_Batch_6_Pipeline_VITIS_LOOP_122_1_fu_58_ap_start_reg  |   1|   0|    1|          0|
+    |mul_i_reg_94                                                                     |  21|   0|   32|         11|
+    |numReps_read_reg_88                                                              |  32|   0|   32|          0|
+    |start_once_reg                                                                   |   1|   0|    1|          0|
+    +---------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                            |  59|   0|   70|         11|
+    +---------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+--------------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++-------------------------------+-----+-----+------------+--------------------------------+--------------+
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  Matrix_Vector_Activate_Batch.6|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  Matrix_Vector_Activate_Batch.6|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  Matrix_Vector_Activate_Batch.6|  return value|
+|start_full_n                   |   in|    1|  ap_ctrl_hs|  Matrix_Vector_Activate_Batch.6|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  Matrix_Vector_Activate_Batch.6|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|  Matrix_Vector_Activate_Batch.6|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  Matrix_Vector_Activate_Batch.6|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  Matrix_Vector_Activate_Batch.6|  return value|
+|start_out                      |  out|    1|  ap_ctrl_hs|  Matrix_Vector_Activate_Batch.6|  return value|
+|start_write                    |  out|    1|  ap_ctrl_hs|  Matrix_Vector_Activate_Batch.6|  return value|
+|convInp_dout                   |   in|   32|     ap_fifo|                         convInp|       pointer|
+|convInp_num_data_valid         |   in|    3|     ap_fifo|                         convInp|       pointer|
+|convInp_fifo_cap               |   in|    3|     ap_fifo|                         convInp|       pointer|
+|convInp_empty_n                |   in|    1|     ap_fifo|                         convInp|       pointer|
+|convInp_read                   |  out|    1|     ap_fifo|                         convInp|       pointer|
+|mvOut_m_buffer_din             |  out|    1|     ap_fifo|                  mvOut_m_buffer|       pointer|
+|mvOut_m_buffer_num_data_valid  |   in|    3|     ap_fifo|                  mvOut_m_buffer|       pointer|
+|mvOut_m_buffer_fifo_cap        |   in|    3|     ap_fifo|                  mvOut_m_buffer|       pointer|
+|mvOut_m_buffer_full_n          |   in|    1|     ap_fifo|                  mvOut_m_buffer|       pointer|
+|mvOut_m_buffer_write           |  out|    1|     ap_fifo|                  mvOut_m_buffer|       pointer|
+|numReps_dout                   |   in|   32|     ap_fifo|                         numReps|       pointer|
+|numReps_num_data_valid         |   in|    3|     ap_fifo|                         numReps|       pointer|
+|numReps_fifo_cap               |   in|    3|     ap_fifo|                         numReps|       pointer|
+|numReps_empty_n                |   in|    1|     ap_fifo|                         numReps|       pointer|
+|numReps_read                   |  out|    1|     ap_fifo|                         numReps|       pointer|
+|numReps_c143_din               |  out|   32|     ap_fifo|                    numReps_c143|       pointer|
+|numReps_c143_num_data_valid    |   in|    3|     ap_fifo|                    numReps_c143|       pointer|
+|numReps_c143_fifo_cap          |   in|    3|     ap_fifo|                    numReps_c143|       pointer|
+|numReps_c143_full_n            |   in|    1|     ap_fifo|                    numReps_c143|       pointer|
+|numReps_c143_write             |  out|    1|     ap_fifo|                    numReps_c143|       pointer|
+|weights5_address0              |  out|   15|   ap_memory|                        weights5|         array|
+|weights5_ce0                   |  out|    1|   ap_memory|                        weights5|         array|
+|weights5_q0                    |   in|   32|   ap_memory|                        weights5|         array|
+|threshs5_address0              |  out|    8|   ap_memory|                        threshs5|         array|
+|threshs5_ce0                   |  out|    1|   ap_memory|                        threshs5|         array|
+|threshs5_q0                    |   in|   16|   ap_memory|                        threshs5|         array|
++-------------------------------+-----+-----+------------+--------------------------------+--------------+
+

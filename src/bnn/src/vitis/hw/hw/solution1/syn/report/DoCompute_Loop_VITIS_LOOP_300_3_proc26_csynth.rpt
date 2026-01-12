@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vitis HLS Report for 'DoCompute_Loop_VITIS_LOOP_300_3_proc26'
+================================================================
+* Date:           Thu May 29 09:36:31 2025
+
+* Version:        2023.2.2 (Build 4101106 on Feb  9 2024)
+* Project:        hw
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.670 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                                            |                                                                  |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                                  Instance                                  |                              Module                              |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_DoCompute_Loop_VITIS_LOOP_300_3_proc26_Pipeline_VITIS_LOOP_300_3_fu_52  |DoCompute_Loop_VITIS_LOOP_300_3_proc26_Pipeline_VITIS_LOOP_300_3  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    2|     282|    284|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     79|    -|
+|Register         |        -|    -|      71|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    2|     353|    365|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|   ~0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+----+-----+-----+-----+
+    |                                  Instance                                  |                              Module                              | BRAM_18K| DSP|  FF | LUT | URAM|
+    +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+----+-----+-----+-----+
+    |grp_DoCompute_Loop_VITIS_LOOP_300_3_proc26_Pipeline_VITIS_LOOP_300_3_fu_52  |DoCompute_Loop_VITIS_LOOP_300_3_proc26_Pipeline_VITIS_LOOP_300_3  |        0|   0|  117|  234|    0|
+    |mul_32s_13ns_32_2_1_U116                                                    |mul_32s_13ns_32_2_1                                               |        0|   2|  165|   50|    0|
+    +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                                       |                                                                  |        0|   2|  282|  284|    0|
+    +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------+----+-----------+-----+-----------+
+    |          Name          | LUT| Input Size| Bits| Total Bits|
+    +------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm               |  25|          5|    1|          5|
+    |ap_done                 |   9|          2|    1|          2|
+    |inter1_write            |   9|          2|    1|          2|
+    |mvOut_m_buffer_10_read  |   9|          2|    1|          2|
+    |numReps_blk_n           |   9|          2|    1|          2|
+    |numReps_c156_blk_n      |   9|          2|    1|          2|
+    |real_start              |   9|          2|    1|          2|
+    +------------------------+----+-----------+-----+-----------+
+    |Total                   |  79|         17|    7|         17|
+    +------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                           Name                                          | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                                |   4|   0|    4|          0|
+    |ap_done_reg                                                                              |   1|   0|    1|          0|
+    |grp_DoCompute_Loop_VITIS_LOOP_300_3_proc26_Pipeline_VITIS_LOOP_300_3_fu_52_ap_start_reg  |   1|   0|    1|          0|
+    |numReps_read_reg_67                                                                      |  32|   0|   32|          0|
+    |start_once_reg                                                                           |   1|   0|    1|          0|
+    |totalIters_reg_72                                                                        |  32|   0|   32|          0|
+    +-----------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                    |  71|   0|   71|          0|
+    +-----------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+----------------------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |              Source Object             |    C Type    |
++----------------------------------+-----+-----+------------+----------------------------------------+--------------+
+|ap_clk                            |   in|    1|  ap_ctrl_hs|  DoCompute_Loop_VITIS_LOOP_300_3_proc26|  return value|
+|ap_rst                            |   in|    1|  ap_ctrl_hs|  DoCompute_Loop_VITIS_LOOP_300_3_proc26|  return value|
+|ap_start                          |   in|    1|  ap_ctrl_hs|  DoCompute_Loop_VITIS_LOOP_300_3_proc26|  return value|
+|start_full_n                      |   in|    1|  ap_ctrl_hs|  DoCompute_Loop_VITIS_LOOP_300_3_proc26|  return value|
+|ap_done                           |  out|    1|  ap_ctrl_hs|  DoCompute_Loop_VITIS_LOOP_300_3_proc26|  return value|
+|ap_continue                       |   in|    1|  ap_ctrl_hs|  DoCompute_Loop_VITIS_LOOP_300_3_proc26|  return value|
+|ap_idle                           |  out|    1|  ap_ctrl_hs|  DoCompute_Loop_VITIS_LOOP_300_3_proc26|  return value|
+|ap_ready                          |  out|    1|  ap_ctrl_hs|  DoCompute_Loop_VITIS_LOOP_300_3_proc26|  return value|
+|start_out                         |  out|    1|  ap_ctrl_hs|  DoCompute_Loop_VITIS_LOOP_300_3_proc26|  return value|
+|start_write                       |  out|    1|  ap_ctrl_hs|  DoCompute_Loop_VITIS_LOOP_300_3_proc26|  return value|
+|numReps_dout                      |   in|   32|     ap_fifo|                                 numReps|       pointer|
+|numReps_num_data_valid            |   in|    3|     ap_fifo|                                 numReps|       pointer|
+|numReps_fifo_cap                  |   in|    3|     ap_fifo|                                 numReps|       pointer|
+|numReps_empty_n                   |   in|    1|     ap_fifo|                                 numReps|       pointer|
+|numReps_read                      |  out|    1|     ap_fifo|                                 numReps|       pointer|
+|mvOut_m_buffer_10_dout            |   in|   16|     ap_fifo|                       mvOut_m_buffer_10|       pointer|
+|mvOut_m_buffer_10_num_data_valid  |   in|    3|     ap_fifo|                       mvOut_m_buffer_10|       pointer|
+|mvOut_m_buffer_10_fifo_cap        |   in|    3|     ap_fifo|                       mvOut_m_buffer_10|       pointer|
+|mvOut_m_buffer_10_empty_n         |   in|    1|     ap_fifo|                       mvOut_m_buffer_10|       pointer|
+|mvOut_m_buffer_10_read            |  out|    1|     ap_fifo|                       mvOut_m_buffer_10|       pointer|
+|inter1_din                        |  out|   64|     ap_fifo|                                  inter1|       pointer|
+|inter1_num_data_valid             |   in|    8|     ap_fifo|                                  inter1|       pointer|
+|inter1_fifo_cap                   |   in|    8|     ap_fifo|                                  inter1|       pointer|
+|inter1_full_n                     |   in|    1|     ap_fifo|                                  inter1|       pointer|
+|inter1_write                      |  out|    1|     ap_fifo|                                  inter1|       pointer|
+|numReps_c156_din                  |  out|   32|     ap_fifo|                            numReps_c156|       pointer|
+|numReps_c156_num_data_valid       |   in|    3|     ap_fifo|                            numReps_c156|       pointer|
+|numReps_c156_fifo_cap             |   in|    3|     ap_fifo|                            numReps_c156|       pointer|
+|numReps_c156_full_n               |   in|    1|     ap_fifo|                            numReps_c156|       pointer|
+|numReps_c156_write                |  out|    1|     ap_fifo|                            numReps_c156|       pointer|
++----------------------------------+-----+-----+------------+----------------------------------------+--------------+
+

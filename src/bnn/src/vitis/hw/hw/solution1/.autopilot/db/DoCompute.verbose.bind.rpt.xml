@@ -1,0 +1,89 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'DoCompute'" level="0">
+<item name = "Date">Thu May 29 09:36:24 2025
+</item>
+<item name = "Version">2023.2.2 (Build 4101106 on Feb  9 2024)</item>
+<item name = "Project">hw</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 9.883 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_Mem2Stream_Batch_64u_3072u_s_fu_906">Mem2Stream_Batch_64u_3072u_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Block_entry5993_proc_fu_918">DoCompute_Block_entry5993_proc, 2, 2, 20.000 ns, 20.000 ns, 2, 2, no</column>
+<column name="grp_DoCompute_Block_ZN24WidthAdjustedInputStreamILj128ELj32ELj144EEC2ERN3hls6stream_fu_923">DoCompute_Block_ZN24WidthAdjustedInputStreamILj128ELj32ELj144EEC2ERN3hls6stream, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
+<column name="grp_StreamingDataWidthConverter_Batch_64u_192u_384u_s_fu_929">StreamingDataWidthConverter_Batch_64u_192u_384u_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Block_ZN24WidthAdjustedInputStreamILj64ELj32ELj900EEC2ERN3hls6streamI_fu_937">DoCompute_Block_ZN24WidthAdjustedInputStreamILj64ELj32ELj900EEC2ERN3hls6streamI, 2, 2, 20.000 ns, 20.000 ns, 2, 2, no</column>
+<column name="grp_StreamingDataWidthConverter_Batch_192u_24u_128u_s_fu_942">StreamingDataWidthConverter_Batch_192u_24u_128u_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ConvolutionInputGenerator_3u_3u_8u_32u_30u_3u_1u_s_fu_950">ConvolutionInputGenerator_3u_3u_8u_32u_30u_3u_1u_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_Matrix_Vector_Activate_Batch_4_fu_958">Matrix_Vector_Activate_Batch_4, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_300_3_proc26_fu_1029">DoCompute_Loop_VITIS_LOOP_300_3_proc26, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_268_1_proc27_fu_1037">DoCompute_Loop_VITIS_LOOP_268_1_proc27, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ConvolutionInputGenerator_3u_64u_1u_30u_28u_32u_1u_s_fu_1045">ConvolutionInputGenerator_3u_64u_1u_30u_28u_32u_1u_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_Matrix_Vector_Activate_Batch_fu_1053">Matrix_Vector_Activate_Batch, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_300_3_proc228_fu_1188">DoCompute_Loop_VITIS_LOOP_300_3_proc228, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_StreamingMaxPool_Batch_28u_2u_64u_s_fu_1196">StreamingMaxPool_Batch_28u_2u_64u_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_268_1_proc329_fu_1204">DoCompute_Loop_VITIS_LOOP_268_1_proc329, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ConvolutionInputGenerator_3u_64u_1u_14u_12u_32u_1u_s_fu_1212">ConvolutionInputGenerator_3u_64u_1u_14u_12u_32u_1u_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="tmp_2343_DoCompute_Block_ZN24WidthAdjustedInputStreamILj64ELj32ELj196EEC2ERN3hls6streamI_fu_1220">DoCompute_Block_ZN24WidthAdjustedInputStreamILj64ELj32ELj196EEC2ERN3hls6streamI, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_Matrix_Vector_Activate_Batch_1_fu_1225">Matrix_Vector_Activate_Batch_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_300_3_proc4_fu_1296">DoCompute_Loop_VITIS_LOOP_300_3_proc4, ?, ?, ?, ?, ?, ?, no</column>
+<column name="tmp_2344_DoCompute_Block_ZN25WidthAdjustedOutputStreamILj16ELj128ELj1152EED2Ev_exit_loop_fu_1305">DoCompute_Block_ZN25WidthAdjustedOutputStreamILj16ELj128ELj1152EED2Ev_exit_loop, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_268_1_proc6_fu_1310">DoCompute_Loop_VITIS_LOOP_268_1_proc6, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ConvolutionInputGenerator_3u_128u_1u_12u_10u_32u_1u_s_fu_1318">ConvolutionInputGenerator_3u_128u_1u_12u_10u_32u_1u_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_Matrix_Vector_Activate_Batch_8_fu_1326">Matrix_Vector_Activate_Batch_8, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_300_3_proc830_fu_1397">DoCompute_Loop_VITIS_LOOP_300_3_proc830, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_StreamingMaxPool_Batch_10u_2u_128u_s_fu_1405">StreamingMaxPool_Batch_10u_2u_128u_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_268_1_proc9_fu_1413">DoCompute_Loop_VITIS_LOOP_268_1_proc9, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ConvolutionInputGenerator_3u_128u_1u_5u_3u_32u_1u_s_fu_1420">ConvolutionInputGenerator_3u_128u_1u_5u_3u_32u_1u_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="tmp_2345_DoCompute_Block_ZN24WidthAdjustedInputStreamILj128ELj32ELj25EEC2ERN3hls6streamI_fu_1428">DoCompute_Block_ZN24WidthAdjustedInputStreamILj128ELj32ELj25EEC2ERN3hls6streamI, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_Matrix_Vector_Activate_Batch_7_fu_1433">Matrix_Vector_Activate_Batch_7, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_300_3_proc11_fu_1456">DoCompute_Loop_VITIS_LOOP_300_3_proc11, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_268_1_proc13_fu_1463">DoCompute_Loop_VITIS_LOOP_268_1_proc13, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ConvolutionInputGenerator_3u_256u_1u_3u_1u_32u_1u_s_fu_1472">ConvolutionInputGenerator_3u_256u_1u_3u_1u_32u_1u_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_Matrix_Vector_Activate_Batch_6_fu_1480">Matrix_Vector_Activate_Batch_6, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_300_3_proc1531_fu_1492">DoCompute_Loop_VITIS_LOOP_300_3_proc1531, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_268_1_proc16_fu_1500">DoCompute_Loop_VITIS_LOOP_268_1_proc16, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_Matrix_Vector_Activate_Batch_5_fu_1508">Matrix_Vector_Activate_Batch_5, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_300_3_proc18_fu_1520">DoCompute_Loop_VITIS_LOOP_300_3_proc18, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_268_1_proc20_fu_1528">DoCompute_Loop_VITIS_LOOP_268_1_proc20, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_Matrix_Vector_Activate_Batch_3_fu_1535">Matrix_Vector_Activate_Batch_3, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_300_3_proc22_fu_1547">DoCompute_Loop_VITIS_LOOP_300_3_proc22, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_DoCompute_Loop_VITIS_LOOP_268_1_proc24_fu_1555">DoCompute_Loop_VITIS_LOOP_268_1_proc24, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_Matrix_Vector_Activate_Batch_2_fu_1562">Matrix_Vector_Activate_Batch_2, ?, ?, ?, ?, ?, ?, no</column>
+<column name="call_ln96_entry_proc_fu_1578">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_Stream2Mem_Batch_64u_128u_s_fu_1585">Stream2Mem_Batch_64u_128u_s, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
