@@ -1,11 +1,2 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-# Vitis/Vivado HLS generated databases (these contain lots of .adb files)
-**/.autopilot/** linguist-generated=true
-**/.autopilot/db/** linguist-generated=true
-
-# Optional: if Ada still shows up from other generated folders
-**/*.adb linguist-generated=true
-**/*.ads linguist-generated=true
-**/*.ada linguist-generated=true
-
