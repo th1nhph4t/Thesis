@@ -1,0 +1,32 @@
+\contentsline {section}{Lời cảm ơn}{1}{section*.3}%
+\contentsline {section}{Tóm tắt đồ án}{2}{section*.5}%
+\contentsline {section}{Danh sách bảng}{4}{section*.7}%
+\contentsline {section}{Danh sách hình vẽ}{6}{section*.8}%
+\contentsline {section}{\numberline {1}Giới thiệu kit PYNQ-Z2}{7}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Tổng quan về kit PYNQ-Z2}{7}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Cách kết nối kit PYNQ-Z2}{8}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Các phương pháp thiết kế vi mạch số trên kit PYNQ-Z2}{10}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Thiết kế RTL bằng ngôn ngữ Verilog và debug, kiểm tra trực tiếp trên kit thông qua Vivado 2023.2}{10}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Các bước thực hiện cụ thể:}{10}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Thiết kế một bộ Full Adder 2 bit}{13}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Dùng Vitis HLS và Vivado tạo custom IP bằng code C++ và kiểm tra kết quả thông qua Jupyter Notebook }{19}{subsection.2.2}%
+\contentsline {section}{\numberline {3}So sánh hai phương pháp thiết kế}{29}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Ưu nhược điểm hai phương pháp}{29}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Xác định trường hợp phù hợp để áp dụng mỗi phương pháp}{29}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Thiết kế và kiểm tra bộ ALU bằng Vitis, Vivado và Jupyter Notebook}{30}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Lên ý tưởng và thiết kế}{30}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Tiến hành việc thiết kế}{31}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Tạo custom IP từ Verilog RTL}{35}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Tổng quan về phương pháp}{35}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Quy trình thiết kế cụ thể}{35}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Kết luận và hướng phát triển}{43}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Kết luận}{43}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Hướng phát triển}{43}{subsection.6.2}%
+\contentsline {section}{\numberline {7}GPIO control LED}{44}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Sơ đồ thiết kế bộ điều khiển led bằng GPIO}{44}{subsection.7.1}%
+\contentsline {section}{\numberline {8}Tài liệu tham khảo}{45}{section.8}%
+\contentsline {section}{\numberline {9}Phụ lục}{46}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Code C++ của bộ ALU và giải thích}{46}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Code C++ của bộ Full Adder và giải thích}{47}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Code RTL và Testbench bộ Full Adder 2 bit}{48}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Code RTL và Testbench bộ ALU 8-bit}{50}{subsection.9.4}%

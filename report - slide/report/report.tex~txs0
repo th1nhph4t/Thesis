@@ -1,0 +1,569 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{mdframed}
+\usepackage{fontawesome}
+\usepackage{tikz}
+\usepackage{setspace}
+\usetikzlibrary{patterns}
+\usetikzlibrary{calc,angles}
+\usepackage[left= 2cm, right = 2cm, top = 2cm, bottom = 2cm]{geometry}
+\usepackage{scalefnt}
+\usepackage{fancybox}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage {xcolor}
+\usepackage{pgfplots}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{subcaption}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\baselinestretch}{1.3} % Giãn dòng 
+%\fancyhead[LE,RO]{\textsl{\leftmark }}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{Trang \thepage}
+
+
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newmdenv[linewidth=0.6pt,linecolor=blue,skipabove=\topsep,skipbelow=\topsep,
+leftmargin=-5pt,rightmargin=-5pt,
+innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+\setlist{nolistsep}
+\newcommand\tab[1][0.7cm]{\hspace*{#1}}
+\pagenumbering{arabic}
+\clearpage   
+\thispagestyle {empty}
+\begin{document}
+\begin{titlepage}
+		\begin{tikzpicture}[overlay,remember picture]
+			\draw [line width=3pt]
+			($ (current page.north west) + (2.5cm,-2.5cm) $)
+			rectangle
+			($ (current page.south east) + (-2.5cm,2.5cm) $);
+			\draw [line width=0.5pt]
+			($ (current page.north west) + (2.6cm,-2.6cm) $)
+			rectangle
+			($ (current page.south east) + (-2.6cm,2.6cm) $); 
+		\end{tikzpicture}
+		
+	\begin{center}
+		\textbf{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH} \\
+		TRƯỜNG ĐẠI HỌC BÁCH KHOA \\
+		KHOA ĐIỆN - ĐIỆN TỬ \\
+		\textbf{BỘ MÔN VIỄN THÔNG}\\
+		---------------o0o---------------\\
+	\end{center}
+	\vspace{0.5cm}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.3]{images/Pic_88} 
+	\end{figure}
+
+	\begin{center}
+		\begin{tabular}{c}
+			\textbf{{\Large ĐỒ ÁN TỐT NGHIỆP}}\\ \\
+				\textbf{{\Large ĐỀ TÀI:}}\\ \\
+			\textbf{{\Large NHẬN DIỆN BIỂN BÁO GIAO THÔNG TRÊN FPGA}} \\ \\
+
+		\end{tabular}
+	\end{center}
+
+	\vspace{2cm}
+	\begin{table}[h]
+		\begin{center}
+		
+		\begin{tabular}{rrl}
+			\hspace {5.6cm}
+						& { \bf GVHD : } & { \bf  TS. VÕ QUẾ SƠN} \\
+						& { \bf SVTH : } & { \bf  HUỲNH THỊNH PHÁT} \\
+						& { \bf MSSV : } & { \bf  2114369} \\
+						\end{tabular}
+					\end{center}
+	\end{table}
+
+	\vspace{3cm}
+	\begin{center}
+		{\footnotesize \large \textbf {Tp. Hồ Chí Minh, 25/04/2025}}
+	\end{center}
+\end{titlepage}
+\begin{center}
+	\section*{LỜI NÓI ĐẦU}
+\end{center}
+%\begin{center} \textbf{PHÂN CÔNG LÀM VIỆC} \end{center}
+
+\addcontentsline{toc}{section}{Lời nói đầu}
+\noindent Trong bối cảnh công nghệ phát triển mạnh mẽ hiện nay, các hệ thống giao thông thông minh ngày càng trở thành một yếu tố quan trọng trong việc đảm bảo an toàn và hiệu quả cho người tham gia giao thông. Một trong những ứng dụng then chốt của hệ thống giao thông thông minh là nhận diện biển báo giao thông. Việc phát triển hệ thống nhận diện biển báo giao thông tự động không chỉ giúp nâng cao mức độ an toàn mà còn góp phần cải thiện hiệu quả giao thông trong các thành phố lớn. \\
+
+\noindent Với mong muốn đóng góp vào sự phát triển của các ứng dụng trong lĩnh vực giao thông thông minh, em lựa chọn đề tài "Nhận diện biển báo giao thông bằng FPGA PYNQ-Z2". Đề tài này tập trung vào việc nghiên cứu và ứng dụng nền tảng FPGA PYNQ-Z2 để xây dựng một hệ thống nhận diện biển báo giao thông hiệu quả, sử dụng các phương pháp tối ưu cho xử lý hình ảnh và phân loại biển báo. \\
+
+\noindent PYNQ-Z2 là một nền tảng mạnh mẽ, hỗ trợ các công cụ và tài nguyên cần thiết để thiết kế và triển khai các ứng dụng vi mạch số. Đề tài này sẽ giới thiệu các phương pháp và thuật toán để nhận diện biển báo giao thông trên FPGA, từ đó đánh giá và tối ưu các giải pháp về hiệu suất, chi phí và độ chính xác của hệ thống. \\
+
+\noindent Em xin gửi lời cảm ơn chân thành đến thầy Võ Quế Sơn vì đã nhiệt tình hướng dẫn và hỗ trợ em trong suốt quá trình thực hiện đề tài này. Nhờ sự giúp đỡ tận tâm của thầy, em đã có thể hoàn thành đề tài và hy vọng rằng kết quả nghiên cứu sẽ góp phần vào sự phát triển của các hệ thống giao thông thông minh trong tương lai. \\
+
+	\vspace{3cm}
+	\begin{table}[h]
+	\begin{center}
+				\begin{tabular}{rrl}
+			\hspace {5.6cm}
+			&  { \bf  TP. Hồ Chính Minh, ngày 25 tháng 5 năm 2025} \\
+		\end{tabular}
+			\begin{tabular}{rrl}
+			\vspace{1cm}	
+		\hspace {5.6cm}
+		&  { \bf Huỳnh Thịnh Phát} \\
+	\end{tabular}
+	\end{center}
+\end{table}
+
+\newpage
+
+\begin{center}
+	\section*{TÓM TẮT ĐỒ ÁN}
+\end{center}
+%\begin{center} \textbf{LỜI MỞ ĐẦU} \end{center}
+
+\addcontentsline{toc}{section}{Tóm tắt đồ án}
+
+\newpage
+\tableofcontents
+\newpage
+{\let\oldnumberline\numberline
+	\renewcommand{\numberline}{\tablename~\oldnumberline}
+	\listoftables
+	\addcontentsline{toc}{section}{Danh sách bảng}
+}
+\newpage
+{\let\oldnumberline\numberline
+	\renewcommand{\numberline}{\figurename~\oldnumberline}
+	\listoffigures}
+\addcontentsline{toc}{section}{Danh sách hình vẽ}
+\newpage 
+
+
+\begin{center} \textbf{ĐỒ ÁN TỐT NGHIỆP - CHUYÊN NGÀNH ĐIỆN TỬ VIỄN THÔNG} \end{center}
+\section{Giới thiệu về nền tảng FPGA và kit PYNQ Z2}
+\subsection{Tổng quan về FPGA}
+FPGA (Field-Programmable Gate Array) là một loại mạch tích hợp có thể lập trình lại sau khi sản xuất, cho phép người dùng thiết kế phần cứng tùy chỉnh cho các ứng dụng cụ thể. FPGA bao gồm các khối logic có thể cấu hình (CLBs - Configurable Logic Blocks) và các đường truyền có thể lập trình (Programmable Interconnects), giúp người thiết kế kết nối các khối logic và cấu hình chúng để thực hiện các phép toán từ các cổng logic đơn giản đến các chức năng phức tạp. Một trong những ưu điểm nổi bật của FPGA là khả năng xử lý song song, giúp thực hiện các tác vụ tính toán nhanh chóng và hiệu quả hơn so với các bộ xử lý truyền thống.\\
+
+\noindent Các FPGA hiện nay thường được sử dụng trong nhiều ứng dụng khác nhau, đặc biệt là trong các hệ thống xử lý tín hiệu, hình ảnh và các thuật toán học máy. FPGA có thể lập trình lại nhiều lần, giúp người dùng linh hoạt thay đổi chức năng của mạch mà không cần thay thế phần cứng. Tuy nhiên, thiết kế FPGA yêu cầu kiến thức sâu về các ngôn ngữ mô tả phần cứng như VHDL hoặc Verilog, điều này làm cho việc phát triển phần cứng trên FPGA có phần phức tạp hơn so với lập trình phần mềm.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.65]{images/pic7} 
+	\caption{Thiết kế FPGA}
+\end{figure} 
+\newpage
+\subsection{Ưu điểm của FPGA}
+Dưới đây là một số lợi ích của FPGA:
+\begin{itemize}
+	 
+\item Xử lý song song: FPGA có khả năng thực hiện các phép toán song song, giúp tăng tốc các tác vụ tính toán nặng như xử lý tín hiệu số và học máy.
+
+\item Linh hoạt: FPGA có thể được lập trình lại bất kỳ lúc nào, giúp người dùng thay đổi chức năng của nó mà không phải thay phần cứng. Điều này giúp tiết kiệm chi phí và thời gian phát triển.
+
+\item Hiệu suất cao: FPGA có thể xử lý các tác vụ phức tạp với hiệu suất cao, nhờ vào khả năng tối ưu hóa phần cứng cho từng ứng dụng cụ thể.
+
+\item Tiết kiệm chi phí: So với ASIC (mạch tích hợp dành riêng), FPGA có chi phí thấp hơn trong việc phát triển và không cần phải chi tiền cho việc thiết kế phần cứng riêng biệt.
+
+\item Dễ dàng lập trình: FPGA có thể được lập trình thông qua phần mềm sử dụng các ngôn ngữ như VHDL hoặc Verilog, giúp dễ dàng thiết kế và kiểm tra các hệ thống phần cứng.
+\end{itemize}
+
+\subsection{Nhược điểm của FPGA}
+Dưới đây là một số hạn chế của FPGA:
+\begin{itemize}
+
+\item Yêu cầu kiến thức phần cứng: Để lập trình FPGA, người phát triển cần có kiến thức về các ngôn ngữ mô tả phần cứng như VHDL hoặc Verilog, điều này đòi hỏi thời gian học hỏi và làm quen.
+
+\item Tiêu thụ điện năng: FPGA có thể tiêu tốn nhiều năng lượng hơn so với các bộ xử lý chuyên dụng như ASIC hoặc GPU.
+
+\item Giới hạn về tài nguyên: Khi chọn một FPGA cho một dự án, người phát triển phải làm việc với tài nguyên của FPGA đã chọn, và đôi khi phải tìm cách tối ưu hóa tài nguyên hạn chế này.
+
+\item Đắt khi sản xuất số lượng lớn: FPGA thích hợp với prototyping (thử nghiệm mẫu) và sản xuất số lượng nhỏ, nhưng khi cần sản xuất số lượng lớn, chi phí cho FPGA sẽ cao hơn so với các giải pháp ASIC.
+	 
+\end{itemize}
+
+\subsection{Ứng dụng của FPGA}
+FPGA được sử dụng trong rất nhiều lĩnh vực và ứng dụng, từ các hệ thống đơn giản đến các cấu trúc phức tạp. Những ứng dụng tiêu biểu của FPGA bao gồm:
+\begin{itemize}
+	
+\item Phát triển phần cứng cho vi điều khiển: FPGA có thể được sử dụng để phát triển các bo mạch phát triển và giao diện cho các vi điều khiển, giúp các nhà thiết kế dễ dàng thử nghiệm và phát triển sản phẩm.
+
+\item Tự động hóa và IoT (Internet of Things): FPGA được ứng dụng trong các hệ thống điều khiển và tự động hóa, đặc biệt trong các thiết bị IoT để xử lý dữ liệu nhanh chóng và hiệu quả.
+
+\item Thị giác máy tính và xử lý hình ảnh: FPGA là một công cụ lý tưởng cho các ứng dụng xử lý hình ảnh và video nhờ vào khả năng xử lý song song và hiệu suất cao.
+
+\item Mã hóa và bảo mật: FPGA được sử dụng trong các hệ thống mã hóa dữ liệu, đặc biệt là trong các ứng dụng đòi hỏi tốc độ xử lý cao và bảo mật.
+
+\item Ứng dụng trong hàng không và quốc phòng: Các hệ thống trên FPGA có thể đáp ứng được yêu cầu khắt khe trong ngành hàng không và quốc phòng, nơi mà tính linh hoạt và hiệu suất là rất quan trọng.
+	
+\end{itemize}
+
+\subsection{Tổng quan về kit PYNQ-Z2}
+PYNQ-Z2 là một nền tảng học tập và nghiên cứu vi mạch số (FPGA) hiệu quả, kết hợp phần cứng FPGA mạnh mẽ của Xilinx với phần mềm Python linh hoạt. PYNQ-Z2 cung cấp cho người dùng môi trường lập trình trực quan, dễ sử dụng, cho phép họ thiết kế, mô phỏng và triển khai các vi mạch số một cách nhanh chóng và hiệu quả.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{images/pic1} 
+	\caption{Hình ảnh kit PYNQ-Z2}
+\end{figure} 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{images/pic2} 
+	\caption{Thông số kỹ thuật kit PYNQ-Z2}
+\end{figure} 
+\newpage
+\subsection{Cách kết nối kit PYNQ-Z2}
+\textbf {Chuẩn bị:}
+\begin{itemize}
+	\item PYNQ-Z2 board
+	\item Máy tính có sẵn trình duyệt thông dụng
+	\item Dây cáp Ethernet 
+	\item Dây mirco USB
+	\item 1 thẻ SD đã được tải Image có OS cấu hình sẵn.
+	Ta download image từ web "pynq.io" và sử dụng "Win32DiskImager utility" để chèn image OS vào thẻ SD.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{images/pic3} 
+		\caption{Chèn image OS vào thẻ SD}
+	\end{figure} 
+\end{itemize}
+\textbf{Tiến hành Setup:} 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.7]{images/pic4} 
+	\caption{Hình ảnh kết nối kit PYNQ-Z2}
+\end{figure} 
+
+\noindent Ta thực hiện các kết nối Micro USB, Ethernet, thẻ SD và gắn các jumpers nguồn và SD theo hình ảnh trên. \\
+\newpage
+\noindent Bật nguồn kit và mở cửa sổ Network and Sharing Center, set lại địa chỉ IP và DNS theo hướng dẫn sau:
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.35]{images/pic5} 
+	\caption{Set IP và DNS cho kit}
+\end{figure} \\
+Sau khi set địa chỉ IP và DNS cho kit ta đợi khoảng 1 phút cho đến khi đèn "DONE" màu vàng sáng, sau đó 2 LED RCB chớp nháy, 4 LED TỪ 0-3 sẽ sáng đèn. Khi này ta đã kết nối kit với PC thành công.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.45]{images/pic6} 
+	\caption{Hình ảnh kit đã kết nối thành công}
+\end{figure} 
+\newpage 
+\section{Lý thuyết}
+\subsection{Giới thiệu về mô hình học sâu (Deep Learning Models)}
+Mô hình học sâu (Deep Learning - DL) là một nhánh con của học máy (machine learning), được phát triển dựa trên các mạng nơ-ron nhân tạo (artificial neural networks). Các mô hình học sâu được gọi là "sâu" vì chúng sử dụng nhiều lớp ẩn (hidden layers) để trích xuất các đặc trưng phức tạp từ dữ liệu. Mô hình học sâu có khả năng học từ dữ liệu một cách tự động mà không cần phải xác định trước các đặc trưng quan trọng, điều này giúp chúng đặc biệt mạnh mẽ trong việc xử lý các vấn đề phức tạp như nhận diện hình ảnh, xử lý ngôn ngữ tự nhiên, nhận dạng tiếng nói và nhiều ứng dụng khác. \\
+
+\noindent Một trong những yếu tố quan trọng giúp học sâu trở nên mạnh mẽ là khả năng học được các biểu diễn dữ liệu phức tạp thông qua việc truyền dữ liệu qua các lớp khác nhau trong mô hình. Học sâu đã giúp đạt được những bước tiến đáng kể trong nhiều lĩnh vực, nhưng cũng có những thách thức về yêu cầu tính toán và tài nguyên bộ nhớ khi triển khai trên các thiết bị có hạn chế tài nguyên, chẳng hạn như các thiết bị di động hoặc hệ thống nhúng.
+\subsection{Giới thiệu về Convolutional Neural Networks - CNN}
+Mạng Convolutional (Convolutional Neural Networks - CNN) là một trong những mô hình học sâu thành công nhất, đặc biệt trong việc xử lý hình ảnh và video. CNN được thiết kế để nhận diện các đặc trưng không gian trong dữ liệu có cấu trúc như ảnh hoặc video. CNN sử dụng các lớp convolutional để tự động trích xuất các đặc trưng từ ảnh mà không cần phải xác định các đặc trưng thủ công, điều này làm cho CNN cực kỳ hiệu quả trong việc nhận dạng hình ảnh và đối tượng. 
+
+\subsubsection{ Cấu trúc của CNN:}
+\begin{itemize}
+
+	\item Lớp Convolutional (Convolutional Layer):
+Lớp này sử dụng các bộ lọc (filters) hoặc kernels để phát hiện các đặc trưng cơ bản trong ảnh, chẳng hạn như cạnh, góc, và các kết cấu cơ bản khác. Mỗi bộ lọc di chuyển qua toàn bộ ảnh và thực hiện phép toán convolution, tạo ra bản đồ đặc trưng (feature maps). Các bộ lọc này giúp mạng học được các đặc trưng không gian từ dữ liệu đầu vào.
+
+	\item Lớp Pooling (Pooling Layer):
+
+Lớp pooling có chức năng giảm độ phân giải của các bản đồ đặc trưng, đồng thời giúp giảm bớt số lượng phép toán mà không làm mất đi các đặc trưng quan trọng. Phương pháp max pooling là một trong những kỹ thuật phổ biến, trong đó giá trị lớn nhất trong mỗi vùng nhỏ của bản đồ đặc trưng được giữ lại.
+
+	\item Lớp Fully Connected (FC Layer):
+
+Sau khi các đặc trưng đã được trích xuất từ các lớp convolutional và pooling, lớp fully connected sẽ kết nối tất cả các đặc trưng này lại và đưa ra kết quả phân loại hoặc dự đoán. Lớp này sử dụng toàn bộ kết nối giữa các neuron trong lớp và các neuron trong lớp kế tiếp. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.9]{images/pic9} 
+	\caption{Cấu trúc CNN}
+\end{figure} 
+\end{itemize}
+\newpage
+\subsubsection{Lợi ích của CNN:}
+\begin{itemize}
+
+	\item  Khả năng học đặc trưng tự động: CNN có khả năng tự động trích xuất các đặc trưng từ dữ liệu mà không cần phải xác định trước các đặc trưng quan trọng, giúp giảm chi phí thời gian và công sức so với các phương pháp học máy truyền thống.
+
+	\item  Tính bất biến với vị trí: Nhờ vào cấu trúc của các lớp convolutional, CNN có khả năng nhận diện các đối tượng trong ảnh dù chúng xuất hiện ở vị trí nào, giúp cải thiện độ chính xác trong nhận diện.
+
+	\item  Giảm yêu cầu tính toán: Bằng cách sử dụng chuyển giao trọng số (weight sharing) trong các lớp convolutional, CNN giúp giảm số lượng tham số cần học, giúp tiết kiệm bộ nhớ và tăng tốc độ tính toán. \\
+
+\end{itemize}
+\subsubsection{Ứng dụng của CNN:}
+
+\noindent CNN đặc biệt hữu ích trong các bài toán nhận diện hình ảnh và video. Các ứng dụng điển hình bao gồm:
+\begin{itemize}
+\item Nhận diện đối tượng trong hình ảnh hoặc video.
+
+\item Phân loại hình ảnh: Ví dụ, phân loại ảnh thành các nhóm như chó, mèo, hoặc nhận diện các vật thể cụ thể trong ảnh.
+
+\item Nhận diện khuôn mặt trong các hệ thống bảo mật.
+
+\item Nhận diện biển báo giao thông trong các hệ thống giao thông thông minh.
+\end{itemize}
+
+
+\subsection{Giới thiệu về Binarized Neural Networks - BNN}
+Mạng Nơ-ron nhị phân (Binarized Neural Networks - BNN) là một biến thể của các mạng nơ-ron truyền thống, trong đó cả trọng số (weights) và kích hoạt (activations) đều được nhị phân hóa. Mô hình BNN nhằm mục tiêu giảm yêu cầu về bộ nhớ và tính toán mà vẫn duy trì khả năng học mạnh mẽ của các mô hình học sâu. \\
+
+\noindent BNN sử dụng 1 bit cho mỗi trọng số và mỗi giá trị kích hoạt thay vì sử dụng các giá trị thực như trong DNN hay CNN. Điều này giúp giảm đáng kể yêu cầu bộ nhớ và tăng tốc quá trình tính toán, rất quan trọng khi triển khai các mô hình học sâu trên các phần cứng có tài nguyên hạn chế, chẳng hạn như FPGA, ASIC, hoặc hệ thống nhúng.
+
+
+\newpage
+\section{Tài liệu tham khảo} 
+1. Documentation Navigator, 2024, https://www.xilinx.com/support/documentation-navigation/overview.html.  \\ \\
+2. Creating a simple Overlay for PYNQ-Z1 board from Vivado HLx, 2017 ,  https://yangtavaresblog.wordpress.com/2017/07/31/creating-a-simple-overlay-for-pynq-z1-board-from-vivado-hlx/. \\ \\
+3.  PYNQ: Python productivity for Adaptive Computing platforms, 2022 , https://pynq.readthedocs.io/. \\ \\
+4.PYNQ-Z2 Reference Manual v1.1, 2019 , TuL PYNQ-Z2.\\ \\
+5. Tutorial: Creating a new Verilog Module Overlay, RogerPease, 2020 , https://discuss.pynq.io/t/tutorial-creating-a-new-verilog-module-overlay/1530. \\ \\
+6. Vivado Design Suite User Guide,  AMD XILINX , 2022.
+
+
+\newpage
+\section{Phụ lục}
+\subsection{Code C++ của bộ ALU và giải thích}
+\#include <iostream>     \textit{//Khai báo các thư viện cần thiết} \\
+\#include <cstdint> \\
+\#include <cassert> \\
+enum class Operation\{   \textit{//Liệt kê các tuỳ chọn cho Operation, và định nghĩa các mã số đại diện cho các phép toán logic và số học bên dưới} \\
+	ADD = 0,\\
+	SUBTRACT,\\
+	NOT,\\
+	NAND,\\
+	NOR,\\
+	AND,\\
+	OR,\\
+	XOR,\\
+	LEFT\_SHIFT,\\
+	RIGHT\_SHIFT,\\
+	GREATER\_THAN,\\
+	LESS\_THAN,\\
+	EQUAL \};\\
+
+\noindent extern "C" {\\
+	void ALU(int32\_t a, int32\_t b, int op, int32\_t\& result) \{   \textit{//Khai báo các tham số cho hàm ALU} \\
+		\#pragma HLS INTERFACE ap\_ctrl\_none port=return   \textit{//Lệnh tắt giao diện điều khiển giúp tối ưu hoá việc tổng hợp phần cứng trên FPGA}\\
+		\#pragma HLS INTERFACE s\_axilite port=a   \textit{//Liên kết giao thức AXI Lite với tham số a}\\
+		\#pragma HLS INTERFACE s\_axilite port=b   \textit{//Liên kết giao thức AXI Lite với tham số b}\\
+		\#pragma HLS INTERFACE s\_axilite port=op  \textit{//Liên kết giao thức AXI Lite với tham số op}\\
+		\#pragma HLS INTERFACE s\_axilite port=result  \textit{//Liên kết giao thức AXI Lite với tham số result}\\\\
+		
+\noindent	switch (op) \{ \textit{//Sử dụng câu lệnh switch để xác định phép toán sẽ thực hiện dựa trên giá trị đầu vào của op}\\
+			case 0: result = a + b; break; // addition - phép cộng\\
+			case 1: result = a - b; break; // subtraction - phép trừ\\
+			case 2: result = !a; break; // NOT gate - phép toán logic NOT\\
+			case 3: result = !(a \& b); break; // NAND gate - phép toán logic NAND\\
+			case 4: result = !(a | b); break; // NOR gate - phép toán logic NOR\\
+			case 5: result = a \& b; break; // AND gate - phép toán logic AND\\
+			case 6: result = a | b; break; // OR gate - phép toán logic OR\\
+			case 7: result = $a{{\rm{ }}^ \wedge }{\rm{ b}}$; break; // XOR gate - phép toán logic XOR\\
+			case 8: result = a << b; break; // LEFT\_SHIFT - phép dịch trái số a với b lần\\
+			case 9: result = a >> b; break; // RIGHT\_SHIFT - phép dịch phải số a với b lần\\
+			case 10: result = (a > b) ? a : b; break; // GREATER\_THAN - phép so sánh xem số nào lớn hơn\\
+			case 11: result = (a < b) ? a : b; break; // LESS\_THAN - phép so sánh xem số nào bé hơn\\
+			case 12: result = (a == b) ? a : 0; break; // EQUAL - phép so sánh bằng, bằng giữ nguyên kết quả, không bằng hiện 0\\
+			default: result = 0; break; \textit{//Nếu op không nằm trong danh sách trên, result được gán giá trị 0}\\
+		\}\\
+	\}\\
+\}\\
+\newpage
+\subsection{Code C++ của bộ Full Adder và giải thích}
+void add(int a, int b, int\& c) \{ \textit{//Khai báo các tham số cho hàm ALU} \\
+
+\noindent	\#pragma HLS INTERFACE ap\_ctrl\_none port=return  \textit{//Lệnh tắt giao diện điều khiển giúp tối ưu hoá việc tổng hợp phần cứng trên FPGA}\\
+	\#pragma HLS INTERFACE s\_axilite port=a \textit{//Liên kết giao thức AXI Lite với tham số a}\\
+	\#pragma HLS INTERFACE s\_axilite port=b \textit{//Liên kết giao thức AXI Lite với tham số b}\\
+	\#pragma HLS INTERFACE s\_axilite port=c \textit{//Liên kết giao thức AXI Lite với tham số c}\\
+	
+	c = a + b; \\
+\} 
+
+\newpage
+\subsection{Code RTL và Testbench bộ Full Adder 2 bit}
+\textbf{Code RTL bộ Full Adder 2 bit:} \\ \\
+\noindent `timescale 1ns / 1ps \textit{//Xác định đơn vị thời gian và độ chính xác cho mô phỏng} \\
+\noindent module full\_adder\_2b( \\
+input wire[1:0] a, \textit{//Khai báo đầu vào a 2 bit}\\
+input wire[1:0] b, \textit{//Khai báo đầu vào b 2 bit}\\
+output wire[2:0] sum); \textit{//Khai báo đầu ra sum 3 bit}\\ \\
+ \textit{//Thực hiện ghép module 2 bộ cộng adder 1 bit có 3 đầu vào a, b, cin và 2 đầu ra sum (tổng), cout (carryout)} \\
+ 
+\noindent full\_adder fa0 ( \\
+.a(a[0]), \textit{//gán a[0] tương ứng với a của bộ FA thứ 1 để nhận giá trị LSB cho a}\\
+.b(b[0]), \textit{//gán b[0] tương ứng với a của bộ FA thứ 1 để nhận giá trị LSB cho b}\\
+.cin(1'b0), \textit{//gán 1'b0 cho cin vì lúc này ta chưa có bit nhớ} \\
+.sum(sum[0]), \textit{//gán sum[0] ứng với sum của bộ FA thứ 1 để nhận giá trị LSB} \\
+.cout(carry)); \textit{//gán carry ứng với sum cout bộ FA thứ 1 để lưu giá trị nhớ xài ở bộ FA thứ 2}\\
+
+\noindent full\_adder fa1 (\\
+.a(a[1]), \textit{//gán a[1] tương ứng với a của bộ FA thứ 2 để nhận giá trị MSB cho a}\\
+.b(b[1]), \textit{//gán b[1] tương ứng với b của bộ FA thứ 2 để nhận giá trị MSB cho b}\\
+.cin(carry), \textit{//gán carry là bit nhớ dư ở bộ FA1 với cin để tiến hành cộng vào bộ FA thứ 2}\\
+.sum(sum[1]), \textit{//giá trị sum đầu ra của bộ FA thứ 2 này sẽ là giá trị bit thứ 2 trong giá trị sum: sum[1]}\\
+.cout(sum[2])) \textit{//Bit nhớ của cout sẽ là giá trị bit thứ 3 trong sum: sum[2]};\\
+
+\noindent endmodule \\
+
+\noindent module full\_adder( \\
+\textit{//Khai báo bộ Full adder 1 bit có 3 đầu vào (a,b,cin) và 2 đầu ra (sum, cout)}. \\
+input a, \\
+input b, \\
+input cin, \\
+output sum, \\
+output cout );\\
+
+\noindent \textit{// Tạo các tín hiệu trung gian}
+\noindent wire xor\_ab, and\_ab, and\_cin\_xor\_ab; \\
+
+\noindent xor (xor\_ab, a, b);  \textit{//Tính xor\_ab bằng cách XOR giữa a và b}       \\
+xor (sum, xor\_ab, cin);  \textit{/Tính sum bằng cách XOR giữa xor\_ab và cin}      \\
+and (and\_ab, a, b);   \textit{//Tính and\_ab bằng cách AND giữa a và b}        \\
+and (and\_cin\_xor\_ab, cin, xor\_ab);  \textit{//Tính and\_cin\_xor\_ab bằng cách AND giữa cin và XOR\_ab} \\
+or  (cout, and\_ab, and\_cin\_xor\_ab); \textit{//Tính cout bằng cách OR giữa and\_ab, and\_cin\_xor\_ab và cin} \\
+
+\noindent endmodule\\
+
+\newpage
+\noindent\textbf{Code Testbench cho bộ Full Adder 2 bit:} \\ \\
+\noindent `timescale 1ns / 1ps\\
+module testbench;\\
+
+\noindent reg [1:0] a; \\
+reg [1:0] b; \\
+
+\noindent wire [2:0] sum; \\
+
+\noindent full\_adder\_2b uut ( \\
+.a(a),  \\
+.b(b), \\
+.sum(sum) ); \\
+
+\noindent initial begin \\
+\noindent \textit{//Trong khối initial, gán giá trị cho a và b và chờ một khoảng thời gian (\#10) trước khi thay đổi giá trị đầu vào tiếp theo.} \\ \\
+\noindent a = 2'b00; b = 2'b00; \#10;\\ 
+a = 2'b00; b = 2'b01; \#10;\\
+a = 2'b00; b = 2'b10; \#10;\\
+a = 2'b00; b = 2'b11; \#10;\\
+a = 2'b01; b = 2'b00; \#10;\\
+a = 2'b01; b = 2'b01; \#10;\\
+a = 2'b01; b = 2'b10; \#10;\\
+a = 2'b01; b = 2'b11; \#10;\\
+a = 2'b10; b = 2'b00; \#10;\\
+a = 2'b10; b = 2'b01; \#10;\\
+a = 2'b10; b = 2'b10; \#10;\\
+a = 2'b10; b = 2'b11; \#10;\\
+a = 2'b11; b = 2'b00; \#10;\\
+a = 2'b11; b = 2'b01; \#10;\\
+a = 2'b11; b = 2'b10; \#10;\\
+a = 2'b11; b = 2'b11; \#10;\\
+
+\noindent \$finish; \\
+end\\
+
+\noindent initial begin \\
+\textit{//Sử dụng \$monitor để hiển thị giá trị của a, b, và sum cùng với thời gian mô phỏng} \\
+\$monitor("Time = \%d : a = \%b, b = \%b, sum = \%b", \$time, a, b, sum);\\
+end\\
+
+\noindent endmodule\\
+
+\newpage
+\subsection{Code RTL và Testbench bộ ALU 8-bit}
+\noindent
+\textbf{Code RTL bằng Verilog} \\ \\
+\noindent
+`timescale 1ns / 1ps \\
+module alu ( \\
+input wire [7:0] a,\\
+input wire [7:0] b,\\
+input wire [2:0] op,\\
+input wire clk,\\
+input wire rst,\\
+output wire [7:0] result\\
+);\\ \\
+\noindent
+reg [7:0] temp\_result;\\\\
+
+\noindent always @(posedge clk or posedge rst) begin\\
+if (rst) begin\\
+temp\_result <= 8'b0;\\
+end else begin\\
+case (op)\\
+3'b000: temp\_result <= a + b; // Add\\
+3'b001: temp\_result <= a - b; // Subtract\\
+3'b010: temp\_result <= !(a \& b); // Bitwise NAND\\
+3'b011: temp\_result <= !(a | b); // Bitwise NOR\\
+3'b100: temp\_result <= (a \& b); // Bitwise AND\\
+3'b101: temp\_result <= a | b; // Bitwise OR\\
+3'b110: temp\_result <= $a{{\rm{ }}^ \wedge }{\rm{ b}}$; // Bitwise XOR\\
+3'b111: temp\_result <= !a;  // Bitwise NOT\\
+default: temp\_result <= 8'b0;\\
+endcase\\
+end\\
+end\\\\
+
+\noindent assign result = temp\_result;
+
+\noindent endmodule
+\newpage
+
+
+\noindent \textbf{Code Testbench bằng Verilog} \\
+
+\noindent `timescale 1ns / 1ps \\
+module tb\_alu;\\
+
+\noindent 
+reg [7:0] A;\\
+reg [7:0] B;\\
+reg [2:0] Op;\\
+reg clk;\\
+reg rst;\\
+
+\noindent 
+wire [7:0] R;\\
+
+\noindent // Instantiate the Unit Under Test (UUT)\\
+alu uut ( \\
+.a(A), \\
+.b(B), \\
+.op(Op), \\
+.clk(clk),\\
+.rst(rst),\\
+.result(R)\\
+); \\
+
+\noindent // Clock generation\\
+always begin\\
+clk <= 1'b0;\\
+\#5; \\
+clk <= 1'b1;\\
+\#5; \\
+end \\
+
+\noindent // Reset pulse\\
+initial begin\\
+rst = 1;\\
+\#10;\\
+rst = 0;\\
+\#10;\\
+// Apply inputs.\\
+A = 8'b01101010;\\
+B = 8'b00111011;\\
+Op = 0; \#100;\\
+Op = 1; \#100;\\
+Op = 2; \#100;\\
+Op = 3; \#100;\\
+Op = 4; \#100;\\
+Op = 5; \#100;\\
+Op = 6; \#100;\\
+Op = 7; \#100;\\
+end\\
+\noindent endmodule\\\\
+
+\end{document}

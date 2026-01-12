@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Giới thiệu về đề tài}{3}{0}{1}
+\beamer@sectionintoc {2}{Giới thiệu về CNN và BNN}{5}{0}{2}
+\beamer@sectionintoc {3}{Tổng quan về FPGA PYNQ-Z2}{8}{0}{3}
+\beamer@sectionintoc {4}{Các bước thực hiện đề tài}{11}{0}{4}
+\beamer@sectionintoc {5}{Chạy kiểm nghiệm trên JupyterNotebook}{22}{0}{5}
+\beamer@sectionintoc {6}{Kết luận và hướng phát triển}{27}{0}{6}

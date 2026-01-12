@@ -1,0 +1,66 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Cấu trúc CNN}}{13}{figure.caption.8}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Ví dụ thực tế về cấu trúc của 1 model BNN}}{18}{figure.caption.9}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Cách BNN thực hiện tính toán mô hình}}{19}{figure.caption.10}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Minh họa lớp sign và Straight-Through Estimator (STE)}}{20}{figure.caption.11}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Thiết kế FPGA}}{23}{figure.caption.12}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Hình ảnh kit PYNQ-Z2}}{25}{figure.caption.13}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Thông số kỹ thuật kit PYNQ-Z2}}{26}{figure.caption.14}%
+\contentsline {figure}{\numberline {8}{\ignorespaces PYNQ Framework}}{27}{figure.caption.15}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Chèn image OS vào thẻ SD}}{28}{figure.caption.16}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Hình ảnh kết nối kit PYNQ-Z2}}{29}{figure.caption.17}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Set IP và DNS cho kit}}{29}{figure.caption.18}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Hình ảnh kit đã kết nối thành công}}{30}{figure.caption.19}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Tập dữ liệu German Traffic Sign Recognition Benchmark}}{31}{figure.caption.20}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Biểu đồ số tệp training}}{31}{figure.caption.21}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Các bước thiết kế}}{32}{figure.caption.22}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Sơ đồ giải thuật tổng quát}}{32}{figure.caption.23}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Luồng hoạt động chính}}{32}{figure.caption.24}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Sơ đồ giải thuật quantization.py}}{33}{figure.caption.25}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Sơ đồ giải thuật quantization\_net.py}}{35}{figure.caption.26}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Sơ đồ giải thuật cnv.py}}{36}{figure.caption.27}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Luồng xử lý khối Data Pipeline}}{38}{figure.caption.30}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Sơ đồ giải thuật readTrafficSigns.py}}{39}{figure.caption.31}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Sơ đồ giải thuật augmentors.py}}{39}{figure.caption.32}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Sơ đồ giải thuật gtsrb.py}}{40}{figure.caption.33}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Sơ đồ giải thuật Weight Conversion}}{41}{figure.caption.35}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Kết quả Training khi chưa áp dụng các biện pháp}}{43}{figure.caption.36}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Biểu đồ quá trình Training của mô hình}}{44}{figure.caption.37}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Accuracy của mô hình sau train}}{45}{figure.caption.38}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Kiến trúc CNV BNN}}{47}{figure.caption.39}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Sơ đồ giải thuật truyền dữ liệu tổng quát bằng HLS}}{48}{figure.caption.40}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Kiến trúc HLS CNV BNN cho Software}}{53}{figure.caption.41}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Kiến trúc tổng quát hệ thống}}{54}{figure.caption.42}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Synthesis và Export HLS thành công}}{56}{figure.caption.43}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Block Design bộ CNV BNN}}{56}{figure.caption.44}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Xuất Bitstream thành công}}{57}{figure.caption.45}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Xuất file .tcl}}{57}{figure.caption.46}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Utilization reports}}{58}{figure.caption.47}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Khởi tạo Classifier}}{60}{figure.caption.48}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Danh sách các lớp phân loại}}{60}{figure.caption.49}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Mở và hiển thị hình ảnh để phân loại}}{61}{figure.caption.50}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Kết quả chạy trên phần cứng}}{62}{figure.caption.51}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Kết quả chạy trên phần mềm}}{63}{figure.caption.52}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Biểu đồ so sánh HW và SW}}{63}{figure.caption.53}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Kết quả tính toán thời gian tăng tốc phần cứng}}{64}{figure.caption.54}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Đọc và hiển thị biển báo "STOP"}}{65}{figure.caption.55}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Phát hiện đối tượng trong cảnh sau}}{66}{figure.caption.56}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Phát hiện biển báo cấm trong ảnh}}{67}{figure.caption.57}%
+\contentsline {figure}{\numberline {48}{\ignorespaces QR Source code của đồ án}}{72}{figure.caption.61}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Giao diện mở và tạo Project trên Vitis}}{73}{figure.caption.66}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Giao diện thêm file cấu hình Hardware C++}}{73}{figure.caption.67}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Giao diện chọn Top Function cho mô hình}}{74}{figure.caption.68}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Giao diện chọn Part của Kit}}{74}{figure.caption.69}%
+\contentsline {figure}{\numberline {53}{\ignorespaces Thêm các file header}}{74}{figure.caption.70}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Giao diện chính Vitis HLS}}{75}{figure.caption.71}%
+\contentsline {figure}{\numberline {55}{\ignorespaces Synthesis code C++}}{75}{figure.caption.72}%
+\contentsline {figure}{\numberline {56}{\ignorespaces Xuất RTL}}{75}{figure.caption.73}%
+\contentsline {figure}{\numberline {57}{\ignorespaces Mở và tạo Project Vivado}}{76}{figure.caption.75}%
+\contentsline {figure}{\numberline {58}{\ignorespaces Chọn board trên Vivado}}{76}{figure.caption.76}%
+\contentsline {figure}{\numberline {59}{\ignorespaces Các bước gọi IP vừa thiết kế}}{77}{figure.caption.77}%
+\contentsline {figure}{\numberline {60}{\ignorespaces Tạo Block Design mới}}{77}{figure.caption.78}%
+\contentsline {figure}{\numberline {61}{\ignorespaces Block Design hoàn chỉnh}}{78}{figure.caption.79}%
+\contentsline {figure}{\numberline {62}{\ignorespaces Các bước xuất ra Bitfile}}{78}{figure.caption.80}%
+\contentsline {figure}{\numberline {63}{\ignorespaces Xuất block design}}{79}{figure.caption.81}%
+\contentsline {figure}{\numberline {64}{\ignorespaces Truy cập vào thẻ SD của PYNQ-Z2}}{79}{figure.caption.83}%
+\contentsline {figure}{\numberline {65}{\ignorespaces Truy cập Jupyter Notebook}}{80}{figure.caption.84}%
+\contentsline {figure}{\numberline {66}{\ignorespaces Mở cửa sổ Notebook mới}}{80}{figure.caption.85}%

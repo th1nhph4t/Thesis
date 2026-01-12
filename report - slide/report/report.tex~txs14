@@ -1,0 +1,1455 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{mdframed}
+\usepackage{fontawesome}
+\usepackage{tikz}
+\usepackage{setspace}
+\usetikzlibrary{patterns}
+\usetikzlibrary{calc,angles}
+\usepackage[left= 2cm, right = 2cm, top = 2cm, bottom = 2cm]{geometry}
+\usepackage{scalefnt}
+\usepackage{fancybox}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{color} % tô màu cho code
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,fit}
+% Đặt giãn dòng cho toàn bộ tài liệu
+\renewcommand{\baselinestretch}{1.3} % Giãn dòng 
+\pagestyle{fancy}
+\fancyhf{}
+%\renewcommand{\baselinestretch}{1.5} % Giãn dòng 
+%\fancyhead[LE,RO]{\textsl{\leftmark }}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{Trang \thepage}
+
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newmdenv[linewidth=0.6pt,linecolor=blue,skipabove=\topsep,skipbelow=\topsep,
+leftmargin=-5pt,rightmargin=-5pt,
+innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+\setlist{nolistsep}
+\newcommand\tab[1][0.7cm]{\hspace*{#1}}
+\pagenumbering{arabic}
+\clearpage   
+\thispagestyle {empty}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+
+\lstset{frame=tb,
+	language=verilog,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	backgroundcolor=\color{backcolour},
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	numbers=left,                    
+	numbersep=5pt
+}
+
+
+
+
+\begin{document}
+\begin{titlepage}
+		\begin{tikzpicture}[overlay,remember picture]
+			\draw [line width=3pt]
+			($ (current page.north west) + (2.5cm,-2.5cm) $)
+			rectangle
+			($ (current page.south east) + (-2.5cm,2.5cm) $);
+			\draw [line width=0.5pt]
+			($ (current page.north west) + (2.6cm,-2.6cm) $)
+			rectangle
+			($ (current page.south east) + (-2.6cm,2.6cm) $); 
+		\end{tikzpicture}
+		
+	\begin{center}
+		\textbf{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH} \\
+		TRƯỜNG ĐẠI HỌC BÁCH KHOA \\
+		KHOA ĐIỆN - ĐIỆN TỬ \\
+		\textbf{BỘ MÔN VIỄN THÔNG}\\
+		---------------o0o---------------\\
+	\end{center}
+	\vspace{0.5cm}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.3]{images/Pic_88} 
+	\end{figure}
+
+	\begin{center}
+		\begin{tabular}{c}
+			\textbf{{\Large ĐỒ ÁN TỐT NGHIỆP}}\\ \\
+				\textbf{{\Large ĐỀ TÀI:}}\\ \\
+			\textbf{{\Large NHẬN DIỆN BIỂN BÁO GIAO THÔNG }} \\ 
+				\textbf{{\Large TRÊN FPGA PYNQ Z2}} \\ 
+
+		\end{tabular}
+	\end{center}
+
+	\vspace{2cm}
+	\begin{table}[h]
+		\begin{center}
+		
+		\begin{tabular}{rrl}
+			\hspace {5.6cm}
+						& { \bf GVHD : } & { \bf  TS. VÕ QUẾ SƠN} \\
+						& { \bf SVTH : } & { \bf  HUỲNH THỊNH PHÁT} \\
+						& { \bf MSSV : } & { \bf  2114369} \\
+						\end{tabular}
+					\end{center}
+	\end{table}
+
+	\vspace{1.5cm}
+	\begin{center}
+		{\footnotesize \large \textbf {Tp. Hồ Chí Minh, 25/04/2025}}
+	\end{center}
+\end{titlepage}
+
+
+
+\newpage
+\begin{center}
+	\begin{tabular}{p{0.5\textwidth}p{1\textwidth}}
+		\textbf{\scriptsize ĐẠI HỌC QUỐC GIA TP.HỒ CHÍ MINH} & \textbf{\scriptsize CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM} \\
+	\end{tabular}
+
+	\begin{tabular}{p{0.55\textwidth}p{0.35\textwidth}}
+		\textbf{\scriptsize TRƯỜNG ĐẠI HỌC BÁCH KHOA} & \textbf{\scriptsize Độc lập - Tự do - Hạnh phúc} \\
+	\end{tabular}
+ 
+	
+	\underline{\hspace{3cm}} $\star$ \underline{\hspace{3cm}} $\star$ \underline{\hspace{3cm}} \\[0.5cm]
+
+\end{center}
+
+\begin{tabular}{l l}
+	Số: & \hspace{2cm}/BKĐT 1 \\
+	Khoa: & \textbf{Điện - Điện tử} \\
+	Bộ Môn: & \textbf{Viễn thông} \\
+\end{tabular}
+
+
+\begin{center}
+	\Large\textbf{NHIỆM VỤ LUẬN VĂN TỐT NGHIỆP}
+\end{center}
+
+\begin{enumerate}
+	\item HỌ VÀ TÊN: Huỳnh Thịnh Phát \hspace{5cm} MSSV: 2114369
+	
+	\item NGÀNH: \textbf{ĐIỆN TỬ - VIỄN THÔNG} \hspace{3.6cm} LỚP: DD21DV3
+	
+	\item Đề tài: Nhận diện biển báo giao thông trên FPGA PYNQ Z2
+	
+	\item Nhiệm vụ (Yêu cầu về nội dung và số liệu ban đầu):
+	\begin{itemize}
+		\item Tìm hiểu về quy trình thiết kế trên FPGA.
+		\item Nghiên cứu về CNN và ứng dụng trong Objecs Detection.
+		\item Triển khai CNN trên FPGA PYNQ Z2.
+		\item Đánh giá về kết quả chạy thực nghiệm.
+	\end{itemize}
+	
+	\item \textbf{Ngày giao nhiệm vụ luận văn:} 03/02/2025
+	
+	\item \textbf{Ngày hoàn thành nhiệm vụ:} 26/04/2025
+	
+	\item \textbf{Họ và tên người hướng dẫn:} \hspace{3.5cm} Phần hướng dẫn
+	
+\hspace{1.5cm}	TS. Võ Quế Sơn \hspace{4.5cm} \underline{\hspace{4.5cm}}
+
+\hspace{1cm}	\underline{\hspace{4.5cm}} \hspace{3.5cm} \underline{\hspace{4.5cm}} \\
+	Nội dung và yêu cầu LVTN đã được thông qua Bộ Môn.
+\end{enumerate}
+
+\begin{flushright}
+	\textit{Tp.HCM, ngày 28 tháng 04 năm 2025}
+\end{flushright}
+
+\begin{center}
+	\begin{tabular}{c c}
+		\textbf{CHỦ NHIỆM BỘ MÔN} & \hspace{2cm}\textbf{NGƯỜI HƯỚNG DẪN CHÍNH} \\
+	\end{tabular}
+\end{center}
+\vspace{2cm}
+\textbf {PHẦN DÀNH CHO KHOA, BỘ MÔN:}
+
+	 \noindent Người duyệt (chấm sơ bộ): \underline{\hspace{6cm}} \\
+	 Đơn vị: \underline{\hspace{7cm}} \\
+	 Ngày bảo vệ: \underline{\hspace{7cm}} \\
+	 Điểm tổng kết: \underline{\hspace{7cm}} \\
+	 Nơi lưu trữ luận văn: \underline{\hspace{6cm}} \\
+
+
+
+
+
+\newpage
+\begin{center}
+	\section*{LỜI NÓI ĐẦU}
+\end{center}
+%\begin{center} \textbf{PHÂN CÔNG LÀM VIỆC} \end{center}
+
+\addcontentsline{toc}{section}{Lời nói đầu}
+\noindent Trong bối cảnh công nghệ phát triển mạnh mẽ hiện nay, các hệ thống giao thông thông minh ngày càng trở thành một yếu tố quan trọng trong việc đảm bảo an toàn và hiệu quả cho người tham gia giao thông. Một trong những ứng dụng then chốt của hệ thống giao thông thông minh là nhận diện biển báo giao thông. Việc phát triển hệ thống nhận diện biển báo giao thông tự động không chỉ giúp nâng cao mức độ an toàn mà còn góp phần cải thiện hiệu quả giao thông trong các thành phố lớn. \\
+
+\noindent Với mong muốn đóng góp vào sự phát triển của các ứng dụng trong lĩnh vực giao thông thông minh, em lựa chọn đề tài "Nhận diện biển báo giao thông bằng FPGA PYNQ-Z2". Đề tài này tập trung vào việc nghiên cứu và ứng dụng nền tảng FPGA PYNQ-Z2 để xây dựng một hệ thống nhận diện biển báo giao thông hiệu quả, sử dụng các phương pháp tối ưu cho xử lý hình ảnh và phân loại biển báo. \\
+
+\noindent PYNQ-Z2 là một nền tảng mạnh mẽ, hỗ trợ các công cụ và tài nguyên cần thiết để thiết kế và triển khai các ứng dụng vi mạch số. Đề tài này sẽ giới thiệu các phương pháp và thuật toán để nhận diện biển báo giao thông trên FPGA, từ đó đánh giá và tối ưu các giải pháp về hiệu suất, chi phí và độ chính xác của hệ thống. \\
+
+\noindent Em xin gửi lời cảm ơn chân thành đến thầy Võ Quế Sơn vì đã nhiệt tình hướng dẫn và hỗ trợ em trong suốt quá trình thực hiện đề tài này. Nhờ sự giúp đỡ tận tâm của thầy, em đã có thể hoàn thành đề tài và hy vọng rằng kết quả nghiên cứu sẽ góp phần vào sự phát triển của các hệ thống giao thông thông minh trong tương lai. \\
+
+	\vspace{3cm}
+	\begin{table}[h]
+	\begin{center}
+				\begin{tabular}{rrl}
+			\hspace {5.6cm}
+			&  { \bf  TP. Hồ Chính Minh, ngày 25 tháng 5 năm 2025} \\
+		\end{tabular}
+			\begin{tabular}{rrl}
+			\vspace{1cm}	
+		\hspace {5.6cm}
+		&  { \bf Huỳnh Thịnh Phát} \\
+	\end{tabular}
+	\end{center}
+\end{table}
+
+
+\newpage
+\tableofcontents
+\newpage
+{\let\oldnumberline\numberline
+	\renewcommand{\numberline}{\tablename~\oldnumberline}
+	\listoftables
+	\addcontentsline{toc}{section}{Danh sách bảng}
+}
+\newpage
+{\let\oldnumberline\numberline
+	\renewcommand{\numberline}{\figurename~\oldnumberline}
+	\listoffigures}
+\addcontentsline{toc}{section}{Danh sách hình vẽ}
+\newpage 
+
+
+\begin{center} \textbf{ĐỒ ÁN TỐT NGHIỆP - CHUYÊN NGÀNH ĐIỆN TỬ VIỄN THÔNG} \end{center}
+\section{GIỚI THIỆU}
+\subsection{Giới thiệu đề tài}
+\noindent Đề tài "Nhận diện biển báo giao thông trên FPGA PYNQ-Z2" nghiên cứu và phát triển một hệ thống sử dụng công nghệ FPGA kết hợp với các phương pháp học sâu để nhận diện biển báo giao thông. Việc áp dụng FPGA giúp tối ưu hóa quá trình xử lý và phân loại biển báo giao thông trong thời gian thực. Hệ thống sử dụng Mạng Nơ-ron Tích chập (CNN) để tự động trích xuất các đặc trưng từ ảnh biển báo, giúp phân loại chính xác các loại biển báo giao thông từ bộ dữ liệu GTSRB. Việc triển khai trên nền tảng FPGA giúp giảm độ trễ và tiết kiệm năng lượng, điều này rất quan trọng trong các ứng dụng giao thông thông minh. \\
+
+\noindent Để giải quyết vấn đề về tài nguyên bộ nhớ và tính toán khi triển khai các mô hình học sâu trên phần cứng hạn chế, nghiên cứu đã áp dụng Mạng Nơ-ron Nhị phân (BNN). BNN giúp nhị phân hóa trọng số và kích hoạt của mô hình, chuyển đổi các giá trị thực thành các giá trị nhị phân (+1 hoặc -1). Phương pháp này không chỉ giảm kích thước mô hình mà còn giúp tăng tốc độ tính toán nhờ vào các phép toán nhị phân đơn giản, rất phù hợp với các hệ thống có tài nguyên tính toán hạn chế như FPGA. \\
+
+\noindent Hệ thống nhận diện biển báo giao thông sử dụng FPGA PYNQ-Z2 có khả năng nhận diện chính xác nhiều loại biển báo trong thời gian thực. Các biển báo như biển báo tốc độ, biển báo dừng, và các biển báo cảnh báo khác đều có thể được phân loại nhanh chóng, giúp cải thiện hiệu quả giao thông và đảm bảo an toàn cho người tham gia. Việc áp dụng BNN giúp hệ thống hoạt động hiệu quả hơn, tiết kiệm bộ nhớ và năng lượng, đồng thời tăng tốc quá trình xử lý, mở ra cơ hội ứng dụng trong các xe tự lái và các hệ thống giao thông thông minh. \\
+
+\noindent Kết quả nghiên cứu đã chứng minh tính khả thi của việc triển khai hệ thống nhận diện biển báo giao thông trên FPGA PYNQ-Z2 với độ chính xác cao và hiệu suất vượt trội. Hệ thống có thể được áp dụng rộng rãi trong các ứng dụng giao thông thông minh, giúp tối ưu hóa việc điều khiển giao thông và giám sát an toàn. Hướng phát triển tiếp theo có thể là tối ưu hóa mô hình học sâu hơn nữa và mở rộng ứng dụng của hệ thống vào các nền tảng giao thông tự động hóa, từ đó đóng góp vào sự phát triển của các thành phố thông minh.
+
+\newpage
+\subsection{Cấu trúc của bài báo cáo}
+Cấu trúc của bài báo cáo bao gồm các phần sau:
+\begin{itemize}
+	\item Lời mở đầu: Giới thiệu về đề tài, lý do chọn đề tài và mục tiêu nghiên cứu.
+	
+	\item Tổng quan lý thuyết: Cung cấp kiến thức nền tảng về FPGA, học sâu, CNN và BNN, cũng như các ứng dụng của chúng trong nhận diện biển báo giao thông.
+	
+	\item Phương pháp nghiên cứu: Trình bày cách tiếp cận và các phương pháp sử dụng, bao gồm quá trình huấn luyện mô hình CNN, áp dụng BNN và triển khai trên FPGA PYNQ-Z2.
+	
+	\item Kết quả và thảo luận: Đưa ra kết quả đạt được từ việc triển khai và thử nghiệm hệ thống, cùng với phân tích hiệu suất và độ chính xác.
+	
+	\item Kết luận và hướng phát triển: Tổng kết các kết quả nghiên cứu, những ứng dụng thực tế và gợi ý cho nghiên cứu tiếp theo.
+	
+	\item Tài liệu tham khảo: Liệt kê các nguồn tài liệu đã tham khảo trong quá trình nghiên cứu.
+\end{itemize}
+
+\subsection{Mục tiêu đề tài}
+Mục tiêu của đề tài "Nhận diện biển báo giao thông trên FPGA PYNQ-Z2" là nghiên cứu và phát triển một hệ thống nhận diện biển báo giao thông sử dụng công nghệ FPGA kết hợp với các phương pháp học sâu, đặc biệt là Mạng Nơ-ron Tích chập (CNN) và Mạng Nơ-ron Nhị phân (BNN). Cụ thể, mục tiêu của đề tài bao gồm: \\
+
+\begin{enumerate}
+	\item Phát triển hệ thống nhận diện biển báo giao thông: Sử dụng FPGA PYNQ-Z2 để tối ưu hóa quá trình xử lý hình ảnh và phân loại các loại biển báo giao thông. \\
+	
+	\item	Áp dụng các thuật toán học sâu: Sử dụng CNN để trích xuất đặc trưng từ hình ảnh và phân loại biển báo, đồng thời áp dụng BNN để giảm yêu cầu bộ nhớ và tính toán khi triển khai mô hình trên phần cứng có tài nguyên hạn chế. \\
+	
+	\item Tối ưu hóa hiệu suất và tiết kiệm tài nguyên: Thiết kế hệ thống với khả năng nhận diện biển báo giao thông trong thời gian thực, giảm độ trễ và tiết kiệm năng lượng. \\
+	
+	\item	Đánh giá hiệu quả của hệ thống: Đo lường độ chính xác, tốc độ nhận diện và khả năng triển khai hệ thống trên phần cứng FPGA, đánh giá khả năng ứng dụng trong các hệ thống giao thông thông minh và xe tự lái. \\
+\end{enumerate}
+
+\newpage
+\section{CƠ SỞ LÝ THUYẾT}
+\subsection{Giới thiệu về mô hình học sâu (Deep Learning Models)}
+Mô hình học sâu (Deep Learning - DL) là một nhánh con của học máy (machine learning), được phát triển dựa trên các mạng nơ-ron nhân tạo (artificial neural networks). Các mô hình học sâu được gọi là "sâu" vì chúng sử dụng nhiều lớp ẩn (hidden layers) để trích xuất các đặc trưng phức tạp từ dữ liệu. Mô hình học sâu có khả năng học từ dữ liệu một cách tự động mà không cần phải xác định trước các đặc trưng quan trọng, điều này giúp chúng đặc biệt mạnh mẽ trong việc xử lý các vấn đề phức tạp như nhận diện hình ảnh, xử lý ngôn ngữ tự nhiên, nhận dạng tiếng nói và nhiều ứng dụng khác. \\
+
+\noindent Một trong những yếu tố quan trọng giúp học sâu trở nên mạnh mẽ là khả năng học được các biểu diễn dữ liệu phức tạp thông qua việc truyền dữ liệu qua các lớp khác nhau trong mô hình. Học sâu đã giúp đạt được những bước tiến đáng kể trong nhiều lĩnh vực, nhưng cũng có những thách thức về yêu cầu tính toán và tài nguyên bộ nhớ khi triển khai trên các thiết bị có hạn chế tài nguyên, chẳng hạn như các thiết bị di động hoặc hệ thống nhúng. Các mô hình học sâu, đặc biệt là Mạng Nơ-ron Tích chập (CNN), được sử dụng rộng rãi trong các bài toán nhận diện hình ảnh, như nhận diện biển báo giao thông, phân loại động vật, hay nhận dạng khuôn mặt. Bên cạnh đó, Mạng Nơ-ron Nhị phân (BNN) giúp tối ưu hóa mô hình học sâu bằng cách nhị phân hóa trọng số và kích hoạt, từ đó giảm yêu cầu về bộ nhớ và tính toán khi triển khai trên phần cứng hạn chế. \\
+
+\noindent Ngoài CNN và BNN, mô hình học sâu còn có nhiều ứng dụng quan trọng khác, đặc biệt là trong Xử lý ngôn ngữ tự nhiên (NLP). Các mô hình như RNN và Transformers được ứng dụng trong các hệ thống dịch ngôn ngữ tự động, phân loại văn bản, và trợ lý ảo. Học sâu cũng đóng vai trò quan trọng trong Nhận dạng giọng nói, với các hệ thống chuyển đổi giọng nói thành văn bản hoặc nhận diện âm thanh trong môi trường công nghiệp. Hơn nữa, học sâu đã được áp dụng trong Dự báo tài chính, giúp dự đoán xu hướng thị trường chứng khoán hoặc phân tích dữ liệu kinh tế. Những ứng dụng này cho thấy sự linh hoạt và tiềm năng của mô hình học sâu trong việc giải quyết các vấn đề phức tạp ở nhiều lĩnh vực khác nhau.úng.
+
+
+\newpage
+\subsection{Giới thiệu về Convolutional Neural Networks - CNN}
+Mạng Convolutional (Convolutional Neural Networks - CNN) là một trong những mô hình học sâu thành công nhất, đặc biệt trong việc xử lý hình ảnh và video. CNN được thiết kế để nhận diện các đặc trưng không gian trong dữ liệu có cấu trúc như ảnh hoặc video. CNN sử dụng các lớp convolutional để tự động trích xuất các đặc trưng từ ảnh mà không cần phải xác định các đặc trưng thủ công, điều này làm cho CNN cực kỳ hiệu quả trong việc nhận dạng hình ảnh và đối tượng. \\
+
+\noindent CNN hoạt động thông qua ba loại lớp cơ bản: lớp tích chập (Convolutional Layer), lớp pooling (Pooling Layer), và lớp fully connected (FC Layer).
+
+\subsubsection{Cấu trúc của CNN:}
+	\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.9]{images/pic9} 
+	\caption{Cấu trúc CNN}
+\end{figure}
+\begin{itemize}
+	
+	\item \textbf{ Lớp tích chập (Convolutional Layer):} \\
+	
+	Lớp tích chập là lớp quan trọng nhất trong CNN. Mục tiêu của lớp này là trích xuất các đặc trưng từ ảnh đầu vào thông qua việc sử dụng một bộ lọc (hay còn gọi là kernel). Bộ lọc này sẽ "quét" qua toàn bộ ảnh và tính toán phép toán tích chập giữa ảnh đầu vào và bộ lọc. Kết quả của phép toán tích chập là các bản đồ đặc trưng (feature maps), trong đó mỗi giá trị trong bản đồ đặc trưng phản ánh một đặc trưng học được từ ảnh đầu vào. \\
+
+	Lớp tích chập không chỉ giúp phát hiện các đặc trưng đơn giản như cạnh và góc, mà còn giúp phát hiện các hình dạng phức tạp hơn trong các lớp sau của mạng. Cùng với quá trình huấn luyện, các bộ lọc trong lớp tích chập sẽ học các đặc trưng phù hợp nhất để phân biệt các đối tượng trong ảnh. \\
+\newpage
+\noindent Phép toán tích chập giữa ảnh đầu vào \( X \) và bộ lọc \( W \) được tính bằng công thức sau:
+\[
+Y(m,n) = \sum_{i=0}^{S-1} \sum_{j=0}^{S-1} W(i,j) \cdot X(m-i, n-j)
+\]
+Trong đó:
+\begin{itemize}
+	\item  \( (m,n) \) là giá trị của pixel tại vị trí \( (m,n) \) trong bản đồ đặc trưng sau phép tích chập.
+\item	 \( W(i,j) \) là trọng số trong bộ lọc (kernel) với kích thước \( S \times S \).
+\item	 \( X(m-i, n-j) \) là giá trị pixel trong ảnh đầu vào tại vị trí \( (m-i, n-j) \). 
+	
+\item	S là kích thước của bộ lọc (kernel), thông thường có kích thước \( 3 \times 3 \), \( 5 \times 5 \), hoặc \( 7 \times 7 \).
+\end{itemize}
+
+
+Ví dụ minh họa: Giả sử bộ lọc có một ảnh đầu vào có kích thước \( 5 \times 5 \):
+\[
+X = \begin{bmatrix}
+	1 & 2 & 3 & 0 & 1 \\
+	4 & 5 & 6 & 1 & 0 \\
+	7 & 8 & 9 & 2 & 1 \\
+	2 & 3 & 4 & 3 & 1 \\
+	1 & 0 & 1 & 4 & 2
+\end{bmatrix}
+\]
+
+Và bộ lọc (kernel) \( W \) có kích thước \(3 \times 3\):
+
+\[
+W = \begin{bmatrix}
+	1 & 0 & -1 \\
+	1 & 0 & -1 \\
+	1 & 0 & -1
+\end{bmatrix}
+\]
+
+Khi thực hiện phép toán tích chập, bạn quét bộ lọc qua ảnh và tính giá trị tích chập tại mỗi vị trí. Ví dụ, tại vị trí \( Y(1,1) \):
+
+\[
+Y(1,1) = (1 \times 1) + (2 \times 0) + (3 \times -1) + (4 \times 1) + (5 \times 0) + (6 \times -1) + (7 \times 1) + (8 \times 0) + (9 \times -1) = -6
+\]
+
+Sau khi tính toán các giá trị tại các vị trí \( Y(1,1) \), \( Y(1,2) \), \( Y(2,1) \), và \( Y(2,2) \), chúng ta có bản đồ đặc trưng như sau:
+
+\[
+Y = \begin{bmatrix}
+	-6 & 12 \\
+	-6 & 10
+\end{bmatrix}
+\]
+
+
+\noindent Quá trình này giúp tạo ra các bản đồ đặc trưng mà sau này sẽ được sử dụng trong các lớp tiếp theo. 
+
+	\newpage
+	\item \textbf{Lớp Pooling (Pooling Layer):} \\
+	
+Lớp pooling giúp giảm kích thước của bản đồ đặc trưng và giảm thiểu số lượng tham số, từ đó giúp giảm độ phức tạp của mô hình và tăng tốc độ tính toán. Mục đích chính của lớp pooling là giảm độ phân giải không gian của bản đồ đặc trưng khi vẫn giữ lại các đặc trưng quan trọng. 
+
+
+Có hai loại pooling phổ biến:
+\begin{itemize}
+	\item Max pooling: Giữ lại giá trị lớn nhất trong một cửa sổ nhỏ.
+	\item Average pooling: Giữ lại giá trị trung bình trong một cửa sổ. \\
+\end{itemize}
+
+Lớp pooling giúp làm số lượng tham số, đồng thời giảm độ phức tạp tính toán, đồng thời giữ lại các đặc trưng quan trọng và giúp mạng học được tính chất bất biến về vị trí và góc quay của đối tượng trong ảnh. \\
+
+Công thức cho max pooling là:
+\[
+P(i,j) = \max_{z \in F} z
+\]
+
+Trong đó:
+\begin{itemize}
+	\item \( P(i,j) \) là giá trị của pixel sau khi thực hiện max pooling tại vị trí \( (i,j) \).
+	\item \( F \) là một cửa sổ nhỏ trong bản đồ đặc trưng.
+	\item \( \max \) là phép toán lấy giá trị lớn nhất trong cửa sổ \( F \). \\
+\end{itemize}
+
+Còn đối với average pooling, công thức là:
+\[
+P(i,j) = \frac{1}{|F|} \sum_{z \in F} z
+\]
+
+Trong đó:
+\[
+|F| \text{ là số phần tử trong cửa sổ } F.
+\]
+
+Ví dụ minh họa: Giả sử có một bản đồ đặc trưng sau lớp tích chập có kích thước \( 4 \times 4 \):
+\[
+S = \begin{bmatrix}
+	1 & 2 & 3 & 4 \\
+	5 & 6 & 7 & 8 \\
+	9 & 10 & 11 & 12 \\
+	13 & 14 & 15 & 16
+\end{bmatrix}
+\]
+
+\newpage
+Sử dụng max pooling với cử sổ \( 2 \times 2 \) và bước nhảy (stride) là 2. Ta sẽ quét qua bản đồ đặc trưng và lấy giá trị lớn nhất trong mỗi cửa sổ \( 2 \times 2 \). Kết quả pooling sẽ là:
+\[
+P = \begin{bmatrix}
+	6 & 8 \\
+	14 & 16
+\end{bmatrix}
+\]
+
+Với average pooling, sử dụng cửa sổ \(2 \times 2\) và bước nhảy 2. Ta tính giá trị trung bình trong mỗi cửa sổ \(2 \times 2\). Ví dụ, tại vị trí \(P(1,1)\), giá trị trung bình của cửa sổ đầu tiên \(2 \times 2\) là:
+\[
+P(1,1) = \frac{1 + 3 + 5 + 6}{4} = 3.75
+\]
+
+Kết quả pooling sẽ là:
+\[
+P = \begin{bmatrix}
+	3.75 & 5 \\
+	10.5 & 12
+\end{bmatrix}
+\]
+
+	\item \textbf{Lớp Fully Connected (FC Layer):} \\
+	
+Lớp fully connected (FC) nằm ở cuối mạng CNN, nơi các đặc trưng đã được trích xuất từ các lớp trước đó sẽ được sử dụng để phân loại. Các đặc trưng này được làm phẳng thành một vector và được đưa qua một hoặc nhiều lớp fully connected. Mỗi neuron trong lớp fully connected sẽ kết nối với tất cả các neuron trong lớp trước đó. Mục tiêu của lớp FC là phân loại và dự đoán đầu ra dựa trên các đặc trưng đã học được từ các lớp trước. \\
+
+Trong lớp FC, quá trình học và phân loại được thực hiện bằng cách sử dụng các trọng số và bias để tính toán đầu ra cho từng lớp (label). Sau khi tính toán, các giá trị đầu ra sẽ được đưa qua một hàm kích hoạt (activation function) như ReLU, sigmoid hoặc softmax để xác định xác suất cho mỗi lớp. \\
+
+Công thức tính toán trong lớp fully connected là:
+ \[
+ y = f \left( \sum_{i} w_i \cdot x_i + b \right)
+ \]
+ 
+ Trong đó:
+ \begin{itemize}
+ 	\item \( y \) là đầu ra của lớp FC, có thể là giá trị phân loại.
+ 	\item \( w_i \) là trọng số của liên kết giữa các neuron trong lớp FC.
+ 	\item \( x_i \) là đầu vào từ lớp trước.
+ 	\item \( b \) là bias của neuron trong lớp FC.
+ 	\item \( f \) là hàm kích hoạt (activation function), ví dụ như ReLU, sigmoid, hoặc softmax. \\
+ \end{itemize}
+ 
+ Ví dụ minh họa: Giả sử sau khi qua các lớp trước, ta có một vector đặc trưng sau khi làm phẳng (flatten) có chiều dài là 6:
+ \[
+ x = \left[ 1 \quad 2 \quad 3 \quad 4 \quad 5 \quad 6 \right]
+ \]
+ Lớp fully connected sẽ tính toán đầu ra từ vector này. \\ Ví dụ với trọng số \( w = \left[ 0.5 \quad 0.2 \quad 0.4 \quad 0.3 \quad 0.1 \quad 0.6 \right] \) và bias \( b = 0.1 \), công thức tính toán là:
+ \[
+ y = f \left( (0.5 \times 1) + (0.2 \times 2) + (0.4 \times 3) + (0.3 \times 4) + (0.1 \times 5) + (0.6 \times 6) \right) + 0.1
+ \]
+ \[
+ y = f \left( 0.5 + 0.4 + 1.2 + 1.2 + 0.5 + 3.6 \right) + 0.1 = f(7.8)
+ \]
+ 
+ Giải hàm kích hoạt là ReLU, kết quả sẽ là:
+ \[
+ y = \text{ReLU}(7.8) = 7.8
+ \]
+ 
+ Lớp FC giúp đưa ra kết quả phân loại cuối cùng từ các đặc trưng đã học được từ các lớp trước.
+\end{itemize}
+
+\subsubsection{Lợi ích của CNN:}
+\begin{itemize}
+	
+	\item  Khả năng học đặc trưng tự động: CNN có khả năng tự động trích xuất các đặc trưng từ dữ liệu mà không cần phải xác định trước các đặc trưng quan trọng, giúp giảm chi phí thời gian và công sức so với các phương pháp học máy truyền thống.
+	
+	\item  Tính bất biến với vị trí: Nhờ vào cấu trúc của các lớp convolutional, CNN có khả năng nhận diện các đối tượng trong ảnh dù chúng xuất hiện ở vị trí nào, giúp cải thiện độ chính xác trong nhận diện.
+	
+	\item  Giảm yêu cầu tính toán: Bằng cách sử dụng chuyển giao trọng số (weight sharing) trong các lớp convolutional, CNN giúp giảm số lượng tham số cần học, giúp tiết kiệm bộ nhớ và tăng tốc độ tính toán. 
+	
+\end{itemize}
+\subsubsection{Ứng dụng của CNN:}
+
+\noindent CNN đặc biệt hữu ích trong các bài toán nhận diện hình ảnh và video. Các ứng dụng điển hình bao gồm:
+\begin{itemize}
+	\item Phân loại hình ảnh: Ví dụ, phân loại ảnh thành các nhóm như chó, mèo, hoặc nhận diện các vật thể cụ thể trong ảnh, video.
+	
+	\item Nhận diện khuôn mặt trong các hệ thống bảo mật.
+	
+	\item Nhận diện biển báo giao thông trong các hệ thống giao thông thông minh.
+\end{itemize}
+
+
+\subsection{Giới thiệu về Binarized Neural Networks - BNN}
+Mạng Nơ-ron nhị phân (Binarized Neural Networks - BNNs) là một phương pháp tối ưu hóa các mô hình học sâu (Deep Neural Networks - DNNs), với mục đích giảm thiểu yêu cầu về bộ nhớ và tính toán trong khi vẫn giữ được khả năng học mạnh mẽ của các mô hình DNN truyền thống. BNN đặc biệt hữu ích khi triển khai trên các hệ thống có tài nguyên hạn chế, chẳng hạn như các thiết bị di động, hệ thống nhúng hoặc các phần cứng như FPGA và ASIC. BNN hoạt động bằng cách nhị phân hóa cả trọng số (weights) và kích hoạt (activations) của mô hình học sâu, nghĩa là chúng chỉ sử dụng hai giá trị nhị phân (+1 hoặc -1) thay vì các giá trị thực (floating-point values). \\
+
+\noindent Trong khi các mô hình học sâu như DNNs và CNNs có khả năng học mạnh mẽ và linh hoạt, chúng lại yêu cầu rất nhiều bộ nhớ và tài nguyên tính toán. Điều này làm cho việc triển khai các mô hình này trên các nền tảng có tài nguyên hạn chế (như IoT devices, mobile devices, hoặc edge devices) trở nên khó khăn. BNNs được phát triển để giải quyết vấn đề này, cho phép các mô hình học sâu có thể hoạt động nhanh hơn và tiết kiệm bộ nhớ bằng cách sử dụng các giá trị nhị phân thay cho các giá trị thực. \\
+
+\noindent BNN được xây dựng dựa trên các phương pháp quy chuẩn hóa (quantization) và nhị phân hóa (binarization) trong học sâu, cho phép giảm kích thước mô hình mà không làm giảm quá nhiều độ chính xác. Các nghiên cứu về BNN đã chỉ ra rằng việc nhị phân hóa trọng số và kích hoạt có thể mang lại các lợi ích rõ rệt về hiệu suất và tiết kiệm tài nguyên trong quá trình suy luận (inference), cũng như huấn luyện (training).
+
+\subsubsection{Các khái niệm cơ bản trong BNN}
+\begin{enumerate}
+	\item Trọng số (Weights): Trong BNN, trọng số là các giá trị học được và được sử dụng trong phép toán dot product với các giá trị kích hoạt từ các lớp trước. Tuy nhiên, thay vì sử dụng các giá trị thực, trọng số trong BNN được nhị phân hóa, nghĩa là chúng chỉ có thể nhận một trong hai giá trị: +1 hoặc -1. Mặc dù trong quá trình huấn luyện, các trọng số thực được sử dụng, nhưng sau khi huấn luyện xong, các trọng số nhị phân sẽ được sử dụng trong quá trình suy luận. \\
+	
+	\item Kích hoạt (Activations): Kích hoạt là các giá trị đầu ra của hàm kích hoạt trong mỗi neuron. Trong BNN, các giá trị kích hoạt cũng được nhị phân hóa thành +1 hoặc -1, thay vì sử dụng các giá trị thực. Hàm kích hoạt được sử dụng trong BNN là hàm sign function, có nhiệm vụ chuyển giá trị thực thành giá trị. \\
+	
+	\item Dot Product: Trong mạng nơ-ron, dot product là một phép toán nhân và cộng được thực hiện giữa các trọng số và các giá trị kích hoạt. BNN sử dụng các phép toán nhị phân đơn giản hơn thay vì các phép toán số học thực tế, giúp tiết kiệm bộ nhớ và tính toán. \\
+	
+	
+	\item Độ lệch (Bias) và Hệ số tăng cường (Gain)
+	\begin{itemize}
+		\item Bias là một giá trị thêm vào trong mạng nơ-ron, giúp mô hình học được các đặc trưng tốt hơn.
+		\item 	Gain là một hệ số tăng cường được học trong BNN, tương tự như bias, và nó được áp dụng sau khi thực hiện phép toán dot product giữa trọng số và kích hoạt. \\ 
+	\end{itemize}
+	
+	\item Topology và Architecture: Topology là cấu trúc của các lớp trong mô hình mạng nơ-ron, còn architecture đề cập đến việc bố trí các thành phần phần cứng khi triển khai mạng nơ-ron. \\
+\end{enumerate}
+
+\subsubsection{Cách BNN hoạt động}
+BNN được xây dựng trên nguyên lý nhị phân hóa cả trọng số và kích hoạt. Điều này giúp giảm bớt yêu cầu bộ nhớ vì mỗi trọng số và mỗi kích hoạt chỉ cần 1 bit để lưu trữ, thay vì 32 bit như trong các mô hình DNN thông thường. Điều này làm giảm kích thước mô hình và tăng tốc độ tính toán nhờ vào các phép toán nhị phân đơn giản (cộng và nhân nhị phân). \\
+\begin{enumerate}
+	\item \textbf{ Nhị phân hóa trọng số (Binarization of Weights):} \\
+	\textbf{Trọng số thực} \( W_R \) \text{ được chuyển thành trọng số nhị phân } \( W_B \) \text{ thông qua hàm sign function:}
+	\[
+	W_B = \text{sign}(W_R)
+	\]
+	Nếu trọng số thực \( W_R \geq 0 \), thì \( W_B = +1 \); nếu \( W_R < 0 \), thì \( W_B = -1 \).
+	
+	\begin{itemize}
+		\item Tuy nhiên, trong quá trình huấn luyện, trọng số thực \( W_R \) vẫn được cập nhật thông qua các phương pháp tối ưu hóa như Stochastic Gradient Descent (SGD) hoặc Adam, còn trong suy luận, các trọng số nhị phân \( W_B \) sẽ được sử dụng.
+		\item Việc tính toán gradient đối với các trọng số nhị phân thông qua backpropagation gặp khó khăn vì gradient của hàm sign bằng 0 hoặc không xác định. Để giải quyết vấn đề này, phương pháp Straight-Through Estimator (STE) được sử dụng, giúp xấp xỉ gradient của hàm sign bằng cách bỏ qua gradient của lớp hiện tại và sử dụng hàm identity:
+		\[
+		\frac{\partial L}{\partial W_R} = \frac{\partial L}{\partial W_B}
+		\]
+		\item Nhờ vào phương pháp STE, các trọng số thực \( W_R \) có thể được cập nhật trong quá trình huấn luyện mà không ảnh hưởng đến các trọng số nhị phân \( W_B \).
+	\end{itemize}
+	
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=1.2]{images/pic10} 
+		\caption{Minh họa lớp sign và Straight-Through Estimator (STE)}
+	\end{figure} 
+
+	\newpage
+	\item \textbf{ Nhị phân hóa kích hoạt (Binarization of Activations)} \\
+	Hàm sign sẽ chuyển giá trị kích hoạt thực thành các giá trị nhị phân:
+	\[
+	a_B = \text{sign}(a_R)
+	\]
+	Nếu \( a_R \geq 0 \), thì \( a_B = +1 \); nếu \( a_R < 0 \), thì \( a_B = -1 \).
+	
+	Trong quá trình huấn luyện, để đạt được kết quả tốt, Courbariaux et al. nhận thấy rằng cần hủy bỏ gradient trong quá trình lan truyền ngược nếu đầu vào của hàm kích hoạt quá lớn. Điều này có thể được thực hiện thông qua một hàm chỉ thị (indicator function) để đặt gradient bằng 0 nếu đầu vào của hàm kích hoạt lớn hơn một giá trị giới hạn nhất định. Cụ thể:
+	\[
+	\frac{\partial L}{\partial a_R} = \frac{\partial L}{\partial a_B} \times 1(|a_R| \leq 1)
+	\]
+	Trong đó:
+	\begin{itemize}
+		\item \( a_R \) là giá trị thực đầu vào hàm kích hoạt.
+		\item \( a_B \) là giá trị nhị phân hóa đầu ra hàm kích hoạt.
+		\item \( 1(|a_R| \leq 1) \) là hàm chỉ thị, đánh giá là 1 nếu \( |a_R| \leq 1 \), và 0 nếu ngược lại. Điều này có nghĩa là nếu giá trị đầu vào hàm kích hoạt quá lớn (ngoài phạm vi vi [-1, 1]), gradient sẽ được làm bằng 0, ngừng việc cập nhật trong quá trình lan truyền ngược. \\
+	\end{itemize}
+	
+	Quá trình này phần lớn được khắc phục thông qua việc sử dụng STE giúp mạng có thể huấn luyện hiệu quả hơn, đồng thời giữ được tính chính xác trong suy luận nhờ vào việc bù đắp gradient của hàm kích hoạt.
+\end{enumerate}
+
+
+\subsubsection{Lợi ích của BNN}
+\begin{itemize}
+	\item Tiết kiệm bộ nhớ: Việc sử dụng 1 bit thay vì các giá trị thực 32 bit giúp giảm kích thước mô hình và tiết kiệm bộ nhớ đáng kể, đặc biệt khi triển khai trên các hệ thống có tài nguyên hạn chế như IoT devices và FPGA. \\
+	
+	\item Tăng tốc tính toán: Các phép toán nhị phân có thể thực hiện nhanh chóng và hiệu quả trên phần cứng, giúp tăng tốc độ suy luận. Các phép toán như cộng và nhân nhị phân đơn giản hơn nhiều so với các phép toán với số thực. \\
+	
+	\item Tiết kiệm năng lượng: Các phép toán nhị phân tiêu thụ ít năng lượng hơn, điều này rất quan trọng khi triển khai trên các thiết bị di động hoặc hệ thống nhúng.
+\end{itemize}
+
+
+\subsubsection{Hạn chế của BNN}
+\begin{itemize}
+	\item Giảm độ chính xác: Việc nhị phân hóa trọng số và kích hoạt có thể làm giảm độ chính xác so với các mô hình sử dụng số thực. Điều này đặc biệt dễ nhận thấy khi bài toán yêu cầu độ chính xác cao trong việc phân loại hoặc nhận diện. \\
+	
+	\item Khó khăn trong huấn luyện: Việc nhị phân hóa trong quá trình huấn luyện có thể gặp khó khăn vì các gradient từ hàm sign không thể thay đổi nhỏ. Tuy nhiên, phương pháp STE đã giúp giải quyết vấn đề này một cách hiệu quả.
+\end{itemize}
+
+\subsubsection{Ứng dụng của BNN}
+BNN rất thích hợp cho các hệ thống có tài nguyên hạn chế nhưng vẫn cần hiệu suất học sâu mạnh mẽ, như các hệ thống nhúng hoặc phần cứng đặc thù như FPGA và ASIC. Các ứng dụng điển hình của BNN bao gồm:
+\begin{itemize}
+	\item Nhận diện biển báo giao thông: BNN có thể giúp nhận diện các biển báo giao thông trong các hệ thống tự lái hoặc các hệ thống giám sát giao thông. \\
+	
+	\item Nhận diện đối tượng trong video: BNN giúp xử lý video trong thời gian thực, nhận diện các đối tượng hoặc hành vi từ các đoạn video. \\
+	
+	\item Nhận diện hình ảnh trong IoT devices: Các thiết bị IoT có thể triển khai BNN để nhận diện các hình ảnh hoặc dữ liệu mà không cần yêu cầu quá nhiều bộ nhớ và tính toán.
+\end{itemize}
+\newpage
+\subsection{Tổng quan về FPGA}
+FPGA (Field-Programmable Gate Array) là một loại mạch tích hợp có thể lập trình lại sau khi sản xuất, cho phép người dùng thiết kế phần cứng tùy chỉnh cho các ứng dụng cụ thể. FPGA bao gồm các khối logic có thể cấu hình (CLBs - Configurable Logic Blocks) và các đường truyền có thể lập trình (Programmable Interconnects), giúp người thiết kế kết nối các khối logic và cấu hình chúng để thực hiện các phép toán từ các cổng logic đơn giản đến các chức năng phức tạp. Một trong những ưu điểm nổi bật của FPGA là khả năng xử lý song song, giúp thực hiện các tác vụ tính toán nhanh chóng và hiệu quả hơn so với các bộ xử lý truyền thống.\\
+
+\noindent Các FPGA hiện nay thường được sử dụng trong nhiều ứng dụng khác nhau, đặc biệt là trong các hệ thống xử lý tín hiệu, hình ảnh và các thuật toán học máy. FPGA có thể lập trình lại nhiều lần, giúp người dùng linh hoạt thay đổi chức năng của mạch mà không cần thay thế phần cứng. Tuy nhiên, thiết kế FPGA yêu cầu kiến thức sâu về các ngôn ngữ mô tả phần cứng như VHDL hoặc Verilog, điều này làm cho việc phát triển phần cứng trên FPGA có phần phức tạp hơn so với lập trình phần mềm.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.65]{images/pic7} 
+	\caption{Thiết kế FPGA}
+\end{figure} 
+\newpage
+\subsubsection{Ưu điểm của FPGA}
+Dưới đây là một số lợi ích của FPGA:
+\begin{itemize}
+	 
+\item Xử lý song song: FPGA có khả năng thực hiện các phép toán song song, giúp tăng tốc các tác vụ tính toán nặng như xử lý tín hiệu số và học máy.
+
+\item Linh hoạt: FPGA có thể được lập trình lại bất kỳ lúc nào, giúp người dùng thay đổi chức năng của nó mà không phải thay phần cứng. Điều này giúp tiết kiệm chi phí và thời gian phát triển.
+
+\item Hiệu suất cao: FPGA có thể xử lý các tác vụ phức tạp với hiệu suất cao, nhờ vào khả năng tối ưu hóa phần cứng cho từng ứng dụng cụ thể.
+
+\item Tiết kiệm chi phí: So với ASIC (mạch tích hợp dành riêng), FPGA có chi phí thấp hơn trong việc phát triển và không cần phải chi tiền cho việc thiết kế phần cứng riêng biệt.
+
+\item Dễ dàng lập trình: FPGA có thể được lập trình thông qua phần mềm sử dụng các ngôn ngữ như VHDL hoặc Verilog, giúp dễ dàng thiết kế và kiểm tra các hệ thống phần cứng.
+\end{itemize}
+
+\subsubsection{Nhược điểm của FPGA}
+Dưới đây là một số hạn chế của FPGA:
+\begin{itemize}
+
+\item Yêu cầu kiến thức phần cứng: Để lập trình FPGA, người phát triển cần có kiến thức về các ngôn ngữ mô tả phần cứng như VHDL hoặc Verilog, điều này đòi hỏi thời gian học hỏi và làm quen.
+
+\item Tiêu thụ điện năng: FPGA có thể tiêu tốn nhiều năng lượng hơn so với các bộ xử lý chuyên dụng như ASIC hoặc GPU.
+
+\item Giới hạn về tài nguyên: Khi chọn một FPGA cho một dự án, người phát triển phải làm việc với tài nguyên của FPGA đã chọn, và đôi khi phải tìm cách tối ưu hóa tài nguyên hạn chế này.
+
+\item Đắt khi sản xuất số lượng lớn: FPGA thích hợp với prototyping (thử nghiệm mẫu) và sản xuất số lượng nhỏ, nhưng khi cần sản xuất số lượng lớn, chi phí cho FPGA sẽ cao hơn so với các giải pháp ASIC.
+	 
+\end{itemize}
+
+\subsubsection{Ứng dụng của FPGA}
+FPGA được sử dụng trong rất nhiều lĩnh vực và ứng dụng, từ các hệ thống đơn giản đến các cấu trúc phức tạp. Những ứng dụng tiêu biểu của FPGA bao gồm:
+\begin{itemize}
+	
+\item Phát triển phần cứng cho vi điều khiển: FPGA có thể được sử dụng để phát triển các bo mạch phát triển và giao diện cho các vi điều khiển, giúp các nhà thiết kế dễ dàng thử nghiệm và phát triển sản phẩm.
+
+\item Tự động hóa và IoT (Internet of Things): FPGA được ứng dụng trong các hệ thống điều khiển và tự động hóa, đặc biệt trong các thiết bị IoT để xử lý dữ liệu nhanh chóng và hiệu quả.
+
+\item Thị giác máy tính và xử lý hình ảnh: FPGA là một công cụ lý tưởng cho các ứng dụng xử lý hình ảnh và video nhờ vào khả năng xử lý song song và hiệu suất cao.
+
+\item Mã hóa và bảo mật: FPGA được sử dụng trong các hệ thống mã hóa dữ liệu, đặc biệt là trong các ứng dụng đòi hỏi tốc độ xử lý cao và bảo mật.
+
+\item Ứng dụng trong hàng không và quốc phòng: Các hệ thống trên FPGA có thể đáp ứng được yêu cầu khắt khe trong ngành hàng không và quốc phòng, nơi mà tính linh hoạt và hiệu suất là rất quan trọng.
+	
+\end{itemize}
+
+\subsection{Tổng quan về kit FPGA PYNQ-Z2}
+PYNQ-Z2 là một nền tảng phần cứng phát triển dựa trên công nghệ FPGA (Field-Programmable Gate Array) của Xilinx, được thiết kế để giúp các nhà phát triển và nghiên cứu viên dễ dàng triển khai và thử nghiệm các ứng dụng học máy và xử lý tín hiệu số. Kit PYNQ-Z2 được trang bị FPGA Xilinx Zynq-7000 với tính năng ARM-based và có khả năng xử lý song song mạnh mẽ, làm cho nó trở thành một công cụ lý tưởng để phát triển các hệ thống nhúng với yêu cầu tính toán cao và tiêu thụ năng lượng thấp.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{images/pic1} 
+	\caption{Hình ảnh kit PYNQ-Z2}
+\end{figure} 
+
+\newpage
+\subsubsection{Thông số kỹ thuật kit PYNQ-Z2}
+Kit PYNQ-Z2 là một nền tảng phát triển mạnh mẽ, được trang bị với những tính năng đáng chú ý sau:
+ 
+\begin{itemize}
+	\item \textbf{FPGA Xilinx Zynq-7000:} FPGA Zynq-7000 cung cấp khả năng tính toán song song, giúp tăng tốc các tác vụ tính toán phức tạp. FPGA này tích hợp cả CPU ARM và phần cứng FPGA, giúp tận dụng sức mạnh của cả hai. \\
+	\item \textbf{Bộ xử lý ARM Cortex-A9:} PYNQ-Z2 tích hợp bộ xử lý ARM Cortex-A9, cho phép thực thi các tác vụ tính toán cao cấp và điều khiển các thiết bị ngoài vi một cách hiệu quả. \\
+	\item \textbf{Cổng kết nối và giao tiếp linh hoạt:} PYNQ-Z2 cung cấp các giao tiếp mạnh mẽ như HDMI, USB, Ethernet và GPIO, giúp kết nối dễ dàng với các thiết bị bên ngoài và via mạng. \\
+	\item \textbf{Bộ nhớ DDR3 1GB:} Kit này trang bị bộ nhớ DDR3 1GB cho phép xử lý dữ liệu nhanh chóng, đặc biệt là khi làm việc với các mô hình học sâu hoặc xử lý tín hiệu. \\
+	\item \textbf{Các đầu vào/ra linh hoạt (I/O):} PYNQ-Z2 cung cấp nhiều cổng I/O có thể cấu hình, giúp kết nối các thiết bị bên ngoài như cảm biến, màn hình và các bộ xử lý tín hiệu.
+\end{itemize}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.55]{images/pic2} 
+	\caption{Thông số kỹ thuật kit PYNQ-Z2}
+\end{figure} 
+
+\newpage
+\subsubsection{Lợi ích và ứng dụng của PYNQ Z2}
+Kit PYNQ-Z2 là nền tảng lý tưởng cho các ứng dụng trong nhiều lĩnh vực như học máy, xử lý tín hiệu số và hệ thống nhúng. Các ứng dụng điển hình bao gồm: \\
+\begin{itemize}
+
+\item Phát triển hệ thống học máy và AI:
+
+PYNQ-Z2 giúp tăng tốc các mô hình học sâu (deep learning models) và các thuật toán AI nhờ khả năng xử lý song song của FPGA, giúp giảm thời gian tính toán và tăng hiệu quả. \\
+
+\item Ứng dụng trong xử lý tín hiệu số (DSP):
+
+Kit có thể được sử dụng trong các hệ thống radar, nhận diện giọng nói, xử lý hình ảnh thời gian thực, nhờ vào khả năng xử lý song song và tốc độ cao.\\
+
+\item Hệ thống nhúng:
+
+Với khả năng xử lý mạnh mẽ và tiêu thụ năng lượng thấp, PYNQ-Z2 là công cụ lý tưởng cho các ứng dụng trong tự động hóa, IoT và các hệ thống điều khiển trong công nghiệp.\\
+
+\item Giáo dục và nghiên cứu:
+
+Kit PYNQ-Z2 rất phù hợp cho các nghiên cứu viên và sinh viên trong lĩnh vực kỹ thuật và khoa học máy tính, giúp họ dễ dàng tiếp cận và làm việc với FPGA và các ứng dụng học sâu.
+	
+\end{itemize}
+
+\subsubsection{PYNQ Framework (PYNQ Python API)}
+Một điểm nổi bật của PYNQ-Z2 là PYNQ Framework, cho phép lập trình viên phát triển ứng dụng FPGA mà không cần phải viết mã phần cứng trực tiếp. Việc sử dụng Python, một ngôn ngữ lập trình phổ biến và dễ sử dụng, giúp các nhà phát triển dễ dàng tương tác với FPGA và tối ưu hóa các ứng dụng. \\
+\begin{itemize}
+
+\item Phát triển ứng dụng với Python: PYNQ Framework hỗ trợ sử dụng Python để lập trình FPGA, giúp các nhà phát triển không cần kiến thức chuyên sâu về VHDL hay Verilog.\\
+
+\item Tối ưu hóa phần cứng: Các tác vụ tính toán có thể được triển khai trên phần cứng FPGA, trong khi phần mềm điều khiển có thể được phát triển bằng Python.\\
+
+	\item Giao diện đồ họa (GUI): PYNQ-Z2 hỗ trợ giao diện người dùng đồ họa, giúp dễ dàng triển khai và kiểm thử các ứng dụng mà không cần kiến thức về FPGA.
+
+\end{itemize}
+
+\subsubsection{Triển khai CNN trên PYNQ Z2}
+PYNQ-Z2 rất phù hợp cho việc triển khai các mô hình học sâu, đặc biệt là các mô hình CNN (Mạng Nơ-ron Tích chập), nhờ vào khả năng tăng tốc tính toán của FPGA và bộ xử lý ARM.
+\\
+\begin{itemize}
+
+\item Tăng tốc tính toán: FPGA giúp tăng tốc các phép toán nhị phân và các phép toán phức tạp trong CNN, như phép toán tích chập và pooling. \\
+
+\item Giảm độ trễ: Khả năng xử lý song song của FPGA giúp giảm độ trễ khi thực hiện các tác vụ tính toán phức tạp, quan trọng trong các ứng dụng nhận diện hình ảnh thời gian thực. \\
+
+	\item Hỗ trợ phát triển nhanh chóng: PYNQ Framework giúp các nhà phát triển dễ dàng triển khai các mô hình học sâu mà không cần viết mã phần cứng từ đầu.
+
+\end{itemize}
+
+\subsubsection{Cách kết nối kit PYNQ-Z2}
+\textbf {Chuẩn bị:}
+\begin{itemize}
+	\item PYNQ-Z2 board
+	\item Máy tính có sẵn trình duyệt thông dụng
+	\item Dây cáp Ethernet 
+	\item Dây mirco USB
+	\item 1 thẻ SD đã được tải Image có OS cấu hình sẵn.
+	Ta download image từ web "pynq.io" và sử dụng "Win32DiskImager utility" để chèn image OS vào thẻ SD.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{images/pic3} 
+		\caption{Chèn image OS vào thẻ SD}
+	\end{figure} 
+\end{itemize}
+
+\newpage
+\noindent \textbf{Tiến hành Setup:} 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.7]{images/pic4} 
+	\caption{Hình ảnh kết nối kit PYNQ-Z2}
+\end{figure} 
+
+\noindent Ta thực hiện các kết nối Micro USB, Ethernet, thẻ SD và gắn các jumpers nguồn và SD theo hình ảnh trên. \\
+
+\noindent Bật nguồn kit và mở cửa sổ Network and Sharing Center, set lại địa chỉ IP và DNS theo hướng dẫn sau:
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.35]{images/pic5} 
+	\caption{Set IP và DNS cho kit}
+\end{figure} 
+
+\newpage
+
+\noindent Sau khi set địa chỉ IP và DNS cho kit ta đợi khoảng 1 phút cho đến khi đèn "DONE" màu vàng sáng, sau đó 2 LED RCB chớp nháy, 4 LED TỪ 0-3 sẽ sáng đèn. Khi này ta đã kết nối kit với PC thành công.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.45]{images/pic6} 
+	\caption{Hình ảnh kit đã kết nối thành công}
+\end{figure} 
+
+
+\subsection{Bộ dữ liệu GTSRB (German Traffic Sign Recognition Benchmark)}
+Bộ Dữ Liệu GTSRB là một bộ dữ liệu nổi tiếng được sử dụng để huấn luyện và thử nghiệm các mô hình nhận diện biển báo giao thông. Bộ dữ liệu này bao gồm hàng nghìn ảnh biển báo giao thông được chụp tại Đức, và các ảnh này được phân loại thành nhiều nhóm biển báo giao thông khác nhau, ví dụ như biển báo giao nhau, biển báo tốc độ, biển báo cấm, và nhiều loại biển báo khác. GTSRB là một bộ dữ liệu quan trọng trong nghiên cứu nhận diện hình ảnh, đặc biệt là trong các hệ thống tự lái và các ứng dụng giao thông thông minh. \\
+
+
+\noindent Bộ dữ liệu GTSRB chứa các loại biển báo giao thông khác nhau và được phân chia thành các nhóm:
+\begin{itemize}
+	
+	\item Biển báo giao nhau: Các biển báo báo hiệu cho người lái xe về các ngã ba, ngã tư.\\
+	
+	\item Biển báo tốc độ: Biển báo giới hạn tốc độ cho phép trong khu vực. \\
+	
+	\item Biển báo cấm: Cấm các hành vi giao thông cụ thể như cấm rẽ trái, rẽ phải hoặc đi vào đường cấm.
+\end{itemize}
+
+\newpage
+\noindent Các ảnh trong bộ dữ liệu GTSRB có độ phân giải cao và được gắn nhãn chính xác với các loại biển báo, giúp mô hình học cách phân loại biển báo giao thông một cách hiệu quả.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.8]{images/pic20} 
+	\caption{Tập dữ liệu German Traffic Sign Recognition Benchmark}
+\end{figure}
+
+
+
+
+
+\newpage
+\section{Huấn luyện tập dữ liệu với Python}
+\subsection{Sơ đồ giải thuật tổng quát}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.12]{images/pic21} 
+	\caption{Sơ đồ giải thuật tổng quát}
+\end{figure} 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.15]{images/luồng} 
+	\caption{Luồng hoạt động chính}
+\end{figure} 
+
+\begin{enumerate}
+	\item \textbf{Core Quantization (quantization.py):}
+	\begin{itemize}
+		\item Cung cấp các lớp quantization (\texttt{QuantizationBinary}, \texttt{QuantizationFixed}) để chuyển đổi weights/activations sang dạng nhị phân hoặc fixed-point.
+		\item Implement các hàm quantization như \texttt{binary\_tanh\_unit}, \texttt{hard\_sigmoid}.
+	\end{itemize}
+	\item \textbf{Network Layers (quantized\_net.py):}
+	\begin{itemize}
+		\item Kế thừa từ Lasagne để tạo các layer quantized (\texttt{DenseLayer}, \texttt{Conv2DLayer}).
+		\item Sử dụng quantization schemes từ \texttt{quantization.py}.
+	\end{itemize}
+	\item \textbf{Network Architectures:}
+	\begin{itemize}
+		\item \texttt{cnv.py}: Xây dựng kiến trúc CNN binary cho GTSRB.
+	\end{itemize}
+	\item \textbf{Data Pipeline:}
+	\begin{itemize}
+		\item \texttt{gtsrb.py}: Xử lý dataset GTSRB (resize, normalize, augment).
+		\item \texttt{augmentors.py}: Thực hiện data augmentation (xoay ảnh, crop).
+		\item \texttt{readTrafficSigns.py}: Đọc dữ liệu ảnh từ thư mục.
+	\end{itemize}
+
+	\item \textbf{Weight Conversion:}
+	\begin{itemize}
+		\item \texttt{gtsrb-gen-binary-weights.py}: Script chính để chuyển đổi weights sang định dạng FPGA.
+		\item \texttt{finntesizer.py}: Thư viện của các hàm:
+		\begin{itemize}
+			\item Đóng gói weights thành binary format.
+			\item Tạo threshold memories.
+			\item Sinh file config cho HLS.
+		\end{itemize}
+	\end{itemize}
+\end{enumerate}
+\subsection{Core Quantization (quantization.py)}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.065]{images/pic31} 
+	\caption{Sơ đồ giải thuật quantization.py}
+\end{figure} 
+\noindent Tệp này cung cấp các lớp và hàm để thực hiện quantization (làm tròn dữ liệu trọng số và kích hoạt) cho mạng nơ-ron:
+\begin{itemize}
+	\item QuantizationFloat: 
+	\begin{itemize}
+		 	
+	\item	Đơn giản clip giá trị đầu vào trong khoảng [min, max].
+		
+	\item	Không có phép làm tròn, giữ nguyên dạng float.
+	\end{itemize}
+
+
+	\item QuantizationBinary: Lớp này thực hiện quantization nhị phân (chuyển đổi trọng số và kích hoạt thành các giá trị nhị phân -1 hoặc +1). Hàm quantize sử dụng một hàm binary\_tanh\_unit để chuyển đổi các giá trị đầu vào thành giá trị nhị phân bằng cách áp dụng hàm kích hoạt hard\_sigmoid và sau đó làm tròn chúng. \\
+
+	\item QuantizationFixed: Lớp này thực hiện quantization fixed-point (một kiểu làm tròn sang các giá trị cố định với một độ phân giải cụ thể). quantizeWeights và quantize sử dụng phương pháp làm tròn có độ chính xác cố định cho trọng số và kích hoạt. \\
+
+	\item hard\_sigmoid và binary\_tanh\_unit: Các hàm này là các hàm kích hoạt được sử dụng trong mạng BNN. binary\_tanh\_unit thực hiện hàm kích hoạt nhị phân, với hard\_sigmoid là bước trung gian.
+
+\end{itemize}
+
+\newpage
+
+\subsection{Network Layers (quantized\_net.py)}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.095]{images/quan\_net1} 
+	\caption{Sơ đồ giải thuật quantization\_net.py}
+\end{figure}
+Trong tệp này, các lớp mạng được mở rộng từ Lasagne để hỗ trợ quantized layers:
+\begin{itemize}
+	
+	\item DenseLayer và Conv2DLayer: Các lớp này mở rộng các lớp DenseLayer và Conv2DLayer trong Lasagne để hỗ trợ quantization cho trọng số (weights) và kích hoạt (activations). \\
+	
+	\item Các lớp này sử dụng các phương thức từ quantization.py để quantize trọng số và kích hoạt trong quá trình huấn luyện. Quá trình này đảm bảo rằng các trọng số và kích hoạt trong mạng sẽ được lưu dưới dạng nhị phân hoặc fixed-point, tối ưu cho việc triển khai phần cứng. \\
+	
+	\item Các lớp get\_output\_for và get\_output trong các lớp này đảm bảo rằng kết quả tính toán sẽ được thực hiện với trọng số đã được quantized.
+	
+\end{itemize}
+
+
+\subsection{Network Architectures (cnv.py)}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.25]{images/pic32} 
+	\caption{Sơ đồ giải thuật cnv.py}
+\end{figure}
+
+\subsubsection{Mục đích thiết kế}
+\noindent	 \textbf{cnv.py:} Tệp này xây dựng kiến trúc mạng nơ-ron tích chập (CNN) nhị phân để nhận diện biển báo giao thông từ GTSRB (German Traffic Sign Recognition Benchmark). Mạng CNN này sử dụng các lớp Conv2DLayer và DenseLayer đã được quantized để tiết kiệm tài nguyện phục vụ việc thực hiện việc nhận diện. Đảm bảo yêu cầu thiết kế một CNN nhỏ gọn phù hợp với phần cứng FPGA/Xilinx.
+
+\newpage
+\subsubsection{Kiến trúc mạng CNN thiết kế}
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{c|l}
+		
+		\textbf{Tên} & \textbf{Chức năng} \\ 
+
+		\hline
+		Input & Ảnh đầu vào 3 kênh (RGB), kích thước 32x32. \\
+	
+		Tiền xử lý & Lượng tử hóa đầu vào về 8-bit (FixedHardTanH). \\
+	
+		Conv Blocks & 6 tầng tích chập (64 $\to$ 128 $\to$ 256 filters), kèm BatchNorm và Activation. \\
+		
+		Pooling & 2 tầng MaxPool (giảm kích thước không gian). \\
+		
+		FC Layers & 2 tầng fully-connected (512 units). \\
+		
+		Output & Lớp đầu ra với $num\_outputs$ units (tùy chỉnh). \\
+	\end{tabular}
+	\caption{Chi tiết cấu trúc mô hình}
+\end{table}
+\subsubsection{Các tham số quan trọng}
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{c|l}
+		
+		\textbf{Tham số} & \textbf{Mô tả} \\
+		\hline
+		$num\_outputs$ & Số lượng lớp đầu ra (1--64). \\
+		
+		learning\_parameters & Chứa cấu hình: $weight\_bits$, $activation\_bits$, $W\_LR\_scale$, ... \\
+		
+		epsilon, alpha & Dùng cho BatchNorm (tránh chia 0, điều chỉnh đạo hàm). \\
+		
+	\end{tabular}
+	\caption{Các tham số quan trọng}
+\end{table}
+
+\subsubsection{Chức năng lượng tử hoá}
+\begin{itemize}
+	\item Đầu vào: Lượng tử hóa về 8-bit (dải giá trị rộng). \\
+	
+	\item Trọng số:
+	\begin{itemize}
+		\item 	Có thể dùng 1-bit (binary) hoặc n-bit fixed-point (tùy weight\_bits).
+		
+		\item Ví dụ: Nếu weight\_bits=1, trọng số chỉ nhận giá trị -1 hoặc +1. \\
+	\end{itemize}
+	
+	\item	Activation: \\
+	Dùng FixedHardTanH (lượng tử hóa sau hàm kích hoạt).
+\end{itemize}
+
+
+\newpage
+\subsection{Data Pipeline (gtsrb.py, augmentors.py, readTrafficSigns.py)}
+
+Khối này mô tả quy trình xử lý dữ liệu và huấn luyện mô hình nhận diện biển báo giao thông, từ khi đọc ảnh gốc đến khi tạo ra mô hình đã được lượng tử hóa. Các bước chính bao gồm tiền xử lý ảnh, tăng cường dữ liệu, chia tập train/val/test và huấn luyện mô hình CNN. \\
+
+Input: Ảnh traffic sign từ GTSRB dataset. \\
+
+Output: Dữ liệu đã chuẩn hóa + augmented, sẵn sàng cho training.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.17]{images/datapipe} 
+	\caption{Luồng xử lý khối Data Pipeline}
+\end{figure}
+
+\newpage
+		\subsubsection{Đọc ảnh và nhãn từ file CSV (readTrafficSigns.py)} 
+			\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.168]{images/readtraff} 
+			\caption{Sơ đồ giải thuật readTrafficSigns.py}
+		\end{figure}
+		\noindent Đọc dữ liệu ảnh từ thư mục và lưu trữ nhãn của biển báo giao thông (tập tin CSV chứa thông tin nhãn).
+
+	
+
+		\subsubsection{Xoay và cắt ngẫu nhiên (augmentors.py)} 
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.168]{images/aug} 
+			\caption{Sơ đồ giải thuật augmentors.py}
+		\end{figure}
+		 \noindent Tệp cấp các hàm data augmentation (tăng cường dữ liệu) như xoay ảnh (rotations) và cắt ảnh (cropping) để tăng cường tính đa dạng của dữ liệu huấn luyện.
+	
+
+		
+		\subsubsection{Khối tiền xử lý (gtsrb.py)} 
+	File gtsrb.py là một pipeline hoàn chỉnh để xử lý và huấn luyện mô hình nhận diện biển báo giao thông trên tập dữ liệu GTSRB. Nó thực hiện các bước từ tiền xử lý ảnh (resize, normalize), augment dữ liệu (xoay, cắt ngẫu nhiên) đến xây dựng và huấn luyện mô hình CNN lượng tử hóa.  \\
+
+		
+		\begin{itemize}
+			\item Đầu vào:
+			\begin{itemize}
+				\item 	Thư mục ảnh GTSRB (cấu trúc thư mục chuẩn).
+				
+				\item	Các tham số huấn luyện (bit-width, learning rate,...).
+			\end{itemize}
+
+			\item	Đầu ra:
+			\begin{itemize}
+				\item 	File model .npz (vd: gtsrb-1w-1a.npz).
+				
+				\item	Log quá trình training (loss/accuracy).
+			\end{itemize}
+		\end{itemize}
+		
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[scale=0.185]{images/gtsrb} 
+			\caption{Sơ đồ giải thuật gtsrb.py}
+		\end{figure}
+	
+	\newpage
+		\begin{table}[ht]
+			\centering
+			\begin{tabular}{c|l}
+			
+				\textbf{Chức năng} & \textbf{Mô tả} \\
+				\hline
+				Xử lý dữ liệu & - Đọc ảnh từ thư mục (sử dụng $readTrafficSigns.py$) \\
+				& - Resize về 32x32, chuẩn hóa pixel về [-1, 1] \\
+				& - Tạo ảnh vuông bằng zero-padding \\
+				
+				Data Augmentation & Áp dụng xoay ngẫu nhiên ($\pm 7^\circ$) và cắt ảnh (dùng $augmentors.py$) \\
+				
+				Chia tập dữ liệu & Chia $train/val/test$ theo tỉ lệ 80\%/10\%/10\%, thêm lớp "junk" (nhiều) \\
+				
+				Xây dựng model & - Tạo kiến trúc CNN từ $cnv.py$ với: \\
+				& - Lượng tử hóa 1-bit cho weights/activations \\
+				& - Hàm mất mát Squared Hinge Loss \\
+				
+				Huấn luyện & Sử dụng Adam optimizer, learning rate decay, và batch normalization \\
+				
+				Lưu model & Xuất file $.npz$ chứa trọng số đã huấn luyện \\
+				
+			\end{tabular}
+			\caption{Chi tiết các chức năng mô hình gtsrb.py}
+		\end{table}
+	
+
+	
+
+
+
+\subsection{Weight Conversion (gtsrb-gen-binary-weights.py, finnthesizer.py)}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.155]{images/wc} 
+	\caption{Sơ đồ giải thuật Weight Conversion}
+\end{figure}
+
+\subsubsection{Thư viện finnthesizer.py:} 
+\noindent Thư viện này giúp tạo các binary weights và thresholds cần thiết để tải vào bộ nhớ của FPGA. Nó đóng vai trò quan trọng trong việc tối ưu hóa mô hình cho FPGA, bao gồm cả việc tạo các tệp khởi tạo cho Vivado HLS và đóng gói trọng số và threshold thành các tệp nhị phân cho việc khởi tạo trong quá trình runtime.
+
+\subsubsection{gtsrb-gen-binary-weights.py} 
+Khối gtsrb-gen-binary-weights.py chủ yếu thực hiện việc đọc và xử lý các trọng số đã huấn luyện từ file .npz, sau đó chuyển đổi chúng thành định dạng nhị phân để có thể sử dụng trong các hệ thống phần cứng FPGA. Các chức năng chính bao gồm:\\
+
+\begin{itemize}
+	\item Đọc trọng số từ file: Tải trọng số của mô hình từ file .npz.
+	
+	\item	Xử lý các lớp tích chập và fully-connected: Đọc các trọng số của các lớp tích chập (Convolutional Layers) và các lớp fully-connected (FC Layers) của mạng nơ-ron.
+	
+	\item	Chuyển đổi trọng số và ngưỡng: Trọng số và ngưỡng (thresholds) được xử lý và chuyển đổi sang dạng nhị phân hoặc các dạng lưu trữ khác phù hợp với FPGA.
+	
+	\item	Tạo file cấu hình HLS: File cấu hình HLS được tạo ra để khởi tạo bộ nhớ cho các lớp trong mô hình, sử dụng trong quá trình tạo bitstream cho FPGA.
+	
+	\item	Lưu trọng số dưới dạng nhị phân: Tạo các file nhị phân để khởi tạo bộ nhớ trong quá trình chạy mô hình trên FPGA.
+\end{itemize}
+
+Khối gtsrb-gen-binary-weights.py sử dụng thư viện finnthesizer để đọc và chuyển đổi các trọng số của mô hình. Cụ thể: \\
+
+\begin{itemize}
+	\item Thư viện finnthesizer cung cấp các hàm để đọc trọng số từ các file .npz (ví dụ như hàm BNNWeightReader) và thực hiện các phép toán như lượng tử hóa trọng số và các ngưỡng.
+	
+	\item	Chức năng chính của thư viện finnthesizer trong khối gtsrb-gen-binary-weights.py là chuyển đổi các trọng số và ngưỡng của mô hình thành các dạng dữ liệu phù hợp với FPGA (dưới dạng nhị phân hoặc các định dạng chuẩn khác) để có thể sử dụng trong hệ thống phần cứng.
+\end{itemize}
+
+
+\subsubsection{Training}
+
+ Quá trình huấn luyện sử dụng dữ liệu từ GTSRB, nơi các lớp mạng được huấn luyện thông qua các kiến trúc đã được định nghĩa trong cnv.py và. Các trọng số được lưu trong định dạng NPZ sau khi huấn luyện. 
+	
+	\subsubsection{Deployment}
+	 Deployment: Khi huấn luyện hoàn thành, tệp NPZ chứa trọng số sẽ được chuyển đổi thành các tệp nhị phân thông qua gtsrb-gen-binary-weights.py và finnthesizer.py. Các tệp này sẽ được sử dụng để tải vào bộ nhớ của FPGA, nơi mô hình sẽ được triển khai và thực hiện nhận diện biển báo giao thông trong thời gian thực.
+
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.8]{images/pic22} 
+	\caption{Accuracy Model CNV 1Wb - 1 Ab}
+\end{figure} 
+\newpage
+
+
+\section{Thiết kế kiến trúc HLS cho CNN}
+Thiết kế kiến trúc High-Level Synthesis (HLS) cho một mạng Convolutional Neural Network (CNN) sử dụng các trọng số nhị phân (1-bit weights) và kích hoạt nhị phân (1-bit activations). Mạng này được thiết kế để chạy trên phần cứng, sử dụng mô hình dữ liệu AXI Lite cho việc tải tham số và xử lý dataflow architecture cho việc suy luận hình ảnh (image inference).
+\newpage
+\subsection{Kiến trúc HLS cho CNV BNN}
+	\begin{figure}[h!]
+		\centering
+	\begin{tikzpicture}[node distance=1cm, >=stealth', every node/.style={font=\small}] % Giảm node distance xuống 1cm
+		
+		% Định nghĩa các style với độ rộng hình chữ nhật tăng lên
+		\tikzset{
+			block/.style={draw, rectangle, minimum height=0.8cm, minimum width=3.5cm, text width=3.3cm, align=center, fill=blue!10, rounded corners=3pt},
+			input/.style={draw, trapezium, trapezium left angle=60, trapezium right angle=120, minimum width=3.5cm, text width=3.3cm, align=center, fill=green!10},
+			output/.style={draw, trapezium, trapezium left angle=120, trapezium right angle=60, minimum width=3.5cm, text width=3.3cm, align=center, fill=red!10},
+			converter/.style={draw, rectangle, minimum height=0.8cm, minimum width=3.5cm, text width=3.3cm, align=center, fill=yellow!10},
+			pool/.style={draw, rectangle, minimum height=0.8cm, minimum width=3.5cm, text width=3.3cm, align=center, fill=orange!10},
+			arrow/.style={->, thick, shorten <=5pt} % Rút ngắn mũi tên
+		}
+		
+		% Các node cho nhánh bên trái
+		\node [input] (input) {Đầu vào \\ (32x32x3 RGB)};
+		\node [converter, below=of input] (mem2stream) {Mem2Stream \\ (Memory → Stream)};
+		\node [converter, below=of mem2stream] (conv1) {Chuyển đổi \\ 64-bit → 192-bit};
+		\node [converter, below=of conv1] (conv2) {Chuyển đổi \\ 192-bit → 24-bit};
+		\node [block, below=of conv2] (conv0) {ConvLayer 0 \\ 3x3, Binary};
+		\node [block, below=of conv0] (conv1-layer) {ConvLayer 1 \\ 3x3, Binary};
+		\node [pool, below=of conv1-layer] (pool1) {MaxPool \\ 2x2, stride 2};
+		\node [block, below=of pool1] (conv2-layer) {ConvLayer 2};
+		\node [block, below=of conv2-layer] (conv3-layer) {ConvLayer 3};
+		\node [pool, below=of conv3-layer] (pool2) {MaxPool \\ 2x2, stride 2};
+		
+		% Các node cho nhánh bên phải (được đẩy qua bên phải và căn chỉnh không đè lên)
+		\node [block, right=4.5cm of input] (conv4-layer) {ConvLayer 4}; % Đẩy ConvLayer 4 lên ngang với input
+		\node [block, below=of conv4-layer] (conv5-layer) {ConvLayer 5};
+		\node [block, below=of conv5-layer] (fc6) {Fully Connected 6};
+		\node [block, below=of fc6] (fc7) {Fully Connected 7};
+		\node [block, below=of fc7] (fc8) {Fully Connected 8 \\ (PassThrough)};
+		\node [converter, below=of fc8] (width-adj) {Điều chỉnh độ rộng};
+		\node [converter, below=of width-adj] (stream2mem) {Stream2Mem \\ (Stream → Memory)};
+		\node [output, below=of stream2mem] (output) {Đầu ra \\ (L8\_MH*16-bit)};
+		
+		% Các đường nối với mũi tên gấp khúc
+		% Nhánh bên trái
+		\draw [arrow] (input) -- (mem2stream);
+		\draw [arrow] (mem2stream) -- (conv1);
+		\draw [arrow] (conv1) -- (conv2);
+		\draw [arrow] (conv2) -- (conv0);
+		\draw [arrow] (conv0) -- (conv1-layer);
+		\draw [arrow] (conv1-layer) -- (pool1);
+		\draw [arrow] (pool1) -- (conv2-layer);
+		\draw [arrow] (conv2-layer) -- (conv3-layer);
+		\draw [arrow] (conv3-layer) -- (pool2);
+		
+		% Nhánh bên phải với mũi tên gấp khúc
+		\draw [arrow] (pool2) -- (conv4-layer);
+		\draw [arrow] (conv4-layer) -- (conv5-layer);
+		\draw [arrow] (conv5-layer) -- (fc6);
+		\draw [arrow] (fc6) -- (fc7);
+		\draw [arrow] (fc7) -- (fc8);
+		\draw [arrow] (fc8) -- (width-adj);
+		\draw [arrow] (width-adj) -- (stream2mem);
+		\draw [arrow] (stream2mem) -- (output);
+		
+		% Khung bao
+		\node[draw=black!50, dashed, inner xsep=8mm, inner ysep=5mm, fit=(input) (output), label={[name=title]above:KIẾN TRÚC CNV BNN (Dataflow)}] {};
+		\draw[black!50, dashed] (title.north) -- ++(0,0.3);
+		\end{tikzpicture}
+		\caption{Kiến trúc CNV BNN}
+	\end{figure} 
+\newpage
+\subsection{Lập sơ đồ giải thuật}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.095]{images/pic13} 
+	\caption{Tệp cấu hình và tệp nhị phân}
+\end{figure} 
+
+\subsection{Chức năng của các hàm chính}
+\begin{itemize}
+	\item $DoMemInit$: Hàm này được sử dụng để khởi tạo các tham số của mạng, bao gồm trọng số (weights) và ngưỡng (thresholds) cho các lớp trong mạng. Các giá trị này được tải vào bộ nhớ theo yêu cầu của người dùng.
+	\item $DoCompute$: Hàm này thực hiện phép toán suy luận trên mạng nơ-ron tích chập, xử lý các đầu vào và tạo ra đầu ra qua các lớp khác nhau của mạng. Nó bao gồm các lớp chập (convolution layers), lớp pool (max pooling), và các lớp kết nối đầy đủ (fully connected layers).
+	\item $BlackBoxJam$: Hàm này là một giao diện cho việc kết nối với phần mềm thông qua giao thức AXI Lite, cho phép điều khiển việc tải tham số và thực hiện suy luận.
+\end{itemize}
+
+\subsection{Chi tiết mã nguồn sử dụng}
+\begin{enumerate}
+	\item \textbf{Các khai báo tĩnh (static) và đối tượng:} \\
+	BinaryWeights và ThresholdsActivation là các lớp mô tả các đối tượng trọng số và ngưỡng. Mỗi lớp tương ứng với một lớp trong mạng nơ-ron và sẽ lưu trữ trọng số hoặc ngưỡng của lớp đó. \\
+	
+	Các đối tượng như weights0, weights1, threshs0, threshs1 chứa các trọng số và ngưỡng cho mỗi lớp. \\
+	
+	\item \textbf{Hàm paddedSizeHW:} \\
+	Hàm này tính toán kích thước đã được đệm cho dữ liệu đầu vào sao cho nó phù hợp với kích thước yêu cầu của phần cứng, đảm bảo rằng kích thước của dữ liệu chia hết cho giá trị cần thiết. \\
+	
+	\item \textbf{Hàm DoMemInit:} \\
+	Hàm này sẽ nhận các tham số xác định lớp (targetLayer), bộ nhớ (targetMem), chỉ mục (targetInd), ngưỡng (targetThresh), và giá trị (val) để lưu trữ giá trị vào bộ nhớ của mạng. Nó sẽ xác định lớp nào và vị trí nào cần được khởi tạo dựa trên tham số truyền vào, sau đó gán giá trị vào bộ nhớ tương ứng. \\
+	
+	\item \textbf{Hàm DoCompute:} \\
+	Đây là hàm chính thực hiện phép toán suy luận hình ảnh trên mạng. Các bước chính trong hàm này bao gồm:
+	\begin{itemize}
+		
+\item 	Mem2Stream\_Batch: Chuyển dữ liệu từ bộ nhớ vào các luồng dữ liệu.
+	
+\item 	StreamingDataWidthConverter\_Batch: Chuyển đổi độ rộng của dữ liệu giữa các luồng.
+	
+\item 	ConvLayer\_Batch: Áp dụng các lớp tích chập (convolution layers) vào các luồng dữ liệu.
+	
+\item 	StreamingMaxPool\_Batch: Áp dụng lớp max pooling.
+	
+\item 	StreamingFCLayer\_Batch: Áp dụng các lớp kết nối đầy đủ (fully connected layers).
+	
+\item 	Cuối cùng, dữ liệu đầu ra được chuyển từ các luồng vào bộ nhớ.
+	
+\end{itemize}
+\newpage
+	\item \textbf{Hàm BlackBoxJam:} \\
+	Đây là một hàm giao diện kết nối với phần mềm qua giao thức AXI Lite. Hàm này có hai chức năng chính:
+	\begin{itemize}
+		\item Nếu doInit là true, hàm sẽ gọi DoMemInit để khởi tạo các tham số mạng.
+		\item Nếu doInit là false, hàm sẽ gọi DoCompute để thực hiện phép toán suy luận hình ảnh.
+	\end{itemize}	
+	Các tham số này có thể được truyền qua các giao diện phần cứng (AXI) để kiểm soát quá trình khởi tạo và tính toán. \\
+
+	\item \textbf{Các pragma HLS:}
+	\begin{itemize}
+		\item Các chỉ thị HLS như \#pragma HLS INTERFACE dùng để xác định các giao diện phần cứng, như giao diện AXI Lite hoặc giao diện AXI Master, để truyền và nhận dữ liệu giữa phần mềm và phần cứng.
+		\item Các chỉ thị HLS ARRAY\_PARTITION được sử dụng để phân vùng mảng (arrays) để tăng tốc độ truy cập bộ nhớ trong quá trình thực thi. \\
+	\end{itemize}
+\end{enumerate}
+
+\begin{itemize}
+	\item Đây là một mô hình high-level synthesis (HLS) cho một mạng nơ-ron tích chập sử dụng trọng số và kích hoạt nhị phân. Mạng này được tối ưu hóa để chạy trên phần cứng với các phép toán dữ liệu chảy (dataflow architecture) và hỗ trợ khởi tạo tham số qua giao diện AXI Lite.
+	
+	\item  Các hàm như DoMemInit và DoCompute thực hiện các bước quan trọng trong việc khởi tạo và tính toán mạng.
+\end{itemize}
+
+\subsection{Các thư viện và tệp kèm được sử dụng}
+\begin{enumerate}
+	\item \textbf{config.h:}
+	Tệp này chứa các tham số cấu hình cho các lớp khác nhau của Mạng Nơ-ron Nhị phân (BNN). Nó định nghĩa các hằng số để xác định các thuộc tính của từng lớp, chẳng hạn như số lượng bản đồ đặc trưng đầu vào và đầu ra (kênh), kích thước của các bản đồ đặc trưng, số lượng phần tử xử lý (PE), kích thước bộ nhớ, và các cài đặt phần cứng khác. Những cấu hình này được sử dụng để khởi tạo các lớp với các tham số cụ thể cho việc triển khai trên FPGA. Tệp này được thu hoạch từ phần 4.5 ở trên. \\
+	
+	\item \textbf{bnn-library.h:}
+	Đây là thư viện các hàm HLS (High-Level Synthesis) cho việc triển khai BNN. Nó bao gồm nhiều hàm mẫu để triển khai các thành phần cơ bản của BNN trên phần cứng (như lớp tích chập, lớp kết nối đầy đủ, hàm kích hoạt, v.v.). Nó cũng bao gồm một số macro để xử lý lỗi (CASSERT\_DATAFLOW) và các thư viện để xử lý dòng dữ liệu và bộ nhớ. Tệp này định nghĩa một số thành phần chính như ConvLayer\_Batch, StreamingMaxPool, v.v., được sử dụng để mô tả tính toán và di chuyển dữ liệu trong BNN. \\
+	
+	\item \textbf{	maxpool.h:}
+	Tệp này triển khai phép toán max-pooling cho Mạng Nơ-ron Nhị phân. Max-pooling là một phép toán giảm mẫu thường được sử dụng trong các Mạng Nơ-ron Tích chập (CNN) để giảm kích thước không gian của các bản đồ đặc trưng. Các mẫu StreamingMaxPool và StreamingMaxPool\_Batch chịu trách nhiệm xử lý các dòng dữ liệu đầu vào và thực hiện phép toán max-pooling. \\
+	
+	\item \textbf{	activations.hpp:}
+	Tệp này có thể chứa các định nghĩa cho các hàm kích hoạt khác nhau, được sử dụng trong các mạng nơ-ron để thêm tính phi tuyến. Mặc dù nội dung cụ thể chưa rõ, nhưng các hàm kích hoạt điển hình bao gồm ReLU (Rectified Linear Unit), sigmoid hoặc tanh. Nó cũng có thể chứa các phép toán ngưỡng cho các giá trị kích hoạt nhị phân. \\
+	
+	\item \textbf{	interpret.hpp:}
+	Tệp này có thể được sử dụng để định nghĩa cách các giá trị nhị phân (như trọng số và kích hoạt nhị phân) được giải thích trong phần cứng. Nó có thể định nghĩa các kiểu và phương thức để xử lý dữ liệu nhị phân một cách tối ưu cho tính toán trên phần cứng, chẳng hạn như FPGA. Tuy nhiên, cần phân tích kỹ hơn nội dung của tệp này để có thông tin chi tiết hơn. \\
+	
+	\item \textbf{	dma.h:}
+	Tệp này cung cấp các hàm để xử lý Truy cập Bộ nhớ Trực tiếp (DMA) giữa bộ nhớ và các dòng dữ liệu trong các triển khai dựa trên FPGA. Nó bao gồm các hàm để chuyển dữ liệu giữa bộ nhớ AXI4 và các dòng HLS, chẳng hạn như Mem2Stream, Stream2Mem, và các phiên bản theo lô của chúng. Những hàm này đảm bảo việc di chuyển dữ liệu hiệu quả cho các ứng dụng tăng tốc phần cứng. \\
+	
+	\item \textbf{	fclayer.h:}
+	Tệp này triển khai các lớp kết nối đầy đủ (FC) trong BNN. Các lớp kết nối đầy đủ chịu trách nhiệm thực hiện phép toán nhân ma trận-vecto, vốn là phép toán cốt lõi của lớp FC, với thêm việc chuyển đổi độ rộng của dòng dữ liệu. Nó bao gồm các hàm để xử lý dữ liệu qua các lớp kết nối đầy đủ bằng cách sử dụng các tài nguyên tối ưu hóa cho phần cứng. \\
+	
+	\item \textbf{	convlayer.h:}
+	Tệp này triển khai các lớp tích chập cho BNN. Các lớp tích chập chịu trách nhiệm áp dụng các phép toán tích chập trên các bản đồ đặc trưng đầu vào (chẳng hạn như hình ảnh) để trích xuất các đặc trưng không gian. Hàm ConvLayer\_Batch thực hiện phép toán tích chập, bao gồm việc sinh cửa sổ trượt (im2col), nhân ma trận-vecto, và tính toán hàm kích hoạt. Tệp này hỗ trợ việc triển khai tối ưu hóa các phép toán tích chập trên phần cứng như FPGA.
+\end{enumerate}
+
+\newpage
+\subsection{Synthesis HLS và xuất RTL Design Hardware}
+Ta tạo file chứa source code C+ và các thư viện, tệp kèm vào chung 1 folder.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.4]{images/pic15} 
+	\caption{Các thư viện và tệp kèm}
+\end{figure}
+\noindent Tạo project thêm các file vào, chọn top Function là "BlackBoxJam", tiến hành chạy Synthesis và Export RTL.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.34]{images/pic14} 
+	\caption{Synthesis và Export HLS thành công}
+\end{figure} 
+
+\newpage
+\section{Tạo block Design bằng Vivado}
+Từ IP được đóng góp (Export RTL) từ Vitis đã thực hiện ở phần trên, ta tiến hành tạo block Design. \\
+Tạo project Vivado, chọn khối ZYNQ7 Processing System, chọn IP vừa thiết kế "BlackBoxJam". Tiến hành các bước chạy tự động, ta thu được Block Design cho bộ CNV BNN.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.36]{images/pic16} 
+	\caption{Block Design bộ CNV BNN}
+\end{figure} \\
+Tiến hành các bước Synthesis --> Implementation --> Generate Bitstream 
+ \begin{figure}[h!]
+ 	\centering
+ 	\includegraphics[scale=0.36]{images/pic17} 
+ 	\caption{Xuất Bitstream thành công}
+ \end{figure} 
+
+\newpage
+\noindent Xuất file .TCL (Tool Command Language), tệp lưu trữ các cấu hình dùng cho Overlay.
+	\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{images/pic18} 
+	\includegraphics[scale=0.7]{images/pic19} 
+	\caption{Xuất file .tcl} 
+\end{figure}
+
+	\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{images/pic30} 
+	\caption{Utilization reports} 
+\end{figure}
+\newpage
+\section{Chạy kiểm nghiệm trên JupyterNotebook}
+Ta tiến hành kết nối kit và load các module, thư viện lên Jupyter. \\
+Dữ liệu được sử dụng là tập dữ liệu biển báo giao thông của Đức. Mô hình này có thể phân loại 42 loại biển báo giao thông khác nhau.
+
+\subsection{Khởi tạo Classifier}
+
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[scale=0.6]{images/pic23} 
+ 	\caption{Khởi tạo Classifier} 
+ \end{figure}
+\begin{itemize}
+	\item Thư viện bnn được nhập vào, sau đó gọi hàm bnn.available\_params() để hiển thị các tham số có sẵn cho mạng BNN.
+	
+	\item Mạng nơ-ron được khởi tạo thông qua bnn.CnvClassifier với mô hình NETWORK\_CNVW1A1, tập dữ liệu "road-signs", và môi trường thực thi là phần cứng (Pynq FPGA).
+\end{itemize}
+
+\subsection{Danh sách các lớp phân loại}
+Sau khi khởi tạo classifier, lệnh này sẽ in ra danh sách các lớp biển báo giao thông mà mô hình có thể phân loại. Có tổng cộng 42 lớp biển báo, ví dụ như "20 Km/h", "Stop", "Pedestrians in road ahead", và nhiều lớp khác.
+ \begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.45]{images/pic24} 
+	\caption{Danh sách các lớp phân loại} 
+\end{figure}
+
+\subsection{Mở và hiển thị hình ảnh để phân loại}
+ \begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.45]{images/pic25} 
+	\caption{Mở và hiển thị hình ảnh để phân loại} 
+\end{figure}
+\begin{itemize}
+	\item Mã này tìm và mở các hình ảnh từ thư mục chứa biển báo giao thông, rồi hiển thị chúng.
+	
+	\item imgList: Tạo danh sách các tệp hình ảnh trong thư mục road\_signs.
+	
+	\item images.append(img): Tải từng hình ảnh vào danh sách images sau khi mở chúng.
+	
+	\item img.thumbnail((64, 64), Image.ANTIALIAS): Thay đổi kích thước hình ảnh xuống 64x64 pixels, giúp giảm khối lượng tính toán khi phân loại.
+	
+	\item display(img): Hiển thị hình ảnh trong notebook.
+\end{itemize}
+
+\subsection{Khởi chạy BNN trên phần cứng}
+ \begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.45]{images/pic26} 
+	\caption{Kết quả chạy trên phần cứng} 
+\end{figure}
+
+\begin{itemize}
+	\item classifier.classify\_images(images): Phân loại các hình ảnh đã tải vào danh sách images. Kết quả trả về là các chỉ số lớp mà mỗi hình ảnh được phân loại vào.
+	
+	\item	classifier.class\_name(index): Chuyển đổi chỉ số lớp thành tên lớp biển báo giao thông tương ứng.
+\end{itemize}
+
+\subsection{Khởi chạy BNN trên phần mềm}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.45]{images/pic27} 
+	\caption{Kết quả chạy trên phần mềm} 
+\end{figure}
+
+\begin{itemize}
+	\item bnn.CnvClassifier(...): Tạo một đối tượng classifier nhưng lần này sử dụng RUNTIME\_SW để chạy trên phần mềm thay vì phần cứng.
+	
+	\item	sw\_class.classify\_images(images): Phân loại các hình ảnh giống như ở trên, nhưng lần này mô hình chạy trên phần mềm ARM thay vì FPGA.
+\end{itemize}
+
+\newpage 
+\subsection{Phát hiện đối tượng trong cảnh}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{images/pic28} 
+
+	\caption{Phát hiện đối tượng trong cảnh trước} 
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+
+	\includegraphics[scale=0.6]{images/pic29} 
+	\caption{Phát hiện đối tượng trong cảnh sau} 
+\end{figure}
+
+
+\newpage
+\section{Real time với OpenCV PYNQ}
+Sử dụng HDMI IN / HDMI OUT để nhận diện ảnh thực tế thời gian thực.
+
+\newpage
+\section{Kết luận và hướng phát triển}
+\subsection{Kết luận}
+\noindent Đồ án "Nhận diện biển báo giao thông trên FPGA PYNQ-Z2" đã phát triển một hệ thống sử dụng học sâu và mạng nơ-ron nhị phân (BNN) để nhận diện và phân loại biển báo giao thông hiệu quả. Việc sử dụng nền tảng FPGA giúp tối ưu hóa quá trình xử lý, giảm độ trễ và tiết kiệm tài nguyên phần cứng. Kết quả cho thấy hệ thống hoạt động tốt trong thời gian thực, mang lại hiệu suất cao trong điều kiện thực tế.
+\subsection{Phát triển}
+\noindent Tuy nhiên, do kiến thức còn hạn chế, hệ thống chưa hoàn thiện hoàn toàn và vẫn có thể cải tiến. Một số hướng phát triển bao gồm mở rộng bộ dữ liệu, cải thiện khả năng nhận diện trong các điều kiện môi trường khắc nghiệt, và tối ưu hóa mô hình BNN để đạt độ chính xác cao hơn. Ngoài ra, việc tích hợp hệ thống vào các nền tảng giao thông thông minh và xe tự lái cũng là một mục tiêu quan trọng trong tương lai.
+
+\newpage
+\section{Tài liệu tham khảo} 
+1. Documentation Navigator, 2024, \\ https://www.xilinx.com/support/documentation-navigation/overview.html.  \\ \\
+2. Creating a simple Overlay for PYNQ-Z1 board from Vivado HLx, 2017 , \\ https://yangtavaresblog.wordpress.com/2017/07/31/creating-a-simple-overlay-for-pynq-z1-board-from-vivado-hlx/. \\ \\
+3.  PYNQ: Python productivity for Adaptive Computing platforms, 2022 , https://pynq.readthedocs.io/. \\ \\
+4.PYNQ-Z2 Reference Manual v1.1, 2019 , TuL PYNQ-Z2.\\ \\
+5. Tutorial: Creating a new Verilog Module Overlay, RogerPease, 2020 , https://discuss.pynq.io/t/tutorial-creating-a-new-verilog-module-overlay/1530. \\ \\
+6. Vivado Design Suite User Guide,  AMD XILINX , 2022. \\ \\
+7. BNN-PYNQ: Baking a custom BNN for the Zybo-Z7,
+Franco Caspe, 2020, \\ https://www.hackster.io/franco-caspe/bnn-pynq-baking-a-custom-bnn-for-the-zybo-z7-f0bbe3\#toc-section-3--hls--amp--vivado-synthesis-4 \\ \\
+8. Accelerating Image Processing with PYNQ \& OpenMV Cam, Adam Taylor, 2019, \\
+https://www.hackster.io/adam-taylor/accelerating-image-processing-with-pynq-openmv-cam-50ba7a \\ \\
+9. Paper Explanation: Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to +1 or -1, Natsu, 2018, 
+https://mohitjain.me/2018/07/14/bnn/ \\ \\
+10. A Review of Binarized Neural Networks, Taylor Simons, 2019, \\
+https://www.mdpi.com/2079-9292/8/6/661 \\ \\
+11. Accelerating Binarized Convolutional Neural Networks with Software-Programmable FPGAs, 2017, https://www.csl.cornell.edu/~zhiruz/pdfs/bnn-fpga2017.pdf \\ \\ 
+12. cv2pynq, https://github.com/wbrueckner/cv2pynq/blob/master/cv2pynq/cv2pynq.py
+
+\newpage
+\section{Phụ lục}
+
+
+\end{document}

@@ -1,0 +1,75 @@
+\contentsline {section}{Lời nói đầu}{3}{section*.3}%
+\contentsline {section}{Danh sách bảng}{7}{section*.6}%
+\contentsline {section}{Danh sách hình vẽ}{9}{section*.7}%
+\contentsline {section}{\numberline {1}GIỚI THIỆU}{10}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Giới thiệu đề tài}{10}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Cấu trúc của bài báo cáo}{11}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Mục tiêu đề tài}{11}{subsection.1.3}%
+\contentsline {section}{\numberline {2}CƠ SỞ LÝ THUYẾT}{12}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Giới thiệu về mô hình học sâu (Deep Learning Models)}{12}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Giới thiệu về Convolutional Neural Networks - CNN}{13}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Cấu trúc của CNN:}{13}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Lợi ích của CNN:}{17}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Ứng dụng của CNN:}{17}{subsubsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3}Giới thiệu về Binarized Neural Networks - BNN}{18}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Các khái niệm cơ bản trong BNN}{19}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Cách BNN hoạt động}{20}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Lợi ích của BNN}{21}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Hạn chế của BNN}{21}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}Ứng dụng của BNN}{22}{subsubsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.4}Tổng quan về FPGA}{22}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Ưu điểm của FPGA}{23}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Nhược điểm của FPGA}{23}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Ứng dụng của FPGA}{24}{subsubsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.5}Tổng quan về kit FPGA PYNQ-Z2}{24}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Thông số kỹ thuật kit PYNQ-Z2}{25}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Lợi ích và ứng dụng của PYNQ Z2}{26}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.3}PYNQ Framework (PYNQ Python API)}{27}{subsubsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.5.4}Triển khai CNN trên PYNQ Z2}{27}{subsubsection.2.5.4}%
+\contentsline {subsubsection}{\numberline {2.5.5}Cách kết nối kit PYNQ-Z2}{28}{subsubsection.2.5.5}%
+\contentsline {subsection}{\numberline {2.6}Bộ dữ liệu GTSRB (German Traffic Sign Recognition Benchmark)}{30}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Huấn luyện tập dữ liệu với Python}{32}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Sơ đồ giải thuật tổng quát}{32}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Core Quantization (quantization.py)}{33}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Network Layers (quantized\_net.py)}{35}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Network Architectures (cnv.py)}{36}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Mục đích thiết kế}{36}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Kiến trúc mạng CNN thiết kế}{37}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Các tham số quan trọng}{37}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}Chức năng lượng tử hoá}{37}{subsubsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.5}Data Pipeline (gtsrb.py, augmentors.py, readTrafficSigns.py)}{38}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Đọc ảnh và nhãn từ file CSV (readTrafficSigns.py)}{39}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Xoay và cắt ngẫu nhiên (augmentors.py)}{39}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Khối tiền xử lý (gtsrb.py)}{40}{subsubsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.6}Weight Conversion (gtsrb-gen-binary-weights.py, finnthesizer.py)}{41}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Thư viện finnthesizer.py:}{42}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}gtsrb-gen-binary-weights.py}{42}{subsubsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.3}Training}{43}{subsubsection.3.6.3}%
+\contentsline {subsubsection}{\numberline {3.6.4}Các kết quả sau huấn luyện}{44}{subsubsection.3.6.4}%
+\contentsline {section}{\numberline {4}Thiết kế kiến trúc HLS CNN}{46}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Thiết kế CNV BNN cho Hardware}{47}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Kiến trúc HLS CNV BNN cho Hardware}{47}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Lập sơ đồ giải thuật}{48}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Chức năng của các hàm chính}{49}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Chi tiết mã nguồn sử dụng}{49}{subsubsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}Các thư viện và tệp kèm được sử dụng}{51}{subsubsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.2}Thiết kế CNV BNN cho Software}{53}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Sơ đồ giải thuật kiến trúc HLS CNV BNN cho Software}{53}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Tổng quan hệ thống}{54}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Chi tiết các hàm được sử dụng}{54}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}Synthesis HLS và xuất RTL Design}{56}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Tạo block Design bằng Vivado}{56}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Đánh giá kiến trúc HLS đã thiết kế}{59}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Chạy kiểm nghiệm trên JupyterNotebook}{60}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Khởi tạo Classifier}{60}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Danh sách các lớp phân loại}{60}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Mở và hiển thị hình ảnh để phân loại}{61}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Khởi chạy BNN trên phần cứng}{62}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Khởi chạy BNN trên phần mềm}{63}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Phát hiện đối tượng trong cảnh}{65}{subsection.5.6}%
+\contentsline {subsubsection}{\numberline {5.6.1}Đọc và hiển thị hình ảnh}{65}{subsubsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.2}Các bước thực hiện nhận diện trong cảnh}{65}{subsubsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.7}Nhận xét kết quả chạy trên Jupyter}{67}{subsection.5.7}%
+\contentsline {section}{\numberline {6}Kết luận và hướng phát triển}{68}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Kết luận}{68}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Phát triển}{69}{subsection.6.2}%

@@ -1,0 +1,414 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+
+\definecolor{BKTemplate}{rgb}{0.11765, 0.30588, 0.47451}
+\usecolortheme[named=BKTemplate]{structure}
+\setbeamercolor{title}{fg=BKTemplate,bg=} 
+\setbeamertemplate{caption}[numbered]
+
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc} % Để sử dụng Tiếng Việt
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{comment}
+\usepackage{forest}
+\usepackage[linesnumbered, ruled]{algorithm2e}
+\usepackage{algorithmic}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{diagbox}
+\usepackage{tikz}
+\usepackage{subcaption}
+% \captionsetup[subfigure]{labelsep=space}
+\usepackage{amsmath}
+\usepackage{dsfont}
+\usepackage{stmaryrd}
+\usepackage[style=authortitle,backend=bibtex]{biblatex}
+\addbibresource{thesiscite.bib}
+
+\renewcommand{\footnotesize}{\tiny}
+\newcommand{\mathbi}[1]{\boldsymbol{#1}}
+\newtheorem{proposition}{Proposition}
+
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title[Bộ môn Viễn thông] %optional
+{\vspace*{1.5cm}\\\textbf{BÁO CÁO ĐỒ ÁN TỐT NGHIỆP}\\
+\textbf{ĐỀ TÀI} \\
+\textbf{NHẬN DIỆN BIỂN BÁO GIAO THÔNG TRÊN FPGA PYNQ-Z2}}
+
+\subtitle{}
+
+\author[Huỳnh Thịnh Phát] % (optional)
+{GVHD: TS. Võ Quế Sơn\\
+SVTH: Huỳnh Thịnh Phát - 2114369}
+
+%\institute[HCMUT] % (optional)
+
+
+\date[Tháng 5 2025] % (optional)
+{Tháng 5 2025}
+
+%End of title page configuration block
+%------------------------------------------------------------
+
+
+
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Nội dung}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+%------------------------------------------------------------
+
+
+\begin{document}
+
+% The next statement creates the title page.
+\setbeamertemplate{background canvas}{
+	\includegraphics[width=\paperwidth,height=\paperheight]{images/FrontBackground.pdf}
+}
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+
+% Set background for all pages
+\setbeamertemplate{background canvas}{
+	\includegraphics[width=\paperwidth,height=\paperheight]{images/Background.pdf}
+}
+
+
+
+%---------------------------------------------------------
+%This block of code is for the table of contents after
+%the title page
+\begin{frame}
+\frametitle{Nội dung}
+\tableofcontents
+\end{frame}
+
+%---------------------------------------------------------
+\section{Giới thiệu về đề tài}
+%---------------------------------------------------------
+
+\begin{frame}
+\frametitle{Giới thiệu về đề tài}
+
+Đề tài "Nhận diện biển báo giao thông trên FPGA PYNQ-Z2" nghiên cứu và phát triển hệ thống nhận diện biển báo giao thông sử dụng công nghệ FPGA kết hợp với các phương pháp học sâu.
+
+\vspace{0.5cm}
+
+
+Hệ thống áp dụng mạng Nơ-ron tích chập (CNN) để phân loại chính xác các loại biển báo giao thông, ứng dụng model BNN để triển khai trên nền tảng FPGA giúp giảm độ trễ và tiết kiệm năng lượng.
+ 
+\end{frame}
+
+%---------------------------------------------------------
+\section{Giới thiệu về CNN và BNN}
+%---------------------------------------------------------
+
+\begin{frame}
+\frametitle{Mạng Nơ-ron Tích chập (CNN)}
+Mạng Nơ-ron Tích chập (CNN) là một mô hình học sâu rất hiệu quả trong nhận diện hình ảnh và video. CNN sử dụng các lớp tích chập để tự động trích xuất các đặc trưng từ hình ảnh mà không cần sự can thiệp của con người. Cấu trúc chính của CNN bao gồm ba loại lớp:
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.75]{images/cnn} 
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mạng Nơ-ron Nhị phân (BNN)}
+Mạng Nơ-ron Nhị phân (BNN) là một phương pháp tối ưu hóa các mô hình học sâu bằng cách nhị phân hóa các trọng số và kích hoạt trong mạng nơ-ron, giúp giảm yêu cầu bộ nhớ và tính toán.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{images/bnn} 
+\end{figure}
+
+\end{frame}
+
+%---------------------------------------------------------
+\section{Tổng quan về FPGA PYNQ-Z2}
+%---------------------------------------------------------
+\begin{frame}
+\frametitle{Giới thiệu về kit FPGA PYNQ-Z2}
+PYNQ-Z2 là một nền tảng học tập và nghiên cứu vi mạch số (FPGA) hiệu quả, kết hợp phần cứng
+FPGA mạnh mẽ của Xilinx với phần mềm Python linh hoạt. PYNQ-Z2 cung cấp cho người dùng môi
+trường lập trình trực quan, dễ sử dụng, cho phép họ thiết kế, mô phỏng và triển khai các vi mạch số
+một cách nhanh chóng và hiệu quả.
+ \begin{figure}[h]
+	\centering 
+	\begin{minipage}{0.3\textwidth}
+		\centering
+		\includegraphics[scale=0.32]{images/pic1.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[scale=0.26]{images/pic59.png}
+	\end{minipage}
+\end{figure} 
+
+\end{frame}
+
+\begin{frame}
+	
+\frametitle{Giới thiệu về PYNQ Framework}
+PYNQ Framework cho phép lập trình FPGA bằng Python, giúp các nhà phát triển dễ dàng sử dụng và triển khai ứng dụng mà không cần viết mã phần cứng.
+
+Tính năng: Tích hợp dễ dàng với Jupyter Notebook, giúp các nhà phát triển kiểm tra và tối ưu hóa thiết kế FPGA nhanh chóng.
+
+
+ \begin{figure}[h]
+	\centering 
+		\includegraphics[scale=0.4]{images/pynq}
+\end{figure}
+\end{frame}
+
+% %---------------------------------------------------------
+\section{Các bước thực hiện đề tài}
+% %---------------------------------------------------------
+\begin{frame}
+\frametitle{Các bước thực hiện đề tài} 
+\begin{enumerate}
+	\item Huấn luyện CNN trên Python.
+	
+\item	Áp dụng BNN để tối ưu hóa mô hình.
+	
+\item	Triển khai trên nền tảng FPGA PYNQ-Z2.
+\end{enumerate}
+
+ \begin{figure}[h]
+	\centering 
+	\includegraphics[scale=0.4]{images/step}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Chuẩn bị dữ liệu đầu vào} 
+	Biểu đồ phân bố của khoảng 39210 hình ảnh được phân loại theo 43 class.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.23]{images/output}
+	\end{figure} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Huấn luyện CNN trên Python} 
+Sơ đồ giải thuật tổng quát, file training được chia ra 0.7 cho train và 0.3 cho validation.
+ \begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.08]{images/flowpy}
+\end{figure} 
+\end{frame}
+
+\begin{frame}
+	\frametitle{Kết quả huấn luyện CNN}
+	\begin{columns}
+		% Cột hình ảnh (chiếm 40% chiều rộng)
+		\begin{column}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{images/train}
+		\end{column}
+		
+		% Cột văn bản (chiếm 60% chiều rộng)
+		\begin{column}{0.5\textwidth}
+		\textbf{Các kỹ thuật áp dụng:}
+		\begin{itemize}
+			\item \textbf{Augmentation dữ liệu:}
+			\begin{itemize}
+				\item Xoay ảnh: 15°
+				\item Dịch chuyển ngang/dọc: 10\%
+				\item Zoom: 15\%
+			\end{itemize}
+			\item \textbf{Regularization:}
+			\begin{itemize}
+				\item Dropout (tỉ lệ 0.5)
+						\end{itemize}
+		
+			\item Batch normalization
+		\end{itemize}
+
+		\end{column}
+	\end{columns}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Chuyển đổi tham số bằng FINN} 
+	\begin{figure}[h]
+		\centering 
+		\includegraphics[scale=0.38]{images/finn}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Xuất ra file dùng cho chạy nhị phân} 
+Khi huấn luyện hoàn thành, tệp NPZ chứa trọng số sẽ được chuyển đổi thành các tệp nhị phân thông qua gtsrb-gen-binary-weights.py và finnthesizer.py. Các tệp này sẽ được sử dụng để tải vào bộ nhớ của FPGA, nơi mô hình sẽ được triển khai và thực hiện nhận diện biển
+báo giao thông trong thời gian thực. \\
+
+\noindent Kết quả sau khi test với tệp Test khoảng 12631 dữ liệu hình ảnh.
+ \begin{figure}[h]
+	\centering
+	\includegraphics[scale=1.2]{images/test}
+\end{figure}
+\end{frame}
+	
+	
+\begin{frame}
+\frametitle{Thiết kế kiến trúc HLS cho CNN} 
+ \begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.3]{images/dataflow}
+\end{figure} 
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Đóng gói thiết kế thành IP} 
+
+ \begin{figure}[h]
+\centering 
+		\includegraphics[scale=0.27]{images/hls}
+\end{figure} 
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tạo và xuất Block Design} 
+	
+	\begin{figure}[h]
+		\centering 
+		\includegraphics[scale=0.35]{images/block}
+	\end{figure} 
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tài nguyên đã sử dụng sau khi Implementation} 
+	
+	\begin{figure}[h]
+		\centering 
+		\includegraphics[scale=0.35]{images/tainguyen}
+	\end{figure} 
+\end{frame}
+
+
+
+%---------------------------------------------------------
+\section{Chạy kiểm nghiệm trên JupyterNotebook}
+%---------------------------------------------------------
+\begin{frame}
+	\frametitle{Khởi chạy BNN trên phần cứng và phần mềm}
+	\begin{figure}[h]
+		\centering 
+		\includegraphics[scale=0.4]{images/class}
+	\end{figure} 
+	
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Khởi chạy BNN trên phần cứng và phần mềm}
+	\begin{figure}[h]
+	\centering 
+	\includegraphics[scale=0.42]{images/hw}
+	\includegraphics[scale=0.4]{images/sw}
+\end{figure} 
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Khởi chạy BNN trên phần cứng và phần mềm}
+	\begin{figure}[h]
+		\centering 
+		\includegraphics[scale=0.34]{images/sosanh}
+		\includegraphics[scale=0.42]{images/speedup}
+	\end{figure} 
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Phát hiện đối tượng trong cảnh}
+ \begin{figure}[h]
+	\centering 
+	\begin{minipage}{0.3\textwidth}
+		\centering
+		\includegraphics[scale=0.35]{images/post}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[scale=0.7]{images/cam}
+	\end{minipage}
+\end{figure} 
+	
+\end{frame}
+
+
+%---------------------------------------------------------
+\section{Kết luận và hướng phát triển}
+%---------------------------------------------------------
+\begin{frame}
+\frametitle{Kết luận}
+\begin{itemize}
+	\item Đề tài "Nhận diện biển báo giao thông trên FPGA PYNQ-Z2" đã nghiên cứu và triển khai thành công một hệ thống nhận diện biển báo giao thông sử dụng công nghệ FPGA kết hợp với các phương pháp học sâu, đặc biệt là Mạng Nơ-ron Tích chập (CNN) và Mạng Nơ-ron Nhị phân (BNN).
+	
+	\item Việc triển khai trên FPGA giúp giảm độ trễ, tiết kiệm năng lượng và tối ưu hóa hơn so với triển khai trên phần mềm.
+	
+	\item Hệ thống đã chứng minh được khả năng nhận diện chính xác nhiều loại biển báo giao thông từ bộ dữ liệu GTSRB.
+	
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hướng phát triển}
+\begin{itemize}
+	\item Tối ưu hóa mô hình học sâu, đặc biệt là các thuật toán CNN và BNN để đạt độ chính xác cao hơn khi triển khai trên FPGA.
+	
+	\item Mở rộng ứng dụng của hệ thống vào các nền tảng giao thông tự động hóa, kết hợp với các cảm biến và camera giám sát để nâng cao tính hiệu quả và an toàn cho giao thông thông minh.
+	
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+\setbeamertemplate{footline}{}
+\begin{frame}
+    \centering
+    \vspace{2cm}
+    \textbf{\Huge{ XIN CẢM ƠN QUÝ THẦY/CÔ ĐÃ CHÚ Ý LẮNG NGHE  }}
+   
+
+\end{frame}
+
+% \begin{frame}[allowframebreaks]
+%         \frametitle{References}
+%         \bibliographystyle{ieeetr}
+%         \bibliography{reference}
+% \end{frame}
+
+\end{document}
